@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://lmm214.github.io/immmmm</id>
+    <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-09T09:23:23.020Z</updated>
+    <updated>2020-03-09T09:24:53.109Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://lmm214.github.io/immmmm"/>
-    <link rel="self" href="https://lmm214.github.io/immmmm/atom.xml"/>
-    <logo>https://lmm214.github.io/immmmm/images/avatar.png</logo>
-    <icon>https://lmm214.github.io/immmmm/favicon.ico</icon>
+    <link rel="alternate" href="https://immmmm.com"/>
+    <link rel="self" href="https://immmmm.com/atom.xml"/>
+    <logo>https://immmmm.com/images/avatar.png</logo>
+    <icon>https://immmmm.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 木木木木木</rights>
     <entry>
         <title type="html"><![CDATA[春]]></title>
-        <id>https://lmm214.github.io/immmmm/waiting-for-spring/</id>
-        <link href="https://lmm214.github.io/immmmm/waiting-for-spring/">
+        <id>https://immmmm.com/waiting-for-spring/</id>
+        <link href="https://immmmm.com/waiting-for-spring/">
         </link>
         <updated>2020-03-06T10:59:00.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -28,8 +28,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[庆生]]></title>
-        <id>https://lmm214.github.io/immmmm/happy-birthday-2020/</id>
-        <link href="https://lmm214.github.io/immmmm/happy-birthday-2020/">
+        <id>https://immmmm.com/happy-birthday-2020/</id>
+        <link href="https://immmmm.com/happy-birthday-2020/">
         </link>
         <updated>2020-02-14T03:20:00.000Z</updated>
         <summary type="html"><![CDATA[<figure>
@@ -49,8 +49,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[二〇二〇，你好]]></title>
-        <id>https://lmm214.github.io/immmmm/hi-2020/</id>
-        <link href="https://lmm214.github.io/immmmm/hi-2020/">
+        <id>https://immmmm.com/hi-2020/</id>
+        <link href="https://immmmm.com/hi-2020/">
         </link>
         <updated>2020-01-23T12:20:00.000Z</updated>
         <summary type="html"><![CDATA[<p>取消外出旅行计划，乖乖乡下来过年，愿所有人平安无事！</p>
@@ -75,8 +75,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Macbook 二三事]]></title>
-        <id>https://lmm214.github.io/immmmm/macbook-some-things/</id>
-        <link href="https://lmm214.github.io/immmmm/macbook-some-things/">
+        <id>https://immmmm.com/macbook-some-things/</id>
+        <link href="https://immmmm.com/macbook-some-things/">
         </link>
         <updated>2019-09-29T09:30:00.000Z</updated>
         <summary type="html"><![CDATA[<p>感谢老婆，二话没说，一个字买。官网败了 MacBook Pro 2019 13寸 2.4G ，用工作证享受了把教育优惠，还得到一副近3k的Beats耳机。昨中午开始折腾到深夜，基本调教完毕。</p>
@@ -119,8 +119,8 @@ Tab控制间移动焦点：键盘 - 快捷键 - 勾选最下方的「使用键�
     </entry>
     <entry>
         <title type="html"><![CDATA[我們與惡的距離]]></title>
-        <id>https://lmm214.github.io/immmmm/the-world-between-us/</id>
-        <link href="https://lmm214.github.io/immmmm/the-world-between-us/">
+        <id>https://immmmm.com/the-world-between-us/</id>
+        <link href="https://immmmm.com/the-world-between-us/">
         </link>
         <updated>2019-04-26T15:20:00.000Z</updated>
         <summary type="html"><![CDATA[<figure>
@@ -137,8 +137,8 @@ Tab控制间移动焦点：键盘 - 快捷键 - 勾选最下方的「使用键�
     </entry>
     <entry>
         <title type="html"><![CDATA[军训掠影]]></title>
-        <id>https://lmm214.github.io/immmmm/2018-military-training-album/</id>
-        <link href="https://lmm214.github.io/immmmm/2018-military-training-album/">
+        <id>https://immmmm.com/2018-military-training-album/</id>
+        <link href="https://immmmm.com/2018-military-training-album/">
         </link>
         <updated>2018-12-31T09:15:00.000Z</updated>
         <content type="html"><![CDATA[<p>小学惯例五年级有国防教育，校内校外还到军营住一晚，补发照片一堆。</p>
@@ -148,8 +148,8 @@ Tab控制间移动焦点：键盘 - 快捷键 - 勾选最下方的「使用键�
     </entry>
     <entry>
         <title type="html"><![CDATA[犟到如此地步]]></title>
-        <id>https://lmm214.github.io/immmmm/my-stubborn-son/</id>
-        <link href="https://lmm214.github.io/immmmm/my-stubborn-son/">
+        <id>https://immmmm.com/my-stubborn-son/</id>
+        <link href="https://immmmm.com/my-stubborn-son/">
         </link>
         <updated>2018-07-01T05:05:00.000Z</updated>
         <summary type="html"><![CDATA[<p>2018年7月1日 中午 爷爷奶奶家</p>
@@ -183,8 +183,8 @@ Tab控制间移动焦点：键盘 - 快捷键 - 勾选最下方的「使用键�
     </entry>
     <entry>
         <title type="html"><![CDATA[爸爸也这样！]]></title>
-        <id>https://lmm214.github.io/immmmm/and-so-did-dad/</id>
-        <link href="https://lmm214.github.io/immmmm/and-so-did-dad/">
+        <id>https://immmmm.com/and-so-did-dad/</id>
+        <link href="https://immmmm.com/and-so-did-dad/">
         </link>
         <updated>2018-05-01T10:05:00.000Z</updated>
         <summary type="html"><![CDATA[<p>-小沐，你怎么把（汽车）窗户开这么低！<br>
@@ -219,8 +219,8 @@ Tab控制间移动焦点：键盘 - 快捷键 - 勾选最下方的「使用键�
     </entry>
     <entry>
         <title type="html"><![CDATA[绣春刀2]]></title>
-        <id>https://lmm214.github.io/immmmm/brotherhood-of-blades-ii/</id>
-        <link href="https://lmm214.github.io/immmmm/brotherhood-of-blades-ii/">
+        <id>https://immmmm.com/brotherhood-of-blades-ii/</id>
+        <link href="https://immmmm.com/brotherhood-of-blades-ii/">
         </link>
         <updated>2017-07-22T08:55:00.000Z</updated>
         <content type="html"><![CDATA[<figure>
@@ -232,8 +232,8 @@ Tab控制间移动焦点：键盘 - 快捷键 - 勾选最下方的「使用键�
     </entry>
     <entry>
         <title type="html"><![CDATA[终于回场]]></title>
-        <id>https://lmm214.github.io/immmmm/come-back/</id>
-        <link href="https://lmm214.github.io/immmmm/come-back/">
+        <id>https://immmmm.com/come-back/</id>
+        <link href="https://immmmm.com/come-back/">
         </link>
         <updated>2017-07-08T11:55:00.000Z</updated>
         <content type="html"><![CDATA[<p>接触静态博客也有些年头，用过 Jekyll、Octopress、Hexo 都是本地书写后命令行生成静态文件同步至 Github。光听这书写流程就别扭，虽然这很酷，但久了就会发现 <em>非书写时间</em> 与 <em>书写</em> 比值常常大于1</p>
