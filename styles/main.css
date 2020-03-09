@@ -849,7 +849,7 @@ footer.footer:before,
 /* Paginator ----------------------------------*/
 .pager {
   margin: 0 auto;
-  max-width: 780px;
+  max-width: 580px;
 }
 .pager a {
   padding: 1em 0;
