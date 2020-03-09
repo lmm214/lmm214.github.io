@@ -2,13 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-09T13:09:04.590Z</updated>
+    <updated>2020-03-09T13:23:00.451Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
     <logo>https://immmmm.com/images/avatar.png</logo>
     <icon>https://immmmm.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 木木木木木</rights>
+    <entry>
+        <title type="html"><![CDATA[2020-03-09]]></title>
+        <id>https://immmmm.com/2020-03-09/</id>
+        <link href="https://immmmm.com/2020-03-09/">
+        </link>
+        <updated>2020-03-09T13:10:02.000Z</updated>
+        <content type="html"><![CDATA[<p>复学遥遥无期，总得找点事打发时间，花了一下午从 Bitcron 迁移到 Gridea，主要是日志meta匹配和主题转制，目前感觉甚好！🎧</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[春]]></title>
         <id>https://immmmm.com/waiting-for-spring/</id>
@@ -223,33 +232,6 @@ jinrishici.load(function(result) {
 <p>支持前端上传文件，大赞！</p>
 <!-- more -->
 <p>部署成果：<a href="https://o.immmmm.com/">https://o.immmmm.com/</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[电报 Flowerss Bot 搭建笔记]]></title>
-        <id>https://immmmm.com/telegram-flowerss-bot/</id>
-        <link href="https://immmmm.com/telegram-flowerss-bot/">
-        </link>
-        <updated>2019-12-02T07:05:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>看中一点：支持 Telegram 应用内 instant view ！</p>
-<p>点开即用：<a href="https://t.me/rssflowbot">https://t.me/rssflowbot</a></p>
-<p>项目主页：<a href="https://github.com/indes/flowerss-bot">https://github.com/indes/flowerss-bot</a></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>看中一点：支持 Telegram 应用内 instant view ！</p>
-<p>点开即用：<a href="https://t.me/rssflowbot">https://t.me/rssflowbot</a></p>
-<p>项目主页：<a href="https://github.com/indes/flowerss-bot">https://github.com/indes/flowerss-bot</a></p>
-<!-- more -->
-<h3 id="搭建">搭建</h3>
-<p><code>bot token</code>获取，电报 @Botfather，点 start，输入 /newbot，命名后获得 API Token。</p>
-<p><code>telegraph token</code>获取，返回的 JSON 中 access_token 字段值即为 Telegraph Token。</p>
-<pre><code>curl https://api.telegra.ph/createAccount?short_name=flowerss&amp;author_name=flowerss&amp;author_url=https://github.com/indes/flowerss-bot
-</code></pre>
-<p>然后构建命令，docker 一键部署：</p>
-<pre><code>docker run -d -v ~/data/flowerss:/var/flowerss indes/flowerss-bot -b &lt;bot token&gt; -t &lt;telegraph token&gt;
-</code></pre>
-<p>然后？然后，就成功啦！</p>
-<h3 id="绝配">绝配</h3>
-<p>RSSHub： <a href="https://docs.rsshub.app/">https://docs.rsshub.app/</a></p>
 ]]></content>
     </entry>
 </feed>
