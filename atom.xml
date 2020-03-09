@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-09T10:00:50.653Z</updated>
+    <updated>2020-03-09T10:45:06.963Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
@@ -74,6 +74,66 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[2020-01-14]]></title>
+        <id>https://immmmm.com/2020-01-14/</id>
+        <link href="https://immmmm.com/2020-01-14/">
+        </link>
+        <updated>2020-01-14T12:19:00.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://edui.fun/">Edui.fun</a>，让教学有点意思。整了个导航站，收集些与工作有关的在线工具、实用软件什么的，希望有点用！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2019-12-08]]></title>
+        <id>https://immmmm.com/2019-12-08/</id>
+        <link href="https://immmmm.com/2019-12-08/">
+        </link>
+        <updated>2019-12-08T14:19:00.000Z</updated>
+        <content type="html"><![CDATA[<p>shi上最大工程量，手动安装了 <a href="https://tt-rss.org/">Tiny Tiny RSS</a> ,一直填坑一直爽！台子是搭好了，可上台的“主儿”得寻觅一番！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2019-12-01]]></title>
+        <id>https://immmmm.com/2019-12-01/</id>
+        <link href="https://immmmm.com/2019-12-01/">
+        </link>
+        <updated>2019-12-01T07:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>一台 VM 折腾了静态博客、Calibre-web、OneInedx，以及不可言说的功能。感叹，折腾真容易上瘾！但，折腾之后呢？</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2019-11-23]]></title>
+        <id>https://immmmm.com/2019-11-23/</id>
+        <link href="https://immmmm.com/2019-11-23/">
+        </link>
+        <updated>2019-11-23T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>入了 MacBook Pro 后家里的 13年款 iMac 几乎雪藏，但仔细对比配置发现还是 iMac 高，可实际流畅度没法跟pro比。因为一个是ssd一个是sata硬盘。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>入了 MacBook Pro 后家里的 13年款 iMac 几乎雪藏，但仔细对比配置发现还是 iMac 高，可实际流畅度没法跟pro比。因为一个是ssd一个是sata硬盘。</p>
+<!-- more -->
+<p><img src="https://lmm.elizen.me/images/2019/11/ssd.png" alt="续命成功" loading="lazy"> <img src="https://lmm.elizen.me/images/2019/11/ssd-2.png" alt="ssd" loading="lazy"></p>
+<p>随便买了个西数的500G蓝盘+绿联USB3.0硬盘盒，Mac App Store 里下载好系统，外置盘接上USB格式化安装重启，指定外置ssd启动系统，续命成功！</p>
+<p>其实双十一就想折腾来着，但搜来搜去教程都说要制作启动U盘，搁置到现在。哎，搜索越来越难。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2019-10-27]]></title>
+        <id>https://immmmm.com/2019-10-27/</id>
+        <link href="https://immmmm.com/2019-10-27/">
+        </link>
+        <updated>2019-10-27T11:22:00.000Z</updated>
+        <content type="html"><![CDATA[<p>小程序收到好心人100分“巨款”捐赠，意义非凡！几周用户已有2k5，每天访问在100左右，内置广告已收入7.3元，达成人生一大flag“睡后”收入！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2019-10-07]]></title>
+        <id>https://immmmm.com/2019-10-07/</id>
+        <link href="https://immmmm.com/2019-10-07/">
+        </link>
+        <updated>2019-10-07T02:22:00.000Z</updated>
+        <content type="html"><![CDATA[<p>为下载个音视频真不容易，安上 <a href="https://github.com/soimort/you-get/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E">you-get</a> 基本解决。另外，图片、文档、课件依然乖乖交税。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Macbook 二三事]]></title>
         <id>https://immmmm.com/macbook-some-things/</id>
         <link href="https://immmmm.com/macbook-some-things/">
@@ -115,132 +175,6 @@ Tab控制间移动焦点：键盘 - 快捷键 - 勾选最下方的「使用键�
 </code></pre>
 <h3 id="总结评分">总结评分</h3>
 <p>总体而言，10分制打8分，其中颜值占2分。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[我們與惡的距離]]></title>
-        <id>https://immmmm.com/the-world-between-us/</id>
-        <link href="https://immmmm.com/the-world-between-us/">
-        </link>
-        <updated>2019-04-26T15:20:00.000Z</updated>
-        <summary type="html"><![CDATA[<figure>
-    <img src="https://lmm.elizen.me/images/2019/04/p2539805435.jpg" width="50%" /><img src="https://lmm.elizen.me/images/2019/04/p2539805408.jpg" width="50%" />
-    <figcaption>我们与恶的距离为负</figcaption>
-</figure>]]></summary>
-        <content type="html"><![CDATA[<figure>
-    <img src="https://lmm.elizen.me/images/2019/04/p2539805435.jpg" width="50%" /><img src="https://lmm.elizen.me/images/2019/04/p2539805408.jpg" width="50%" />
-    <figcaption>我们与恶的距离为负</figcaption>
-</figure>
-<!--more-->
-<p><a href="https://movie.douban.com/subject/30181230/">https://movie.douban.com/subject/30181230/</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[军训掠影]]></title>
-        <id>https://immmmm.com/2018-military-training-album/</id>
-        <link href="https://immmmm.com/2018-military-training-album/">
-        </link>
-        <updated>2018-12-31T09:15:00.000Z</updated>
-        <content type="html"><![CDATA[<p>小学惯例五年级有国防教育，校内校外还到军营住一晚，补发照片一堆。</p>
-<!--more-->>
-<p><photos><img src="https://lmm.elizen.me/images/2018/12/hxjx-36.JPG" alt="hxjx-36" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-34.JPG" alt="hxjx-34" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-33.JPG" alt="hxjx-33" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-32.JPG" alt="hxjx-32" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-31.JPG" alt="hxjx-31" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-30.JPG" alt="hxjx-30" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-29.JPG" alt="hxjx-29" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-28.JPG" alt="hxjx-28" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-27.JPG" alt="hxjx-27" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-26.JPG" alt="hxjx-26" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-25.JPG" alt="hxjx-25" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-24.JPG" alt="hxjx-24" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-23.JPG" alt="hxjx-23" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-22.JPG" alt="hxjx-22" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-21.JPG" alt="hxjx-21" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-20.JPG" alt="hxjx-20" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-19.JPG" alt="hxjx-19" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-18.JPG" alt="hxjx-18" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-17.JPG" alt="hxjx-17" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-16.JPG" alt="hxjx-16" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-15.JPG" alt="hxjx-15" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-14.JPG" alt="hxjx-14" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-13.JPG" alt="hxjx-13" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-12.JPG" alt="hxjx-12" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-11.JPG" alt="hxjx-11" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-10.JPG" alt="hxjx-10" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-9.JPG" alt="hxjx-9" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-8.JPG" alt="hxjx-8" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-7.JPG" alt="hxjx-7" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-6.JPG" alt="hxjx-6" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-5.JPG" alt="hxjx-5" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-4.JPG" alt="hxjx-4" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-3.JPG" alt="hxjx-3" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-2.JPG" alt="hxjx-2" loading="lazy"><img src="https://lmm.elizen.me/images/2018/12/hxjx-1.JPG" alt="hxjx-1" loading="lazy"></photos></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[犟到如此地步]]></title>
-        <id>https://immmmm.com/my-stubborn-son/</id>
-        <link href="https://immmmm.com/my-stubborn-son/">
-        </link>
-        <updated>2018-07-01T05:05:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>2018年7月1日 中午 爷爷奶奶家</p>
-<p>客厅茶几开小灶，奶奶喂饭，爷爷陪看电视，嘴不动电视停，多次依旧无效。奶奶决定不吃，把饭菜拿回餐厅。</p>
-<p>被我抱进房间，问他，吃不吃饭，不应答。哭会儿说要尿尿，抱进里面厕所，不尿，说要去外面厕所尿。</p>
-<p>被我抱起，扔回床上。继续大哭，喊我要出去，我要吃饭…要爸爸抱</p>
-<p>被我拒绝，不抱。扶他，要求他自己站起来，其收腿不站。</p>
-<p>来回多次，要我抱起来，去外面。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>2018年7月1日 中午 爷爷奶奶家</p>
-<p>客厅茶几开小灶，奶奶喂饭，爷爷陪看电视，嘴不动电视停，多次依旧无效。奶奶决定不吃，把饭菜拿回餐厅。</p>
-<p>被我抱进房间，问他，吃不吃饭，不应答。哭会儿说要尿尿，抱进里面厕所，不尿，说要去外面厕所尿。</p>
-<p>被我抱起，扔回床上。继续大哭，喊我要出去，我要吃饭…要爸爸抱</p>
-<p>被我拒绝，不抱。扶他，要求他自己站起来，其收腿不站。</p>
-<p>来回多次，要我抱起来，去外面。</p>
-<!-- more -->
-<p>…（奶奶突然进来，被我推出去）</p>
-<p>他又继续大哭，期间床上下来2次强行拉门，说，要去吃饭，去吃饭。</p>
-<p>开门，出来。</p>
-<p>他径直走进书房爷爷怀里，窸窣窸窣。奶奶准备饭菜被爷爷呵止，然后陪其一起到客厅搭积木。</p>
-<p>我餐厅吃完饭，到客厅问他，你说出来吃饭，还吃吗？不回应。起身拉我给他拼大飞机，被我拒绝。回奶奶边再次哭。</p>
-<p>我收拾好电脑包后问，不吃就带回茶苑自己家了，吃不吃。奶奶边哄边拉他起来，非常勉强到餐厅。</p>
-<p>十多分钟，吃了两三口，又开始哭，要把自己撕开的肉黏回去，试了多次失败，奶奶说不吃了，他说要吃饭，要吃肉，情绪奔溃。</p>
-<p>我过去抱起他，也说不吃了，一起到客厅拼大飞机。客厅坐下拼了几秒，他说要机关枪大飞机，我说没有，只有大飞机或者机关枪。情绪再次不对…</p>
-<p>爷爷过来带走，进房间，让他开空调，准备睡觉。</p>
-<p>注：<br>
-1、被关进前，含着饭就是不嚼，电视停了也不嚼，而是起身找遥控。<br>
-2、关进房间，就算哭到窸窣哽咽，还是不停地提出各种要求。<br>
-3、出来后，没有第一时间吃饭，后来吃也只吃了几口，最后还跟肉干上了。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[爸爸也这样！]]></title>
-        <id>https://immmmm.com/and-so-did-dad/</id>
-        <link href="https://immmmm.com/and-so-did-dad/">
-        </link>
-        <updated>2018-05-01T10:05:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>-小沐，你怎么把（汽车）窗户开这么低！<br>
--<strong>爸爸也</strong>开那么低！</p>
-<p>-小沐，你怎么光着脚呀？拖鞋呢！<br>
--<strong>爸爸也</strong>没穿！</p>
-<p>-小沐，别把脚搁茶几上！<br>
--<strong>爸爸也</strong>搁着！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>-小沐，你怎么把（汽车）窗户开这么低！<br>
--<strong>爸爸也</strong>开那么低！</p>
-<p>-小沐，你怎么光着脚呀？拖鞋呢！<br>
--<strong>爸爸也</strong>没穿！</p>
-<p>-小沐，别把脚搁茶几上！<br>
--<strong>爸爸也</strong>搁着！</p>
-<!--more-->
-<p>-小沐，去尿尿好不好？<br>
--没有～<br>
--爸爸去了！<br>
--我也要去！</p>
-<p>-小沐，我们把外套拖了还不好？<br>
--不要！<br>
--看，爸爸穿着背心无袖的呢！你里面是短袖的。<br>
--嗯，好的，爸爸露的肉比我多！</p>
-<p>-好渴啊，我要去喝水啦～<br>
--我<strong>才不要</strong>喝水！</p>
-<p>-好冷啊，我要穿外套啦～<br>
--我<strong>才不要</strong>穿外套！</p>
-<p>-好多汗啊，我们去洗澡吧～<br>
--我<strong>才不要</strong>洗澡！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[绣春刀2]]></title>
-        <id>https://immmmm.com/brotherhood-of-blades-ii/</id>
-        <link href="https://immmmm.com/brotherhood-of-blades-ii/">
-        </link>
-        <updated>2017-07-22T08:55:00.000Z</updated>
-        <content type="html"><![CDATA[<figure>
-    <img src="https://lmm.elizen.me/images/2017/07/xcd-1.jpg" width="50%" /><img src="https://lmm.elizen.me/images/2017/07/xcd-2.jpg" width="50%" />
-    <figcaption>辛芷蕾</figcaption>
-</figure>
-<p>哎哟，好好的破案片，成了儿女情长片。直接2星，想想动作设计、想想还有几个角不错，还是3星推荐吧</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[终于回场]]></title>
-        <id>https://immmmm.com/come-back/</id>
-        <link href="https://immmmm.com/come-back/">
-        </link>
-        <updated>2017-07-08T11:55:00.000Z</updated>
-        <content type="html"><![CDATA[<p>接触静态博客也有些年头，用过 Jekyll、Octopress、Hexo 都是本地书写后命令行生成静态文件同步至 Github。光听这书写流程就别扭，虽然这很酷，但久了就会发现 <em>非书写时间</em> 与 <em>书写</em> 比值常常大于1</p>
-<p>随着 Github 被认证半死不活，文章数增多后 Hexo 标榜的生成性能也不复存在，最纠结的是想码字还得开电脑输入命令行，算了，不酷了。</p>
-<p>其实 Farbox 挺好的，存在感不强，但也满足需求。看看后台注册时间2013年，同步数据0，看来又是一个我占个ID走人的网站，那时估计是在装“酷”。</p>
-<p>Bitcron 是 Elizen 那听到看到，一了解，原来是 Farbox 升级版 ，老用户注册无需邀请码，一年基础版60大洋，良心。最用心是码字全平台支持，Dropbox 云应用！</p>
-<p>iOS 上的 Byword 终于可以回场咯！当然，要丝滑般的感觉，Surge 也是必备。</p>
 ]]></content>
     </entry>
 </feed>
