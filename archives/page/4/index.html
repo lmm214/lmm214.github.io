@@ -58,6 +58,173 @@
                 <header>
                     <time class="date">
                         <i class="fa">
+                            <span class="datetime">2017-12-27</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/auto-outlinks-add-iconfont/">自动识别外链并添加图标</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>效果测试：</p>
+<p><a href="https://twitter.com/">推特</a> <a href="https://web.wechat.com/">微信</a> <a href="https://weibo.com/">微博</a> <a href="https://www.facebook.com">脸书</a> <a href="https://www.google.com">谷歌</a> <a href="https://github.com/">Github</a> <a href="https://movie.douban.com/">豆瓣</a> <a href="https://www.v2ex.com/">V2EX</a> <a href="https://www.zhihu.com/">知乎</a> <a href="https://zh.wikipedia.org">维基百科</a> <a href="http://jianshu.io/">简书</a> <a href="http://youku.com/">优酷</a> <a href="https://www.youtube.com/">YouTube</a></p>
+<p>功能代码来自： <a href="https://github.com/foru17/Yasuko">@罗磊</a></p>
+
+                        <a href="https://immmmm.com/auto-outlinks-add-iconfont/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-26</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-show-relative-time/">Bitcron 显示相对时间</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>已更新下面这货！</p>
+<p><a href="https://tokinx.github.io/lately/">Lately.js</a>：基于jQuery ，仅 800 字节却强大、好用的'Timeago'插件。</p>
+<p>逻辑：年月相同继续（否，显示“常规日期”），日相同继续（否，显示“发布于几天前”），小时相同继续（否，显示“发布于几小时前”），分相同显示“刚刚发布”（否，显示“发布于几分钟前”）</p>
+<p>BUG也明显，不能跨月，跨了如12月31日23时59秒发的文，1月1日00时01分来看也是显示常规的。找不到时间戳的api及计算，只想到用这个笨办法。</p>
+<p>代码如下：</p>
+
+                        <a href="https://immmmm.com/bitcron-show-relative-time/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-26</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/2017-12-26/">2017-12-26</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>臭小子竟然又中招发热了！</p>
+
+                        <a href="https://immmmm.com/2017-12-26/#comments">发表评论</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-24</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-diy-mail-template/">Bitcron 美化评论回复通知</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>之前用 WordPress 的时候，评论的邮件通知也算是个折腾点，PHP的回复样式和内容随便自己写，相比较而言 Bitcron 源码未公布，Jade 都改名 Pug，折腾测试全凭感觉。所幸，没白折腾，效果如下：</p>
+<figure>
+    <img src="https://lmm.elizen.me/images/2017/12/mail-1.png" alt="" style="width:30%"/>              <img src="https://lmm.elizen.me/images/2017/12/mail-0.png" alt="" style="width:30%"/>
+    <figcaption>样式对比</figcaption>
+</figure>
+<p>官方介绍：<a href="https://api.bitcron.com/read/others#toc_6">https://api.bitcron.com/read/others#toc_6</a></p>
+
+                        <a href="https://immmmm.com/bitcron-diy-mail-template/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-24</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-show-last-update/">Bitcron 显示最后更新时间</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <blockquote>
+<p>需求点：很多教程文章会多次修改，显示文章最后的修改时间，就显得非常有必要。效果图如下：</p>
+</blockquote>
+<figure>
+    <img src="https://lmm.elizen.me/images/2017/12/last-1.png" alt="" />
+    <figcaption>显示最后更新时间</figcaption>
+</figure>
+<p>利用了 <code>sys_date</code> 这属性，格式化为 <code>%Y%j</code>，其中 <code>%j</code> 表示一年中的第几天，所以 <strong>判断发布与修改不是同一日</strong> ，则显示。相关代码如下：</p>
+
+                        <a href="https://immmmm.com/bitcron-show-last-update/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-23</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-cool-links-page/">Bitcron 实现个性友情链接页</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2017/12/links-1.png" alt="我的朋友们" loading="lazy"></figure>
+<p>具体效果见：<a href="https://immmmm.com/friends">https://immmmm.com/friends</a></p>
+
+                        <a href="https://immmmm.com/bitcron-cool-links-page/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-21</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/demo-shuiba-co/">为八口打 Call ！！！</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <blockquote>
+<p>一个字：服！</p>
+</blockquote>
+<h3 id="01你好呀">01「你好呀」</h3>
+<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2017/12/shuiba-01.jpg" alt="shuiba-01" loading="lazy"></figure>
+<h5 id="预览"><a href="https://demo.shuiba.co/?template_prefix=01%20hello">[预览]</a> <a href="https://blog.shuiba.co/bitcron-theme-hello">[介绍]</a></h5>
+<h3 id="02庸">02「庸」</h3>
+<figure data-type="image" tabindex="2"><img src="https://lmm.elizen.me/images/2017/12/shuiba-02.jpg" alt="shuiba-02" loading="lazy"></figure>
+<h5 id="预览-2"><a href="https://demo.shuiba.co/?template_prefix=02%20ordinary">[预览]</a> <a href="https://blog.shuiba.co/bitcron-theme-ordinary">[介绍]</a></h5>
+
+                        <a href="https://immmmm.com/demo-shuiba-co/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
                             <span class="datetime">2017-12-20</span>
                         </i>
                     </time>
@@ -413,179 +580,6 @@ Sollrei | [源码1](https://github.com/sollrei/bitcron-template) [源码2](https
                 </div>
             </article>
             
-            <article class="meta">
-                <header>
-                    <time class="date">
-                        <i class="fa">
-                            <span class="datetime">2017-07-08</span>
-                        </i>
-                    </time>
-                </header>
-                <h1 class="entry-title">
-                    <a href="https://immmmm.com/come-back/">终于回场</a>
-                </h1>
-                <div class="post-content">
-                    
-                        <p>接触静态博客也有些年头，用过 Jekyll、Octopress、Hexo 都是本地书写后命令行生成静态文件同步至 Github。光听这书写流程就别扭，虽然这很酷，但久了就会发现 <em>非书写时间</em> 与 <em>书写</em> 比值常常大于1</p>
-<p>随着 Github 被认证半死不活，文章数增多后 Hexo 标榜的生成性能也不复存在，最纠结的是想码字还得开电脑输入命令行，算了，不酷了。</p>
-<p>其实 Farbox 挺好的，存在感不强，但也满足需求。看看后台注册时间2013年，同步数据0，看来又是一个我占个ID走人的网站，那时估计是在装“酷”。</p>
-<p>Bitcron 是 Elizen 那听到看到，一了解，原来是 Farbox 升级版 ，老用户注册无需邀请码，一年基础版60大洋，良心。最用心是码字全平台支持，Dropbox 云应用！</p>
-<p>iOS 上的 Byword 终于可以回场咯！当然，要丝滑般的感觉，Surge 也是必备。</p>
-
-                        <a href="https://immmmm.com/come-back/#comments">发表评论</a>
-                    
-                </div>
-            </article>
-            
-            <article class="meta">
-                <header>
-                    <time class="date">
-                        <i class="fa">
-                            <span class="datetime">2016-10-30</span>
-                        </i>
-                    </time>
-                </header>
-                <h1 class="entry-title">
-                    <a href="https://immmmm.com/wechat-public-platform-development/">微信公众平台开发小记</a>
-                </h1>
-                <div class="post-content">
-                    
-                        <p>微信公众平台开发，个人申请只能订阅号，虽能开启开发者模式，可这权限令人发指！借助“微信开放平台”中的第三方，通过简单的“授权管理”做到各尽其能、互不干扰。</p>
-<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2016/10/dyh-dsf.jpg" alt="dyh-dsf.jpg" loading="lazy"></figure>
-<h3>自定义菜单</h3>
-<p><strong>微之家</strong>：<a href="https://www.iweizhijia.com" target="_blank">https://www.iweizhijia.com</a></p>
-<figure data-type="image" tabindex="2"><img src="https://lmm.elizen.me/images/2016/10/dyh-1.jpg" alt="dyh-1.jpg" loading="lazy"></figure>
-<p>其中菜单内容的“发送消息”、“跳转网页”，当然选择后者，点击菜单后直接显示内容。</p>
-
-                        <a href="https://immmmm.com/wechat-public-platform-development/">阅读全文</a>
-                    
-                </div>
-            </article>
-            
-            <article class="meta">
-                <header>
-                    <time class="date">
-                        <i class="fa">
-                            <span class="datetime">2016-02-07</span>
-                        </i>
-                    </time>
-                </header>
-                <h1 class="entry-title">
-                    <a href="https://immmmm.com/goodbay-2015/">二〇一五，不见。</a>
-                </h1>
-                <div class="post-content">
-                    
-                        <h3 id="过去">过去</h3>
-<p>过去一年若码流水肯定得码通宵，若只说一件那就是：<strong>为人父</strong>。</p>
-<p>臭小子6个多月咯，全靠长辈特别是奶奶和外婆。当然，最为辛苦的是老婆！经历孕育、当下的哺育以及之后的教育，让我在这个过程中拓宽了对“爱”的定义域，延展了“爱”的峰值。新的一年，想对老婆说：</p>
-<p style="text-align: center;"><strong>你的幸福，我们爷俩全包了！</strong></p>
-<p>若说第二件就是：<strong>成“阿姨”</strong>。</p>
-<p>工作第五年，被任命为一班之主任，成为了43个孩子的“阿姨”。说阿姨真是一点不夸张，准确说应该是 43×2 的阿姨，甚至，还不止。咳，说多了都是泪啊！当然，这份差事虽苦，也有感动与感激，且思且行且珍惜，继续咯。</p>
-<p>若说第三件…这水流得好欢哟，下面说几个关键词吧。</p>
-
-                        <a href="https://immmmm.com/goodbay-2015/">阅读全文</a>
-                    
-                </div>
-            </article>
-            
-            <article class="meta">
-                <header>
-                    <time class="date">
-                        <i class="fa">
-                            <span class="datetime">2014-06-30</span>
-                        </i>
-                    </time>
-                </header>
-                <h1 class="entry-title">
-                    <a href="https://immmmm.com/dont-be-trust/">不被信任感</a>
-                </h1>
-                <div class="post-content">
-                    
-                        <p>不知多少人会有这样的想法：如果你觉着我做不好，那就做不好吧，就算自己其实能做好。如果你觉得我肯定做得好，就算自己其实没把握，也尽全力做好。</p>
-<p>当面对别人对自己的信任度时，总显得特别敏感，生怕别人不信任自己，一旦察觉随之也就应验了别人的不信任：你看，他果真不行吧！</p>
-<p>在读书时期很长一段时间里，感受到父母对自己的不信任，特别不信任我能做到超出他们预期的事儿。这种不被自己至亲信任的感觉，真的是好讨厌的感觉，因为感觉受到了伤害，而且施害方是至亲！那段时间一直困扰的问题：明明我是他们孩子，为什么他们会不信任我呢？</p>
-
-                        <a href="https://immmmm.com/dont-be-trust/">阅读全文</a>
-                    
-                </div>
-            </article>
-            
-            <article class="meta">
-                <header>
-                    <time class="date">
-                        <i class="fa">
-                            <span class="datetime">2014-06-14</span>
-                        </i>
-                    </time>
-                </header>
-                <h1 class="entry-title">
-                    <a href="https://immmmm.com/overcome-the-grocery-store/">解忧杂货店</a>
-                </h1>
-                <div class="post-content">
-                    
-                        <blockquote>
-<p>如今回顾写作过程，我发现直接始终再思考一个问题：站在人生的岔路口，人究竟应该怎么做？————东野圭吾</p>
-</blockquote>
-<p>月兔：是参加奥运集训，还是陪身患绝症的男友度过生命最后一程……</p>
-<p>鱼店音乐人：是坚持自己的音乐梦，还是子承父业成为鱼店的接班人……</p>
-<p>约翰·列侬：是否与父母一同走上逃债的不归路，还是坚持让父母留下来面对现实……</p>
-<p>迷途的小狗：希望得到正面肯定的“陪酒小姐”……</p>
-<p>这些人通过一封封信，把自己的烦恼写下来投递进了“解忧杂货店”，这些信奇迹般地在时光中来回穿梭，改变的不仅仅是写信人的人生，同时也改变着回信人的人生。看似不同人的人生，在不知不觉中都归向了这间杂货店……</p>
-<p>这不是一本推理小说，却可以让我带着近似阅读推理小说时的疑惑和小猜测一口气读到底的小说。</p>
-<p>读完，想说：推理大师写得“鸡汤”还是挺“干货”的！</p>
-
-                        <a href="https://immmmm.com/overcome-the-grocery-store/#comments">发表评论</a>
-                    
-                </div>
-            </article>
-            
-            <article class="meta">
-                <header>
-                    <time class="date">
-                        <i class="fa">
-                            <span class="datetime">2014-04-19</span>
-                        </i>
-                    </time>
-                </header>
-                <h1 class="entry-title">
-                    <a href="https://immmmm.com/slimbox2-js-adaptive/">Slimbox2.js 图片灯箱自适应</a>
-                </h1>
-                <div class="post-content">
-                    
-                        <p>Github： <a href="https://github.com/lmm214/slimbox2-lite">slimbox2-lite</a></p>
-<p>很久很久以前（喂，喂喂），很早很早以前（嘿！），好吧。以前发现只有几KB的图片灯箱特效 slimbox2 就瞬间被它征服了，不过这娃一直有个硬伤：</p>
-<p>图片多大灯箱显示出来的图片就有多大。就是说，一旦图片比较大比如1800<em>1200，显示器只有1280</em>800，那真是赤果果扑面而来啊！</p>
-<p>虽然带着这个硬伤，还是把它作为哥发布的主题的标配！昨 @小黑黑 再一次向我反馈了这个情况，一下决心操起编辑器开试。吼，花了个把小时把 js 从头到尾读了N遍后，顺利搞定！修改部分如下：</p>
-
-                        <a href="https://immmmm.com/slimbox2-js-adaptive/">阅读全文</a>
-                    
-                </div>
-            </article>
-            
-            <article class="meta">
-                <header>
-                    <time class="date">
-                        <i class="fa">
-                            <span class="datetime">2014-01-15</span>
-                        </i>
-                    </time>
-                </header>
-                <h1 class="entry-title">
-                    <a href="https://immmmm.com/goodbye-2013/">二〇一三，不见。</a>
-                </h1>
-                <div class="post-content">
-                    
-                        <h3>一、博客小记</h3>
-<p>一三年，微信公众平台各博客老手自号“自媒体”汹涌袭来，看多了自己就更加动不了笔了。繁忙中心里惦记着空下来一定好好找个话题，好好前思后想一番来一发。真闲了，发现码下的尽是口水文，完全不符合前期心里预设，索性，关页面！</p>
-<p>几周前的年底，各博集体诈shi纷纷岁末总结文。动物界有冬眠，现今博客圈有“年更”，一年一更，其实我也很想跟进这波潮流，不过，那几天人生要事进行中，待明年再跟。</p>
-<p>Google Reader 关闭后，个人使用了 Feedly ，刚查看竟然还有 400+ 童鞋订阅着，受宠若惊感激涕零啊！看着“前端”这个 Tag ，请问能P成“生活端”或者“老婆端”OK不？这年除掉零碎折腾水文、就剩暑假“丽江行”的记录文了。</p>
-<p>用了快两年的主题，昨下午做了一些减法，技能生疏，得改段时间或者学习段时间，码个新滴，吼吼！</p>
-
-                        <a href="https://immmmm.com/goodbye-2013/">阅读全文</a>
-                    
-                </div>
-            </article>
-            
                         <div class="paginator pager pagination">
               <div class="nav">
                 
@@ -600,7 +594,7 @@ Sollrei | [源码1](https://github.com/sollrei/bitcron-template) [源码2](https
 
             <footer id="footer" class="">
         <p class="published border-effect">
-          ©2020 共 112 篇文章
+          ©2020 共 119 篇文章
           <br/>
           Theme <a href="https://immmmm.com/gridea-theme-motify/" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
         </p>
