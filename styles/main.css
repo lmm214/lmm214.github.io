@@ -453,6 +453,9 @@ figure figcaption {
   margin: 0 auto!important;
   padding: 0 20px;
 }
+#comments {
+  max-width: 780px;
+}
 .hentry h1 {
   color: #DA3E3E;
   text-align: center;
@@ -687,7 +690,7 @@ figure figcaption {
   text-align: center;
   margin: 10px 0;
 }
-#comments:before {
+#comments:after {
   content: "";
   display: block;
   margin: 80px auto 80px;
@@ -1585,7 +1588,7 @@ photos .photo:last-child {
   background-color: #fff;
 }
 .lbLoading {
-  background: #fff url(images/loading.gif) no-repeat center;
+  background: #fff url('') no-repeat center;
 }
 #lbImage {
   position: absolute;
