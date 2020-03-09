@@ -370,7 +370,7 @@ i.fa.link:before {
 }
 .header-container {
   text-align: center;
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto;
 }
 .site-title {
@@ -449,7 +449,7 @@ figure figcaption {
 .chat,
 #comments,
 .archive {
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto!important;
   padding: 0 20px;
 }
@@ -556,7 +556,7 @@ figure figcaption {
 .hentry .post-content hr,
 .hentry .post-content ul,
 .hentry .post-content li {
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto 2em!important;
   padding: 10px 20px;
 }
@@ -643,7 +643,7 @@ figure figcaption {
 }
 .hentry .post-content .post-hentry {
   line-height: 2.5em;
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto 2em!important;
   padding: 10px 20px;
 }
@@ -1553,7 +1553,7 @@ photos .photo:nth-of-type(3n) {
 photos .photo:last-child {
   margin-right: 0px;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 600px) {
   photos .photo {
     width: 180px;
     margin-right: 4px;
@@ -1561,9 +1561,9 @@ photos .photo:last-child {
     float: left;
   }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 860px) {
   photos .photo {
-    width: 280px;
+    width: 240px;
     margin-right: 16px;
     margin-bottom: 10px;
     float: left;
