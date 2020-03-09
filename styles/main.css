@@ -500,7 +500,7 @@ figure figcaption {
   color: #42b983;
   position: absolute;
   left: -1.5em;
-  top: 0px;
+  top: 4px;
   font-size: 1.2em;
   line-height: 1.2em;
 }
@@ -605,7 +605,7 @@ figure figcaption {
 }
 .hentry .post-content h3 {
   position: relative;
-  left: 1em;
+  left: 2em;
   margin: 28px auto 18px!important;
 }
 .hentry .post-content ul,
