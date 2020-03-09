@@ -201,9 +201,9 @@ i.fa.fa-flickr:before {
 .format-movie i.fa:before {
   content: "\e913";
 }
-.format-code i.fa:before,
+.format-coding i.fa:before,
 .coding i.fa:before {
-  content: "\ea80";
+  content: "\ea80" !important;
 }
 .format-link i.fa:before,
 i.fa.link:before {
@@ -1552,9 +1552,9 @@ photos .photo:last-child {
 }
 @media screen and (max-width: 760px) {
   photos .photo {
-    width: 220px;
-    margin-right: 8px;
-    margin-bottom: 10px;
+    width: 180px;
+    margin-right: 4px;
+    margin-bottom: 5px;
     float: left;
   }
 }
