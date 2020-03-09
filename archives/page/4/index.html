@@ -1,0 +1,793 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>木木木木木</title>
+<meta name="referrer" content="never" />
+<link rel="shortcut icon" href="https://immmmm.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://immmmm.com/styles/main.css">
+
+<script src="https://immmmm.com/media/js/jquery.min.js"></script>
+<script src="https://immmmm.com/media/js/lately.min.js"></script>
+<script src="https://immmmm.com/media/js/waterfall.min.js"></script>
+<script src="https://immmmm.com/media/js/slimbox2.min.js"></script>
+  </head>
+  <body>
+    <!-- start: #wrapper -->
+    <div class="header-container">
+  <h1 class="site-title"><a href="https://immmmm.com">木木木木木</a></h1>
+  <h2 class="site-description"></h2>
+  <nav class="main-navigation">
+    <ul id="" class="">
+      
+      <li class="" ><a href="/" class="menu">首页</a></li>
+      
+      <li class="" ><a href="/archives" class="menu">归档</a></li>
+      
+      <li class="" ><a href="/tags" class="menu">标签</a></li>
+      
+      <li class="" ><a href="/about" class="menu">关于</a></li>
+      
+    </ul>
+  </nav>
+  <div class="my_socials">
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-instagram"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-weibo"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-facebook"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-flickr"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-feed"></i></a>
+      
+    
+  </div>
+</div>
+    <div class="wrapper">
+        <div class="content">
+            <!-- start: .articles -->
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-20</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-multi-theme-preview/">Bitcron 一站搞定多主题预览</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>起源： <a href="https://pi.bitcron.com/post/wen-da/2017-12/2017-12-11-13-32-39#main">网站上适用不同自定义主题</a></p>
+<blockquote>
+<p>假设 /template/a/index.jade<br>
+访问 http://yourdomain.com/?template_prefix=a, 会强制模板匹配的时候，访问前缀为 a 的目录路径。</p>
+</blockquote>
+<p>什么意思？就是说我们可以把多个主题放到 template 的子文件夹里，比如 <code>a</code>子文件夹，然后在链接后加上参数 <code>?template_prefix=a</code> 就能用这个模板来渲染呈现主题啦！</p>
+<p>所以，可以这样做:</p>
+<pre><code class="language-html">/template/a/
+/template/b/
+/template/c/
+/template/d/
+/template/e/
+/template/f/
+</code></pre>
+<p>来半打子主题，然后用 js 加上参数就好啦~（ 注：template 目录下的总文件要低于 200）</p>
+
+                        <a href="https://immmmm.com/bitcron-multi-theme-preview/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-18</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-article-run-code/">Bitcron 文章内运行代码实例一则</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>Bitcron 文章里是可以直接运行代码的，只要把代码高亮类型设置成 <code>code</code> 即可。</p>
+<p>什么用呢？可以当定制页面（Pages）用！文章定制功能So Easy！</p>
+<p>比如，我的友情链接页。按照常规需要新建个 <code>links.jade</code> ，然后再把需要插入的 css 和 js 写入模板调用。</p>
+
+                        <a href="https://immmmm.com/bitcron-article-run-code/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-18</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-auto-article-refer/">Bitcron 文章内链自动优化显示</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <blockquote>
+<p>当我们在文章内引用了一个站内的链接，一般只是超级链接，其实，也可以为这个超级链接提供更好的表现方式。<br>
+这是看起来很简单，但确实一个超赞的想法，来自于 Jimmy。效果如下(中间部分，hello 为标题):</p>
+</blockquote>
+<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2017/12/refer-1.png" alt="refer 处理页面内的链接" loading="lazy"></figure>
+
+                        <a href="https://immmmm.com/bitcron-auto-article-refer/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-17</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-add-owo-similies/">给 Bitcron 评论添加 OwO 表情</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <figure>
+    <img src="https://lmm.elizen.me/images/2017/12/owo-1.png" />
+    <figcaption>OwO 表情</figcaption>
+</figure>
+                        <a href="https://immmmm.com/bitcron-add-owo-similies/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-12-16</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-edit-article-and-comments/">即时编辑 Bitcron 文章和评论</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>Bitcron 后台是有个“文件管理器”的功能，完全可依此在 WEB 端管理自己的博客。偶尔想修改下文章内的错别字或删除个垃圾评论，会手动输入 <a href="https://us.bitcron.com/">https://us.bitcron.com/</a> ，然后进入相应的文件里进行修改。</p>
+<p>其实，直接访问以下链接同样可以</p>
+<p>https://us.bitcron.com/service/files_manager?site_id=站点ID.bitcron.com#pages/文件名.md<br>
+https://us.bitcron.com/service/files_manager?site_id=站点ID.bitcron.com#_comments/pages/文件名.csv</p>
+
+                        <a href="https://immmmm.com/bitcron-edit-article-and-comments/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-10-06</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/weapp-round-avatar-builder/">微信小程序：巡礼头像编辑器</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <figure>
+    <img src="https://lmm.elizen.me/images/2017/10/txbjq_1.JPG" width="25%" /><img src="https://lmm.elizen.me/images/2017/10/txbjq_2.png" width="25%" /><img src="https://lmm.elizen.me/images/2017/10/txbjq_3.png" width="25%" /><img src="https://lmm.elizen.me/images/2017/10/txbjq_4.PNG" width="25%" />
+    <figcaption>巡礼头像编辑器</figcaption>
+</figure>
+<p>看到人大80周年网页版的头像生成器，试了一试微信小程序，花了一个周末也就搞定之！</p>
+<p>感谢 <strong>we-cropper</strong> 作者，上传图片手势缩放裁剪一条龙。</p>
+<p>源码托管： <a href="https://coding.net/u/lmm214/p/weapp-round-avatar-builder/git">https://coding.net/u/lmm214/p/weapp-round-avatar-builder/git</a></p>
+
+                        <a href="https://immmmm.com/weapp-round-avatar-builder/#comments">发表评论</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-08-09</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-close-post-comments/">Bitcron 关闭某篇文章评论</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>捂脸，遁之……</p>
+<p>文章直接添加下句即可:</p>
+<pre><code class="language-markdown">comment: no
+</code></pre>
+
+                        <a href="https://immmmm.com/bitcron-close-post-comments/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-07-26</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/pk24go-cn/">决战24点（HTML5）开发小记</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>点击体验：<a href="https://pk24go.cn">https://pk24go.cn</a></p>
+<p>本就开发了一个玩儿24点游戏的微信公众号“决战24点”（pk24go），可以回复综合算式进行解答。说实话，还是挺不方面的。前段时间看到 <a href="http://4shu.net/">4数网</a> 在线 HTML5 玩法，立马着手改造！</p>
+<h3 id="改造点">改造点</h3>
+<p>1、界面UI：以方格为基本图形，4个数字在4个角落，4个运算符号在中间，完成数、撤销返回、提示等按钮在空白小方格中。<br>
+2、功能减法：去除时间限制模式、积分、结束按钮。<br>
+3、功能加法：新增【题库选择】可选择数字范围1<sub>10或1</sub>13，新增【待解模式】针对性强化玩家提示过的题组。</p>
+
+                        <a href="https://immmmm.com/pk24go-cn/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-07-25</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/new-tab-external-link/">识别外链并新窗口打开</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>注：已对类似 toc 里的链接进行排除。</p>
+<p>markdown 语法链接不支持设置 <code>target='_blank'</code> ，如果要就直接写 html 的链接代码。个人来说，非常反习惯！</p>
+<p>既然 Bitcron 加载了 jQuery ，那就重操旧业来个自动识别内外链！代码如下：</p>
+<pre><code class="language-jade">	script
+		$(document).ready (function() {
+			var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+			var location_href = window.location.href.replace(parse_url,'$3')
+			$('.post-content a:not(:has(img)),.author-name a').hover(function() {
+				var this_href = $(this).attr('href');
+				var replace_href = this_href.replace(parse_url,'$3');
+                if ( this_href != replace_href &amp;&amp; location_href != replace_href)
+					$(this).attr('target','_blank'); 
+			});
+		});
+</code></pre>
+<p>一般放 <code>post.jade</code>里，直接放 <code>base.jade</code> 也行。其中 <code>.post-content</code> 和 <code>.author-name</code> 有可能需要匹配自己的主题模板。</p>
+<p>短短代码测试了个把小时，主要耗在“a标签里无img”和“本地和点击的href的正则”，哎，果真代码欺负老新人！</p>
+
+                        <a href="https://immmmm.com/new-tab-external-link/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-07-23</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-template-code/">Bitcron 主题常用的代码片段</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <h3 id="全站-site">全站 Site</h3>
+<p>标题：<code>site.title</code>，示例：</p>
+<pre><code class="language-jade">a(href=&quot;/&quot;)= site.title
+</code></pre>
+<p>副标题：<code>site.sub_title</code>，示例：</p>
+<pre><code class="language-jade">if site.sub_title
+	h2.site-description= site.sub_title]
+</code></pre>
+<p>关键词：<code>site.keywords</code><br>
+描述：<code>site.description</code></p>
+<p>站点头像：<code>site.avatar</code><br>
+背景：<code>site.background_image</code>，示例：</p>
+<pre><code class="language-jade">header#header(style=&quot;background-image:url({{site.background_image}})&quot;)
+</code></pre>
+<p>当下年份：<code>site.now.year</code></p>
+
+                        <a href="https://immmmm.com/bitcron-template-code/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-07-22</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/brotherhood-of-blades-ii/">绣春刀2</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <figure>
+    <img src="https://lmm.elizen.me/images/2017/07/xcd-1.jpg" width="50%" /><img src="https://lmm.elizen.me/images/2017/07/xcd-2.jpg" width="50%" />
+    <figcaption>辛芷蕾</figcaption>
+</figure>
+<p>哎哟，好好的破案片，成了儿女情长片。直接2星，想想动作设计、想想还有几个角不错，还是3星推荐吧</p>
+
+                        <a href="https://immmmm.com/brotherhood-of-blades-ii/#comments">发表评论</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-07-20</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-theme-motify/">Bitcron 主题「Motify」</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <figure>
+    <img src="https://lmm.elizen.me/images/2017/07/motify.jpg" alt="Bitcron 主题「Motify」" />
+    <figcaption>Github 地址： <a href="https://github.com/lmm214/Bitcron-Theme-Motify">Motify</a> </figcaption>
+</figure>
+<h3 id="主题简介">主题简介</h3>
+<p>自扒 WordPress 同名主题，支持：</p>
+<ul>
+<li>头部背景自定义</li>
+<li>“相册”、“一句话”特色文章样式</li>
+<li>社交图标包含：Twitter、Instagram、Github、Flickr、微博、Facebook。</li>
+<li>自动识别外链并新窗口打开</li>
+</ul>
+
+                        <a href="https://immmmm.com/bitcron-theme-motify/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-07-14</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-themes/">Bitcron 主题集</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p><a href="demo-shuiba-co">demo-shuiba-co</a></p>
+<pre><code class="language-table">主题名(-) | 链接(-)
+Bedford | [预览](https://blog-bedford--theme.bitcron.com/)  [源码](https://github.com/pagecho/Bedford)
+Akina | [预览](https://akina.0x400.bitcron.com/)  [源码](https://github.com/0x401/Bitcron-themes/tree/master/Akina)
+Next | [源码](https://github.com/0x401/Bitcron-themes/tree/master/Next)
+Mixedpaper | [源码](https://github.com/imsuwj/bitcron-mixedpaper)
+Slimwriter | [预览](https://slimwriter.dearsnow.com/) [源码](https://github.com/yamakong/Bitcron-theme-Slimwriter)
+飛鳥 ASUKA | [预览](https://bird.dearsnow.com/) 
+Linen | [预览](https://linen.dearsnow.com/)
+colachan | [预览](http://colachan.com/)  [源码](https://github.com/greenzorro/bitcron-colachan)
+cola-themes | [源码](https://github.com/cdswyda/cola-themes)
+Maupassant Mod v1.0 | [预览](http://bit.lanieldev.com/post/webkai-fa/lorem2)  [源码](https://github.com/kissinggod/Maupassant-farbox) 
+Sollrei | [源码1](https://github.com/sollrei/bitcron-template) [源码2](https://github.com/sollrei/bitcron-template02) 
+正则 | [预览](https://matrixk.me)  [源码](https://github.com/matrixk/bitcron-theme-canonical) 
+「素」 | [预览](https://mytrix.in/post/zi-zhi/bitcron-theme-plain)  [源码](https://github.com/matrixk/bitcron-theme-plain) 
+</code></pre>
+
+                        <a href="https://immmmm.com/bitcron-themes/#comments">发表评论</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2017-07-08</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/come-back/">终于回场</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>接触静态博客也有些年头，用过 Jekyll、Octopress、Hexo 都是本地书写后命令行生成静态文件同步至 Github。光听这书写流程就别扭，虽然这很酷，但久了就会发现 <em>非书写时间</em> 与 <em>书写</em> 比值常常大于1</p>
+<p>随着 Github 被认证半死不活，文章数增多后 Hexo 标榜的生成性能也不复存在，最纠结的是想码字还得开电脑输入命令行，算了，不酷了。</p>
+<p>其实 Farbox 挺好的，存在感不强，但也满足需求。看看后台注册时间2013年，同步数据0，看来又是一个我占个ID走人的网站，那时估计是在装“酷”。</p>
+<p>Bitcron 是 Elizen 那听到看到，一了解，原来是 Farbox 升级版 ，老用户注册无需邀请码，一年基础版60大洋，良心。最用心是码字全平台支持，Dropbox 云应用！</p>
+<p>iOS 上的 Byword 终于可以回场咯！当然，要丝滑般的感觉，Surge 也是必备。</p>
+
+                        <a href="https://immmmm.com/come-back/#comments">发表评论</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2016-10-30</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/wechat-public-platform-development/">微信公众平台开发小记</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>微信公众平台开发，个人申请只能订阅号，虽能开启开发者模式，可这权限令人发指！借助“微信开放平台”中的第三方，通过简单的“授权管理”做到各尽其能、互不干扰。</p>
+<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2016/10/dyh-dsf.jpg" alt="dyh-dsf.jpg" loading="lazy"></figure>
+<h3>自定义菜单</h3>
+<p><strong>微之家</strong>：<a href="https://www.iweizhijia.com" target="_blank">https://www.iweizhijia.com</a></p>
+<figure data-type="image" tabindex="2"><img src="https://lmm.elizen.me/images/2016/10/dyh-1.jpg" alt="dyh-1.jpg" loading="lazy"></figure>
+<p>其中菜单内容的“发送消息”、“跳转网页”，当然选择后者，点击菜单后直接显示内容。</p>
+
+                        <a href="https://immmmm.com/wechat-public-platform-development/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2016-02-07</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/goodbay-2015/">二〇一五，不见。</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <h3 id="过去">过去</h3>
+<p>过去一年若码流水肯定得码通宵，若只说一件那就是：<strong>为人父</strong>。</p>
+<p>臭小子6个多月咯，全靠长辈特别是奶奶和外婆。当然，最为辛苦的是老婆！经历孕育、当下的哺育以及之后的教育，让我在这个过程中拓宽了对“爱”的定义域，延展了“爱”的峰值。新的一年，想对老婆说：</p>
+<p style="text-align: center;"><strong>你的幸福，我们爷俩全包了！</strong></p>
+<p>若说第二件就是：<strong>成“阿姨”</strong>。</p>
+<p>工作第五年，被任命为一班之主任，成为了43个孩子的“阿姨”。说阿姨真是一点不夸张，准确说应该是 43×2 的阿姨，甚至，还不止。咳，说多了都是泪啊！当然，这份差事虽苦，也有感动与感激，且思且行且珍惜，继续咯。</p>
+<p>若说第三件…这水流得好欢哟，下面说几个关键词吧。</p>
+
+                        <a href="https://immmmm.com/goodbay-2015/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2014-06-30</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/dont-be-trust/">不被信任感</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>不知多少人会有这样的想法：如果你觉着我做不好，那就做不好吧，就算自己其实能做好。如果你觉得我肯定做得好，就算自己其实没把握，也尽全力做好。</p>
+<p>当面对别人对自己的信任度时，总显得特别敏感，生怕别人不信任自己，一旦察觉随之也就应验了别人的不信任：你看，他果真不行吧！</p>
+<p>在读书时期很长一段时间里，感受到父母对自己的不信任，特别不信任我能做到超出他们预期的事儿。这种不被自己至亲信任的感觉，真的是好讨厌的感觉，因为感觉受到了伤害，而且施害方是至亲！那段时间一直困扰的问题：明明我是他们孩子，为什么他们会不信任我呢？</p>
+
+                        <a href="https://immmmm.com/dont-be-trust/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2014-06-14</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/overcome-the-grocery-store/">解忧杂货店</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <blockquote>
+<p>如今回顾写作过程，我发现直接始终再思考一个问题：站在人生的岔路口，人究竟应该怎么做？————东野圭吾</p>
+</blockquote>
+<p>月兔：是参加奥运集训，还是陪身患绝症的男友度过生命最后一程……</p>
+<p>鱼店音乐人：是坚持自己的音乐梦，还是子承父业成为鱼店的接班人……</p>
+<p>约翰·列侬：是否与父母一同走上逃债的不归路，还是坚持让父母留下来面对现实……</p>
+<p>迷途的小狗：希望得到正面肯定的“陪酒小姐”……</p>
+<p>这些人通过一封封信，把自己的烦恼写下来投递进了“解忧杂货店”，这些信奇迹般地在时光中来回穿梭，改变的不仅仅是写信人的人生，同时也改变着回信人的人生。看似不同人的人生，在不知不觉中都归向了这间杂货店……</p>
+<p>这不是一本推理小说，却可以让我带着近似阅读推理小说时的疑惑和小猜测一口气读到底的小说。</p>
+<p>读完，想说：推理大师写得“鸡汤”还是挺“干货”的！</p>
+
+                        <a href="https://immmmm.com/overcome-the-grocery-store/#comments">发表评论</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2014-04-19</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/slimbox2-js-adaptive/">Slimbox2.js 图片灯箱自适应</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <p>Github： <a href="https://github.com/lmm214/slimbox2-lite">slimbox2-lite</a></p>
+<p>很久很久以前（喂，喂喂），很早很早以前（嘿！），好吧。以前发现只有几KB的图片灯箱特效 slimbox2 就瞬间被它征服了，不过这娃一直有个硬伤：</p>
+<p>图片多大灯箱显示出来的图片就有多大。就是说，一旦图片比较大比如1800<em>1200，显示器只有1280</em>800，那真是赤果果扑面而来啊！</p>
+<p>虽然带着这个硬伤，还是把它作为哥发布的主题的标配！昨 @小黑黑 再一次向我反馈了这个情况，一下决心操起编辑器开试。吼，花了个把小时把 js 从头到尾读了N遍后，顺利搞定！修改部分如下：</p>
+
+                        <a href="https://immmmm.com/slimbox2-js-adaptive/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+            <article class="meta">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2014-01-15</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/goodbye-2013/">二〇一三，不见。</a>
+                </h1>
+                <div class="post-content">
+                    
+                        <h3>一、博客小记</h3>
+<p>一三年，微信公众平台各博客老手自号“自媒体”汹涌袭来，看多了自己就更加动不了笔了。繁忙中心里惦记着空下来一定好好找个话题，好好前思后想一番来一发。真闲了，发现码下的尽是口水文，完全不符合前期心里预设，索性，关页面！</p>
+<p>几周前的年底，各博集体诈shi纷纷岁末总结文。动物界有冬眠，现今博客圈有“年更”，一年一更，其实我也很想跟进这波潮流，不过，那几天人生要事进行中，待明年再跟。</p>
+<p>Google Reader 关闭后，个人使用了 Feedly ，刚查看竟然还有 400+ 童鞋订阅着，受宠若惊感激涕零啊！看着“前端”这个 Tag ，请问能P成“生活端”或者“老婆端”OK不？这年除掉零碎折腾水文、就剩暑假“丽江行”的记录文了。</p>
+<p>用了快两年的主题，昨下午做了一些减法，技能生疏，得改段时间或者学习段时间，码个新滴，吼吼！</p>
+
+                        <a href="https://immmmm.com/goodbye-2013/">阅读全文</a>
+                    
+                </div>
+            </article>
+            
+                        <div class="paginator pager pagination">
+              <div class="nav">
+                
+                  <a href="https://immmmm.com/archives/page/3/" class="prev button red">上一页</a>
+                
+                
+                  <a href="https://immmmm.com/archives/page/5/" class="next button red">下一页</a>
+                
+              </div>
+            </div>
+        </div>
+
+            <footer id="footer" class="">
+        <p class="published border-effect">
+          ©2020 共 112 篇文章
+          <br/>
+          Theme <a href="https://immmmm.com/gridea-theme-motify/" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+        
+        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
+          <i class="fa fa-arrow"></i>
+        </a>
+    </footer>
+
+    <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+<script>
+jQuery(document).ready(function($){
+          $("photos img").each(function(){
+              var _a = $("<a></a>").attr("href",this.src);
+              $(this).wrap("<div class='photo'></div>").wrap(_a);
+          })
+          $("figure img").each(function(){
+              var _b = $("<a></a>").attr("href",this.src);
+              $(this).wrap(_b);
+          })
+          isImgLoad(function(){
+            var photos = document.querySelector('photos');
+            if(photos){
+              waterfall(photos);
+            }
+            $(window).resize(function() {
+             if(photos){
+                  waterfall(photos);
+            }
+          });
+});
+        var t_img;
+        var isLoad = true;
+        function isImgLoad(callback){
+          $('photos img').each(function(){
+            if(this.height === 0){
+              isLoad = false;
+              return false;
+            }
+          });
+          if(isLoad){
+            clearTimeout(t_img);
+            callback();
+          }else{
+            isLoad = true;
+            t_img = setTimeout(function(){
+              isImgLoad(callback);
+            },500);
+          }
+        }
+      });
+</script>
+
+<script>
+jQuery(document).ready(function($) {
+    //灯箱
+    $(".post-hentry a[rel!=link]:has(img)").slimbox();
+    //返回顶部
+    var bt;
+    bt = $('#back_to_top');
+    if ($(document).width() > 480) {
+      $(window).scroll(function() {
+        var st;
+        st = $(window).scrollTop();
+        if (st > 30) {
+          bt.css('display', 'block');
+        } else {
+          bt.css('display', 'none');
+        }
+      });
+      bt.click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    }
+    //相对时间
+    $.lately({'target' : 'time.date span,.author-date small'});
+    //外链新窗口
+    var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+    var location_href = window.location.href.replace(parse_url,'$3');
+    $('.post-content a:not(:has(img)),.author-name a').hover(function() {
+        var this_href = $(this).attr('href');
+        var replace_href = this_href.replace(parse_url,'$3');
+        if ( this_href != replace_href && location_href != replace_href){$(this).attr('target','_blank');}
+    });
+    //外链加图标
+        function urlIconlize(url) {
+        var domain,
+            _output;
+        var iconFontTag = 'iconfont';
+        var iconMap = {
+            'twitter': iconFontTag + '-twitter',
+            'wechat': iconFontTag + '-wechat',
+            'qzone': iconFontTag + '-qzone',
+            'weibo': iconFontTag + '-weibo',
+            'facebook': iconFontTag + '-facebook',
+            'github': iconFontTag + '-github',
+            'douban': iconFontTag + '-douban',
+            'google': iconFontTag + '-google',
+            'luolei': iconFontTag + '-luolei',
+            'dribble': iconFontTag + '-dribble',
+            'v2ex': iconFontTag + '-v2ex',
+            'zhihu': iconFontTag + '-zhihu',
+            'wikipedia': iconFontTag + '-wikipedia',
+            'jianshu': iconFontTag + '-jianshu',
+            'youku': iconFontTag + '-youku',
+            'youtube': iconFontTag + '-youtube'
+        }
+        for (var name in iconMap) {
+            if (typeof iconMap[name] !== 'function') {
+                var MapKey = name;
+                if (url.indexOf(MapKey) >= 0) {
+                    domain = MapKey;
+                    _output = iconMap[MapKey];
+                }
+            }
+        }
+        return _output;
+    };
+    function addIcons() {
+      $('.post-content  a:not(:has(img))').each(function(i) {
+            var _src = $(this).attr('href');
+            var tmp = document.createElement('a');
+            tmp.href = _src;
+            _selfDomain = tmp.hostname;
+            urlIconlize(_selfDomain);
+            $(this).prepend('<i class="iconfont ' + urlIconlize(_selfDomain) + '"></i>');
+
+      });
+    }
+    addIcons();
+    //豆瓣图书电影条目
+    $(".post-content a[href*='douban']").each(function () {
+        var _this = $(this);
+        var str = _this.attr("href");
+        var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+        if (db_reg.test(str)) {
+            var db_type = str.replace(db_reg, "$1");
+            var db_id = str.replace(db_reg, "$2").toString();
+            var db_api = "https://bm.weajs.com/api/";
+            if (db_type == 'movie') {
+                var url = db_api + "movies/" + db_id + "/";
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: "json",
+                    success: function (data) {
+                        var db_star = Math.ceil(data.rating);
+                        $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>导演：" + data.directors + " / 类型：" + data.genres + " / " + data.pubdate + "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                    }
+                });
+            } else if (db_type == 'book') {
+                var url = db_api + "books/" + db_id;
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        var db_star = Math.ceil(data.rating);
+                        $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>作者：" + data.author + " </time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                    }
+                });
+            } else {
+                console.log("error")
+            }
+        }
+    });
+
+});
+</script>
+        <footer class="footer">
+            
+        </footer>
+    </div>
+  </body>
+</html>
