@@ -1563,7 +1563,7 @@ photos .photo:last-child {
 }
 @media screen and (min-width: 860px) {
   photos .photo {
-    width: 240px;
+    width: 274px;
     margin-right: 16px;
     margin-bottom: 10px;
     float: left;
