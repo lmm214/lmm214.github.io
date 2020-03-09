@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Valine 评论框美化及功能优化 | 木木木木木</title>
+<meta name="referrer" content="never" />
+<link rel="shortcut icon" href="https://immmmm.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://immmmm.com/styles/main.css">
+
+<script src="https://immmmm.com/media/js/jquery.min.js"></script>
+<script src="https://immmmm.com/media/js/lately.min.js"></script>
+<script src="https://immmmm.com/media/js/waterfall.min.js"></script>
+<script src="https://immmmm.com/media/js/slimbox2.min.js"></script>
+    <meta name="description" content="以下修改不涉及 Valine 源码的改动，防止后续官方更新还得再来一边。因此，相关 css、js 代码得放在调取 valine.min.js 之后。
+评论框美化：
+
+.v .vwrap{padding: 0 0 44px;}.v .vedi..." />
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+  </head>
+  <body>
+    <!-- start: #wrapper -->
+    <header id="header" style="background-image:url(/media/images/custom-headerBgImage.jpg)">
+        <div class="header-container">
+  <h1 class="site-title"><a href="https://immmmm.com">木木木木木</a></h1>
+  <h2 class="site-description"></h2>
+  <nav class="main-navigation">
+    <ul id="" class="">
+      
+      <li class="" ><a href="/" class="menu">首页</a></li>
+      
+      <li class="" ><a href="/archives" class="menu">归档</a></li>
+      
+      <li class="" ><a href="/tags" class="menu">标签</a></li>
+      
+      <li class="" ><a href="/about" class="menu">关于</a></li>
+      
+    </ul>
+  </nav>
+  <div class="my_socials">
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-instagram"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-weibo"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-facebook"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-flickr"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-feed"></i></a>
+      
+    
+  </div>
+</div>
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            <div id="posts" class="posts single">
+            <!-- start: .articles -->
+            
+            <article class="post hentry format-daily">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2019-07-15</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/valine-diy/">Valine 评论框美化及功能优化</a>
+                </h1>
+                <div class="post-content">
+                    <div class="post-hentry">
+                        <p>以下修改不涉及 Valine 源码的改动，防止后续官方更新还得再来一边。因此，相关 css、js 代码得放在调取 <code>valine.min.js</code> 之后。</p>
+<h3 id="评论框美化">评论框美化：</h3>
+<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2019/07/plk.jpg" alt="评论框美化：" loading="lazy"></figure>
+<pre><code class="language-css">.v .vwrap{padding: 0 0 44px;}.v .veditor{min-height:7rem;resize:none;}.v .vwrap .vedit{padding-top:0}.v .vwrap .vheader{width: 80%;bottom:0;position: absolute;background: #f7f7f7;}.v .vinput{padding:10px 15px;}.v .vwrap .vheader .vinput{border-bottom:0px}.v .vwrap .vedit .vctrl{margin-top:-44px;right:0;position:absolute;margin-right:-3px;}.v .vwrap .vcontrol{    position:absolute;right:0;bottom:0;width:20%;padding-top:0px;}.v .vwrap .vcontrol .col.col-80{width: 100%;}.v .vbtn.vsubmit{border-radius: 0;padding: 0;color: #fff;line-height: 44px;width:100%;border: none;background:#1abc9c;}.v .vwrap .vedit .vctrl span.vpreview-btn,.v .vwrap .vcontrol .col.col-20,.v .vlist .vcard .vhead .vsys{display:none;}
+@media screen and (max-width: 520px){
+	.v .vwrap .vheader .vinput{width: 33.33%;padding:10px 5px;}
+}
+</code></pre>
+<!--more-->
+<h3 id="点击回复直接评论">点击回复直接评论</h3>
+<p>官方版本点击回复时都是跳回到页面上方的评论框进行回复，评论框是固定不动的。比较合理的是：点哪条的回复，评论框就显示在此条评论下方。避免页面跳上跳下。</p>
+<p>相关 jQuery 代码：</p>
+<pre><code class="language-javascript">$(document).ready(function(){
+	$('.vemoji-btn').text('😀');
+	$(&quot;#vcomments&quot;).on('click', 'span.vat',function(){
+		$(this).parent('div.vmeta').next(&quot;div.vcontent&quot;).after($(&quot;div.vwrap&quot;));
+		$('textarea#veditor').focus();
+	})
+})
+</code></pre>
+<p>短短几行，折腾了一个深夜加一个下午，主要是卡在点击事件得使用动态绑定事件，还有卡在移动dom后页面滚动定位错误，前者使用 on 解决，后者加个 focus 解决。</p>
+<h3 id="自定义邮件回复样式">自定义邮件回复样式</h3>
+<figure data-type="image" tabindex="2"><img src="https://lmm.elizen.me/images/2019/07/mail-re1.jpg" alt="自定义邮件回复样式" loading="lazy"></figure>
+<p>分享给已成功使用了 Valine Admin 的同学。</p>
+<p><code>MAIL_TEMPLATE</code> 代码，自行替换logo图片地址：</p>
+<pre><code class="language-html">&lt;div style=&quot;padding:2em 10%;color:#b3b3b1;width:420px;margin:0 auto;font-size:14px&quot;;&gt;
+	&lt;img style=&quot;display:block;width:50px;margin:0 auto&quot; src=&quot;https://图片地址/logo.png&quot;&gt;
+	&lt;p style=&quot;text-align:center;&quot;&gt;Hi，&lt;span style=&quot;color:#3eae5f&quot;&gt; ${PARENT_NICK} &lt;/span&gt;&lt;/p&gt;
+	&lt;p style=&quot;font-size:13px;text-align:center;&quot;&gt;有人回复了您在 &lt;strong style=&quot;font-weight:bold&quot;&gt; ${SITE_NAME} &lt;/strong&gt; 上的评论&lt;/p&gt;
+	&lt;hr style=&quot;width:64px;border:0;border-bottom:1px solid #e5e5e5;margin:24px auto;&quot;&gt;
+	&lt;div style=&quot;color:#333;overflow:hidden;&quot;&gt;
+		&lt;p style=&quot;display:inline-block;float:left;&quot;&gt;&lt;span style=&quot;color:#3eae5f;font-weight:bold&quot;&gt; 您 &lt;/span&gt;&lt;span&gt;说：&lt;/span&gt;&lt;/p&gt;
+		${PARENT_COMMENT}
+	&lt;/div&gt;
+	&lt;div style=&quot;color:#333;overflow:hidden;&quot;&gt;
+		&lt;p style=&quot;display:inline-block;float:left;&quot;&gt;&lt;span style=&quot;color:#3eae5f;font-weight:bold&quot;&gt; ${NICK} &lt;/span&gt;&lt;span&gt;说：&lt;/span&gt;&lt;/p&gt;
+		${COMMENT}
+	&lt;/div&gt;
+	&lt;p&gt;&lt;a style=&quot;color:#ffffff;text-decoration:none;display:inline-block;min-height:28px;line-height:28px;padding:0 13px;outline:0;background:#3eae5f;font-size:13px;text-align:center;font-weight:400;border:0;border-radius:999em&quot; href=&quot;${POST_URL}&quot; target=&quot;_blank&quot;&gt;点击查看&lt;/a&gt;&lt;/p&gt;
+	&lt;hr style=&quot;width:64px;border:0;border-bottom:1px solid #e5e5e5;margin:24px auto;&quot;&gt;
+	&lt;p&gt;&lt;a style=&quot;display:block;color:#b3b3b1;text-decoration:none;text-align:center;&quot; href=&quot;${SITE_URL}&quot; target=&quot;_blank&quot;&gt;${SITE_NAME}&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p><code>MAIL_TEMPLATE_ADMIN</code> 通知博主邮件模板代码：</p>
+<pre><code class="language-html">&lt;div style=&quot;line-height:24px;font-size:13px;&quot;&gt;
+    &lt;p&gt;&lt;span style=&quot;color:#3eae5f&quot;&gt; ${NICK} &lt;/span&gt; 说：&lt;/p&gt;
+    &lt;p &gt;${COMMENT}&lt;/p&gt;
+    &lt;p style=&quot;font-size:12px;line-height:12px;&quot;&gt;&lt;a style=&quot;color:#b3b3b1;text-decoration:none;&quot; href=&quot;${POST_URL}&quot; target=&quot;_blank&quot;&gt;${POST_URL}&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </article>
+            
+
+            <div id="comments"></div>
+            
+            </div>
+
+        </div>
+
+            <footer id="footer" class="">
+        <p class="published border-effect">
+          ©2020 共 112 篇文章
+          <br/>
+          Theme <a href="https://immmmm.com/gridea-theme-motify/" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+        
+        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
+          <i class="fa fa-arrow"></i>
+        </a>
+    </footer>
+
+    <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+<script>
+jQuery(document).ready(function($){
+          $("photos img").each(function(){
+              var _a = $("<a></a>").attr("href",this.src);
+              $(this).wrap("<div class='photo'></div>").wrap(_a);
+          })
+          $("figure img").each(function(){
+              var _b = $("<a></a>").attr("href",this.src);
+              $(this).wrap(_b);
+          })
+          isImgLoad(function(){
+            var photos = document.querySelector('photos');
+            if(photos){
+              waterfall(photos);
+            }
+            $(window).resize(function() {
+             if(photos){
+                  waterfall(photos);
+            }
+          });
+});
+        var t_img;
+        var isLoad = true;
+        function isImgLoad(callback){
+          $('photos img').each(function(){
+            if(this.height === 0){
+              isLoad = false;
+              return false;
+            }
+          });
+          if(isLoad){
+            clearTimeout(t_img);
+            callback();
+          }else{
+            isLoad = true;
+            t_img = setTimeout(function(){
+              isImgLoad(callback);
+            },500);
+          }
+        }
+      });
+</script>
+
+<script>
+jQuery(document).ready(function($) {
+    //灯箱
+    $(".post-hentry a[rel!=link]:has(img)").slimbox();
+    //返回顶部
+    var bt;
+    bt = $('#back_to_top');
+    if ($(document).width() > 480) {
+      $(window).scroll(function() {
+        var st;
+        st = $(window).scrollTop();
+        if (st > 30) {
+          bt.css('display', 'block');
+        } else {
+          bt.css('display', 'none');
+        }
+      });
+      bt.click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    }
+    //相对时间
+    $.lately({'target' : 'time.date span,.author-date small'});
+    //外链新窗口
+    var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+    var location_href = window.location.href.replace(parse_url,'$3');
+    $('.post-content a:not(:has(img)),.author-name a').hover(function() {
+        var this_href = $(this).attr('href');
+        var replace_href = this_href.replace(parse_url,'$3');
+        if ( this_href != replace_href && location_href != replace_href){$(this).attr('target','_blank');}
+    });
+    //外链加图标
+        function urlIconlize(url) {
+        var domain,
+            _output;
+        var iconFontTag = 'iconfont';
+        var iconMap = {
+            'twitter': iconFontTag + '-twitter',
+            'wechat': iconFontTag + '-wechat',
+            'qzone': iconFontTag + '-qzone',
+            'weibo': iconFontTag + '-weibo',
+            'facebook': iconFontTag + '-facebook',
+            'github': iconFontTag + '-github',
+            'douban': iconFontTag + '-douban',
+            'google': iconFontTag + '-google',
+            'luolei': iconFontTag + '-luolei',
+            'dribble': iconFontTag + '-dribble',
+            'v2ex': iconFontTag + '-v2ex',
+            'zhihu': iconFontTag + '-zhihu',
+            'wikipedia': iconFontTag + '-wikipedia',
+            'jianshu': iconFontTag + '-jianshu',
+            'youku': iconFontTag + '-youku',
+            'youtube': iconFontTag + '-youtube'
+        }
+        for (var name in iconMap) {
+            if (typeof iconMap[name] !== 'function') {
+                var MapKey = name;
+                if (url.indexOf(MapKey) >= 0) {
+                    domain = MapKey;
+                    _output = iconMap[MapKey];
+                }
+            }
+        }
+        return _output;
+    };
+    function addIcons() {
+      $('.post-content  a:not(:has(img))').each(function(i) {
+            var _src = $(this).attr('href');
+            var tmp = document.createElement('a');
+            tmp.href = _src;
+            _selfDomain = tmp.hostname;
+            urlIconlize(_selfDomain);
+            $(this).prepend('<i class="iconfont ' + urlIconlize(_selfDomain) + '"></i>');
+
+      });
+    }
+    addIcons();
+    //豆瓣图书电影条目
+    $(".post-content a[href*='douban']").each(function () {
+        var _this = $(this);
+        var str = _this.attr("href");
+        var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+        if (db_reg.test(str)) {
+            var db_type = str.replace(db_reg, "$1");
+            var db_id = str.replace(db_reg, "$2").toString();
+            var db_api = "https://bm.weajs.com/api/";
+            if (db_type == 'movie') {
+                var url = db_api + "movies/" + db_id + "/";
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: "json",
+                    success: function (data) {
+                        var db_star = Math.ceil(data.rating);
+                        $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>导演：" + data.directors + " / 类型：" + data.genres + " / " + data.pubdate + "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                    }
+                });
+            } else if (db_type == 'book') {
+                var url = db_api + "books/" + db_id;
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        var db_star = Math.ceil(data.rating);
+                        $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>作者：" + data.author + " </time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                    }
+                });
+            } else {
+                console.log("error")
+            }
+        }
+    });
+
+});
+</script>
+    </div>
+    <script src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js"></script>
+    <script>
+        jQuery(document).ready(function($){
+                new Valine({
+                    el: '#comments',
+                    recordIP:true,
+                    appId:'m6rxiyixBDG25mYPEPapQpnR-MdYXbMMI',
+                    appKey:'WMokwNAwh9noJ4XeUjVBjsCt',
+                    pageSize: 30,
+                    placeholder:'既然来了，那就留个痕迹吧~',
+                    //visitor: true
+                })
+                jinrishici.load(function(result) {
+                    var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+                    document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+                });
+                $(document).ready(function(){
+                    $('.vemoji-btn').text('😀');
+                    $("#comments").on('click', 'span.vat',function(){
+                        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+                        $('textarea#veditor').focus();
+                    })
+                })
+                if(window.location.hash){
+                    var checkExist = setInterval(function() {
+                        if ($(window.location.hash).length) {
+                            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+                            clearInterval(checkExist);
+                        }
+                    }, 100);
+                }
+        });
+    </script>
+  </body>
+</html>

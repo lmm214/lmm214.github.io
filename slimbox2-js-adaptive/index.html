@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Slimbox2.js 图片灯箱自适应 | 木木木木木</title>
+<meta name="referrer" content="never" />
+<link rel="shortcut icon" href="https://immmmm.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://immmmm.com/styles/main.css">
+
+<script src="https://immmmm.com/media/js/jquery.min.js"></script>
+<script src="https://immmmm.com/media/js/lately.min.js"></script>
+<script src="https://immmmm.com/media/js/waterfall.min.js"></script>
+<script src="https://immmmm.com/media/js/slimbox2.min.js"></script>
+    <meta name="description" content="Github： slimbox2-lite
+很久很久以前（喂，喂喂），很早很早以前（嘿！），好吧。以前发现只有几KB的图片灯箱特效 slimbox2 就瞬间被它征服了，不过这娃一直有个硬伤：
+图片多大灯箱显示出来的图片就有多大。就是说，一旦..." />
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+  </head>
+  <body>
+    <!-- start: #wrapper -->
+    <header id="header" style="background-image:url(/media/images/custom-headerBgImage.jpg)">
+        <div class="header-container">
+  <h1 class="site-title"><a href="https://immmmm.com">木木木木木</a></h1>
+  <h2 class="site-description"></h2>
+  <nav class="main-navigation">
+    <ul id="" class="">
+      
+      <li class="" ><a href="/" class="menu">首页</a></li>
+      
+      <li class="" ><a href="/archives" class="menu">归档</a></li>
+      
+      <li class="" ><a href="/tags" class="menu">标签</a></li>
+      
+      <li class="" ><a href="/about" class="menu">关于</a></li>
+      
+    </ul>
+  </nav>
+  <div class="my_socials">
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-instagram"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-weibo"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-facebook"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-flickr"></i></a>
+      
+    
+      
+      <a href="1" class="translate-effect" target="_blank"><i class="fa fa-feed"></i></a>
+      
+    
+  </div>
+</div>
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            <div id="posts" class="posts single">
+            <!-- start: .articles -->
+            
+            <article class="post hentry format-daily">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2014-04-19</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/slimbox2-js-adaptive/">Slimbox2.js 图片灯箱自适应</a>
+                </h1>
+                <div class="post-content">
+                    <div class="post-hentry">
+                        <p>Github： <a href="https://github.com/lmm214/slimbox2-lite">slimbox2-lite</a></p>
+<p>很久很久以前（喂，喂喂），很早很早以前（嘿！），好吧。以前发现只有几KB的图片灯箱特效 slimbox2 就瞬间被它征服了，不过这娃一直有个硬伤：</p>
+<p>图片多大灯箱显示出来的图片就有多大。就是说，一旦图片比较大比如1800<em>1200，显示器只有1280</em>800，那真是赤果果扑面而来啊！</p>
+<p>虽然带着这个硬伤，还是把它作为哥发布的主题的标配！昨 @小黑黑 再一次向我反馈了这个情况，一下决心操起编辑器开试。吼，花了个把小时把 js 从头到尾读了N遍后，顺利搞定！修改部分如下：</p>
+<!--more-->
+<pre><code class="language-javascript">function animateBox() {
+	center.className = &quot;&quot;;
+	//Slimbox2 图片灯箱自适应 By ImMmMm.com
+	//CSS 内新增 background-size&quot;:&quot;100%&quot;，之后增加对浏览器宽、高和图片宽、高判断。
+	$(image).css({backgroundImage: &quot;url(&quot; + activeURL + &quot;)&quot;, visibility: &quot;hidden&quot;, display: &quot;&quot;,&quot;background-size&quot;:&quot;100%&quot;});
+	var p_w = preload.width,p_h = preload.height,w_w = win.width(),w_h = win.height();
+	if (p_w &gt;= w_w || p_h &gt;= w_h){
+		if ( w_w &gt;= w_h ){
+			$(sizer).width(w_h*0.8*p_w/p_h);
+			$([sizer, prevLink, nextLink]).height(w_h*0.8);
+		}else{
+			$(sizer).width(w_w*0.8);
+			$([sizer, prevLink, nextLink]).height(w_w*0.8*p_h/p_w);
+		}			
+	}else{
+		$(sizer).width(preload.width);
+		$([sizer, prevLink, nextLink]).height(preload.height);
+	}
+	//End
+</code></pre>
+<p>主要思路是图片宽度或高度超出浏览器时：图片宽度大于高度（横图），以浏览器高度80%作为图片高度，宽度等比缩小；竖图，反之处理。</p>
+<p>不容易遇到个需求点而且顺利解决，话不免多了起开，哈哈～</p>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </article>
+            
+
+            <div id="comments"></div>
+            
+            </div>
+
+        </div>
+
+            <footer id="footer" class="">
+        <p class="published border-effect">
+          ©2020 共 112 篇文章
+          <br/>
+          Theme <a href="https://immmmm.com/gridea-theme-motify/" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+        
+        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
+          <i class="fa fa-arrow"></i>
+        </a>
+    </footer>
+
+    <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+<script>
+jQuery(document).ready(function($){
+          $("photos img").each(function(){
+              var _a = $("<a></a>").attr("href",this.src);
+              $(this).wrap("<div class='photo'></div>").wrap(_a);
+          })
+          $("figure img").each(function(){
+              var _b = $("<a></a>").attr("href",this.src);
+              $(this).wrap(_b);
+          })
+          isImgLoad(function(){
+            var photos = document.querySelector('photos');
+            if(photos){
+              waterfall(photos);
+            }
+            $(window).resize(function() {
+             if(photos){
+                  waterfall(photos);
+            }
+          });
+});
+        var t_img;
+        var isLoad = true;
+        function isImgLoad(callback){
+          $('photos img').each(function(){
+            if(this.height === 0){
+              isLoad = false;
+              return false;
+            }
+          });
+          if(isLoad){
+            clearTimeout(t_img);
+            callback();
+          }else{
+            isLoad = true;
+            t_img = setTimeout(function(){
+              isImgLoad(callback);
+            },500);
+          }
+        }
+      });
+</script>
+
+<script>
+jQuery(document).ready(function($) {
+    //灯箱
+    $(".post-hentry a[rel!=link]:has(img)").slimbox();
+    //返回顶部
+    var bt;
+    bt = $('#back_to_top');
+    if ($(document).width() > 480) {
+      $(window).scroll(function() {
+        var st;
+        st = $(window).scrollTop();
+        if (st > 30) {
+          bt.css('display', 'block');
+        } else {
+          bt.css('display', 'none');
+        }
+      });
+      bt.click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    }
+    //相对时间
+    $.lately({'target' : 'time.date span,.author-date small'});
+    //外链新窗口
+    var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+    var location_href = window.location.href.replace(parse_url,'$3');
+    $('.post-content a:not(:has(img)),.author-name a').hover(function() {
+        var this_href = $(this).attr('href');
+        var replace_href = this_href.replace(parse_url,'$3');
+        if ( this_href != replace_href && location_href != replace_href){$(this).attr('target','_blank');}
+    });
+    //外链加图标
+        function urlIconlize(url) {
+        var domain,
+            _output;
+        var iconFontTag = 'iconfont';
+        var iconMap = {
+            'twitter': iconFontTag + '-twitter',
+            'wechat': iconFontTag + '-wechat',
+            'qzone': iconFontTag + '-qzone',
+            'weibo': iconFontTag + '-weibo',
+            'facebook': iconFontTag + '-facebook',
+            'github': iconFontTag + '-github',
+            'douban': iconFontTag + '-douban',
+            'google': iconFontTag + '-google',
+            'luolei': iconFontTag + '-luolei',
+            'dribble': iconFontTag + '-dribble',
+            'v2ex': iconFontTag + '-v2ex',
+            'zhihu': iconFontTag + '-zhihu',
+            'wikipedia': iconFontTag + '-wikipedia',
+            'jianshu': iconFontTag + '-jianshu',
+            'youku': iconFontTag + '-youku',
+            'youtube': iconFontTag + '-youtube'
+        }
+        for (var name in iconMap) {
+            if (typeof iconMap[name] !== 'function') {
+                var MapKey = name;
+                if (url.indexOf(MapKey) >= 0) {
+                    domain = MapKey;
+                    _output = iconMap[MapKey];
+                }
+            }
+        }
+        return _output;
+    };
+    function addIcons() {
+      $('.post-content  a:not(:has(img))').each(function(i) {
+            var _src = $(this).attr('href');
+            var tmp = document.createElement('a');
+            tmp.href = _src;
+            _selfDomain = tmp.hostname;
+            urlIconlize(_selfDomain);
+            $(this).prepend('<i class="iconfont ' + urlIconlize(_selfDomain) + '"></i>');
+
+      });
+    }
+    addIcons();
+    //豆瓣图书电影条目
+    $(".post-content a[href*='douban']").each(function () {
+        var _this = $(this);
+        var str = _this.attr("href");
+        var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+        if (db_reg.test(str)) {
+            var db_type = str.replace(db_reg, "$1");
+            var db_id = str.replace(db_reg, "$2").toString();
+            var db_api = "https://bm.weajs.com/api/";
+            if (db_type == 'movie') {
+                var url = db_api + "movies/" + db_id + "/";
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: "json",
+                    success: function (data) {
+                        var db_star = Math.ceil(data.rating);
+                        $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>导演：" + data.directors + " / 类型：" + data.genres + " / " + data.pubdate + "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                    }
+                });
+            } else if (db_type == 'book') {
+                var url = db_api + "books/" + db_id;
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        var db_star = Math.ceil(data.rating);
+                        $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>作者：" + data.author + " </time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                    }
+                });
+            } else {
+                console.log("error")
+            }
+        }
+    });
+
+});
+</script>
+    </div>
+    <script src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js"></script>
+    <script>
+        jQuery(document).ready(function($){
+                new Valine({
+                    el: '#comments',
+                    recordIP:true,
+                    appId:'m6rxiyixBDG25mYPEPapQpnR-MdYXbMMI',
+                    appKey:'WMokwNAwh9noJ4XeUjVBjsCt',
+                    pageSize: 30,
+                    placeholder:'既然来了，那就留个痕迹吧~',
+                    //visitor: true
+                })
+                jinrishici.load(function(result) {
+                    var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+                    document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+                });
+                $(document).ready(function(){
+                    $('.vemoji-btn').text('😀');
+                    $("#comments").on('click', 'span.vat',function(){
+                        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+                        $('textarea#veditor').focus();
+                    })
+                })
+                if(window.location.hash){
+                    var checkExist = setInterval(function() {
+                        if ($(window.location.hash).length) {
+                            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+                            clearInterval(checkExist);
+                        }
+                    }, 100);
+                }
+        });
+    </script>
+  </body>
+</html>

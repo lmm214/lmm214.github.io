@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-09T10:50:31.052Z</updated>
+    <updated>2020-03-09T11:03:46.583Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
@@ -45,6 +45,123 @@
 <p>生，活着，当下异常值得庆祝！祝，自己生日快乐！祝，家人平安健康！</p>
 <!--more-->
 <p><photos><img src="https://lmm.elizen.me/images/2020/02/mh-7.jpeg" alt="mh-7" loading="lazy"><img src="https://lmm.elizen.me/images/2020/02/mh-6.jpeg" alt="mh-6" loading="lazy"><img src="https://lmm.elizen.me/images/2020/02/mh-5.jpeg" alt="mh-5" loading="lazy"><img src="https://lmm.elizen.me/images/2020/02/mh-4.jpeg" alt="mh-4" loading="lazy"><img src="https://lmm.elizen.me/images/2020/02/mh-3.jpeg" alt="mh-3" loading="lazy"><img src="https://lmm.elizen.me/images/2020/02/mh-2.jpeg" alt="mh-2" loading="lazy"><img src="https://lmm.elizen.me/images/2020/02/mh-1.jpeg" alt="mh-1" loading="lazy"></photos></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[今日诗词 & Valine]]></title>
+        <id>https://immmmm.com/jinrishici-with-valine/</id>
+        <link href="https://immmmm.com/jinrishici-with-valine/">
+        </link>
+        <updated>2020-01-30T08:40:00.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.jinrishici.com/">今日诗词</a>：一个可以随机返回一句古诗词名句的接口，宅到用来做 Valine 的 placeholder 显示内容……</p>
+<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2020/01/jinrishici.png" alt="今日诗词 and Valine" loading="lazy"></figure>
+<pre><code class="language-js">&lt;script src=&quot;https://sdk.jinrishici.com/v2/browser/jinrishici.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+jinrishici.load(function(result) {
+	var jrsc_plac =  result.data.content + &quot;\n「&quot; + result.data.origin.title + &quot;」&quot; + result.data.origin.dynasty + &quot; · &quot; + result.data.origin.author
+	document.getElementById(&quot;veditor&quot;).setAttribute(&quot;placeholder&quot;,jrsc_plac);
+});
+&lt;/script&gt;
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Valine 文章列表显示评论数和阅读数]]></title>
+        <id>https://immmmm.com/valine-show-comment-views/</id>
+        <link href="https://immmmm.com/valine-show-comment-views/">
+        </link>
+        <updated>2020-01-27T11:05:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>回头一看 Valine 已使用半年，除早前国内版 Leancloud 出现<strong>被</strong>宕机，整体还算稳。</p>
+<p><a href="valine-by-leancloud-cn">valine-by-leancloud-cn</a></p>
+<p><a href="valine-diy">valine-diy</a></p>
+<p>闲着寻思到 Valine 能否在首页文章列表中显示对应的「评论数」和「阅读数」，查阅了文档（只有阅读数代码）和issue，好家伙,竟然 <a href="https://github.com/xCss/Valine/releases/tag/v1.1.8-beta2">v1.1.8-beta2</a> 已实现！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>回头一看 Valine 已使用半年，除早前国内版 Leancloud 出现<strong>被</strong>宕机，整体还算稳。</p>
+<p><a href="valine-by-leancloud-cn">valine-by-leancloud-cn</a></p>
+<p><a href="valine-diy">valine-diy</a></p>
+<p>闲着寻思到 Valine 能否在首页文章列表中显示对应的「评论数」和「阅读数」，查阅了文档（只有阅读数代码）和issue，好家伙,竟然 <a href="https://github.com/xCss/Valine/releases/tag/v1.1.8-beta2">v1.1.8-beta2</a> 已实现！</p>
+<!-- more -->
+<h3 id="评论数">评论数</h3>
+<pre><code class="language-html">&lt;span class=&quot;valine-comment-count&quot; data-xid=&quot;pathname&quot;&gt;&lt;/span&gt;
+</code></pre>
+<p>自动查找网页中class值为 <code>valine-comment-count</code> 的元素并自动填充查询结果，如果文章完整网址是 <code>http://immmmm.com/valine-show-comment-views</code> ，pathname则是 <code>/valine-show-comment-views</code>。</p>
+<h3 id="阅读数">阅读数</h3>
+<p>直接套用手册：<a href="https://valine.js.org/visitor.html">https://valine.js.org/visitor.html</a></p>
+<h3 id="结语">结语</h3>
+<p>效果预览：<a href="https://i.immmmm.com/">https://i.immmmm.com/</a></p>
+<p>但发现如果首页刷新过快，会被 Leancloud 阻止……</p>
+<p>PS：刚官宣学校推迟上学了，咳！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[文章内显示豆瓣条目]]></title>
+        <id>https://immmmm.com/post-show-douban-item/</id>
+        <link href="https://immmmm.com/post-show-douban-item/">
+        </link>
+        <updated>2020-01-25T13:31:46.000Z</updated>
+        <summary type="html"><![CDATA[<p>小众豆瓣已成刚需，电影、图书看完都会标记下，写日志时常会提到，老想着在文章内「优雅」地展示，官方 API 已废，幸好还有给力的 <a href="https://mufeng.me/">@mufeng</a> 兄，以下功能就使用其提供的轮子。</p>
+<h3 id="效果如下">效果如下</h3>
+<p><a href="https://book.douban.com/subject/33408247/">https://book.douban.com/subject/33408247/</a></p>
+<p><a href="https://movie.douban.com/subject/10432911/">https://movie.douban.com/subject/10432911/</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>小众豆瓣已成刚需，电影、图书看完都会标记下，写日志时常会提到，老想着在文章内「优雅」地展示，官方 API 已废，幸好还有给力的 <a href="https://mufeng.me/">@mufeng</a> 兄，以下功能就使用其提供的轮子。</p>
+<h3 id="效果如下">效果如下</h3>
+<p><a href="https://book.douban.com/subject/33408247/">https://book.douban.com/subject/33408247/</a></p>
+<p><a href="https://movie.douban.com/subject/10432911/">https://movie.douban.com/subject/10432911/</a></p>
+<!-- more -->
+<h3 id="使用方式">使用方式</h3>
+<p>如果是md的话之间输入以下格式，其他输入a标签链接，注意链接以 <code>/</code> 斜杠结尾。</p>
+<pre><code class="language-html">&lt;https://book.douban.com/subject/33408247/&gt;
+&lt;https://movie.douban.com/subject/10432911/&gt;
+</code></pre>
+<h3 id="相关代码">相关代码</h3>
+<p><code>head</code>头部添加以下 meta</p>
+<pre><code class="language-html">&lt;meta name=&quot;referrer&quot; content=&quot;never&quot;&gt;
+</code></pre>
+<p>基于 jQuery 的功能代码：</p>
+<pre><code class="language-javascript">jQuery(document).ready(function ($) {
+  $(&quot;a[href*='douban']&quot;).each(function () {
+    var _this = $(this);
+    var str = _this.attr(&quot;href&quot;);
+    var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+    if (db_reg.test(str)) {
+      var db_type = str.replace(db_reg, &quot;$1&quot;);
+      var db_id = str.replace(db_reg, &quot;$2&quot;).toString();
+      var db_api = &quot;https://bm.weajs.com/api/&quot;;
+      if (db_type == 'movie') {
+        var url = db_api + &quot;movies/&quot; + db_id + &quot;/&quot;;
+        $.ajax({
+          url: url,
+          type: 'GET',
+          dataType: &quot;json&quot;,
+          success: function (data) {
+            var db_star = Math.ceil(data.rating);
+            $(&quot;&lt;div class='post-preview'&gt;&lt;div class='post-preview--meta'&gt;&lt;div class='post-preview--middle'&gt;&lt;h4 class='post-preview--title'&gt;&lt;a target='_blank' href='&quot; + str + &quot;'&gt;《&quot; + data.title + &quot;》&lt;/a&gt;&lt;/h4&gt;&lt;div class='rating'&gt;&lt;div class='rating-star allstar&quot; + db_star + &quot;'&gt;&lt;/div&gt;&lt;div class='rating-average'&gt;&quot; + data.rating + &quot;&lt;/div&gt;&lt;/div&gt;&lt;time class='post-preview--date'&gt;导演：&quot; + data.directors + &quot; / 类型：&quot; + data.genres + &quot; / &quot; + data.pubdate + &quot;&lt;/time&gt;&lt;section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'&gt;&quot; + data.intro + &quot;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img class='post-preview--image' src=&quot; + data.cover + &quot;&gt;&lt;/div&gt;&quot;).replaceAll(_this)
+          }
+        });
+      } else if (db_type == 'book') {
+        var url = db_api + &quot;books/&quot; + db_id;
+        $.ajax({
+          url: url,
+          type: 'GET',
+          dataType: 'json',
+          success: function (data) {
+            var db_star = Math.ceil(data.rating);
+            $(&quot;&lt;div class='post-preview'&gt;&lt;div class='post-preview--meta'&gt;&lt;div class='post-preview--middle'&gt;&lt;h4 class='post-preview--title'&gt;&lt;a target='_blank' href='&quot; + str + &quot;'&gt;《&quot; + data.title + &quot;》&lt;/a&gt;&lt;/h4&gt;&lt;div class='rating'&gt;&lt;div class='rating-star allstar&quot; + db_star + &quot;'&gt;&lt;/div&gt;&lt;div class='rating-average'&gt;&quot; + data.rating + &quot;&lt;/div&gt;&lt;/div&gt;&lt;time class='post-preview--date'&gt;作者：&quot; + data.author + &quot; &lt;/time&gt;&lt;section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'&gt;&quot; + data.intro + &quot;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img class='post-preview--image' src=&quot; + data.cover + &quot;&gt;&lt;/div&gt;&quot;).replaceAll(_this)
+          }
+        });
+      } else {
+        console.log(&quot;出错&quot; + id)
+      }
+    }
+  });
+});
+</code></pre>
+<p>样式代码：</p>
+<pre><code class="language-css">.post-preview{max-width:780px;height:210px;margin:1em auto;position:relative;display:flex;background:#fff;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.25),0 0 1px rgba(0,0,0,.25);}.post-preview--meta{width:75%;padding:25px;overflow:hidden;}.post-preview--middle {line-height:28px;}.post-preview--title {font-size:18px;margin:0!important;}.post-preview--title a{text-decoration:none;}.post-preview--date{font-size:14px;color:#999;}.post-preview--excerpt{font-size:14px;line-height:1.825;}.post-preview--excerpt p{margin-bottom:0;}  .post-preview--image {height:210px!important;width:auto;float:right;border-top-right-radius: 2px!important;border-bottom-right-radius:2px!important;border-top-left-radius:0!important;border-bottom-left-radius:0!important;}
+@media (max-width:550px) {.post-preview {width:95%;}.post-preview--excerpt{display:none;}.post-preview--middle {line-height:19px;}}
+.rating{display:block;line-height:15px;}.rating-star{display:inline-block;width:75px;height:15px;background-repeat:no-repeat;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==);overflow:hidden;}.allstar10{background-position:0px 0px;}.allstar9{background-position:0px -15px;}.allstar8{background-position:0px -30px;}.allstar7{background-position:0px -45px;}.allstar6{background-position:0px -60px;}.allstar5{background-position:0px -75px;}.allstar4{background-position:0px -90px;}.allstar3{background-position:0px -105px;}.allstar2{background-position:0px -120px;}.allstar1{background-position:0px -135px;}.allstar0{background-position:0px -150px;}.rating-average{color:#777;display:inline-block;font-size:13px;margin-left:10px;}
+</code></pre>
 ]]></content>
     </entry>
     <entry>
@@ -92,89 +209,51 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[2019-12-01]]></title>
-        <id>https://immmmm.com/2019-12-01/</id>
-        <link href="https://immmmm.com/2019-12-01/">
+        <title type="html"><![CDATA[OLAINDEX 搭建笔记]]></title>
+        <id>https://immmmm.com/olaindex-onedrive/</id>
+        <link href="https://immmmm.com/olaindex-onedrive/">
         </link>
-        <updated>2019-12-01T07:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>一台 VM 折腾了静态博客、Calibre-web、OneInedx，以及不可言说的功能。感叹，折腾真容易上瘾！但，折腾之后呢？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2019-11-23]]></title>
-        <id>https://immmmm.com/2019-11-23/</id>
-        <link href="https://immmmm.com/2019-11-23/">
-        </link>
-        <updated>2019-11-23T09:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>入了 MacBook Pro 后家里的 13年款 iMac 几乎雪藏，但仔细对比配置发现还是 iMac 高，可实际流畅度没法跟pro比。因为一个是ssd一个是sata硬盘。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>入了 MacBook Pro 后家里的 13年款 iMac 几乎雪藏，但仔细对比配置发现还是 iMac 高，可实际流畅度没法跟pro比。因为一个是ssd一个是sata硬盘。</p>
-<!-- more -->
-<p><img src="https://lmm.elizen.me/images/2019/11/ssd.png" alt="续命成功" loading="lazy"> <img src="https://lmm.elizen.me/images/2019/11/ssd-2.png" alt="ssd" loading="lazy"></p>
-<p>随便买了个西数的500G蓝盘+绿联USB3.0硬盘盒，Mac App Store 里下载好系统，外置盘接上USB格式化安装重启，指定外置ssd启动系统，续命成功！</p>
-<p>其实双十一就想折腾来着，但搜来搜去教程都说要制作启动U盘，搁置到现在。哎，搜索越来越难。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2019-10-27]]></title>
-        <id>https://immmmm.com/2019-10-27/</id>
-        <link href="https://immmmm.com/2019-10-27/">
-        </link>
-        <updated>2019-10-27T11:22:00.000Z</updated>
-        <content type="html"><![CDATA[<p>小程序收到好心人100分“巨款”捐赠，意义非凡！几周用户已有2k5，每天访问在100左右，内置广告已收入7.3元，达成人生一大flag“睡后”收入！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2019-10-07]]></title>
-        <id>https://immmmm.com/2019-10-07/</id>
-        <link href="https://immmmm.com/2019-10-07/">
-        </link>
-        <updated>2019-10-07T02:22:00.000Z</updated>
-        <content type="html"><![CDATA[<p>为下载个音视频真不容易，安上 <a href="https://github.com/soimort/you-get/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E">you-get</a> 基本解决。另外，图片、文档、课件依然乖乖交税。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Macbook 二三事]]></title>
-        <id>https://immmmm.com/macbook-some-things/</id>
-        <link href="https://immmmm.com/macbook-some-things/">
-        </link>
-        <updated>2019-09-29T09:30:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>感谢老婆，二话没说，一个字买。官网败了 MacBook Pro 2019 13寸 2.4G ，用工作证享受了把教育优惠，还得到一副近3k的Beats耳机。昨中午开始折腾到深夜，基本调教完毕。</p>
-<h3 id="槽点无数砸钱来填">槽点无数，砸钱来填</h3>
-<p>-仅typec口，需另购配件配线 USB、SD、VGA、HDMI 扩展坞买起<br>
--CPU在40度以上，剪辑视频导出时近70度，touchbar烫手，风扇托盘买起<br>
--键盘真残，近正方形比例、键帽预估容易积灰，键盘膜买起<br>
--屏幕反光厉害，时常看瞎自己，啥膜买起？<br>
-……</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>感谢老婆，二话没说，一个字买。官网败了 MacBook Pro 2019 13寸 2.4G ，用工作证享受了把教育优惠，还得到一副近3k的Beats耳机。昨中午开始折腾到深夜，基本调教完毕。</p>
-<h3 id="槽点无数砸钱来填">槽点无数，砸钱来填</h3>
-<p>-仅typec口，需另购配件配线 USB、SD、VGA、HDMI 扩展坞买起<br>
--CPU在40度以上，剪辑视频导出时近70度，touchbar烫手，风扇托盘买起<br>
--键盘真残，近正方形比例、键帽预估容易积灰，键盘膜买起<br>
--屏幕反光厉害，时常看瞎自己，啥膜买起？<br>
-……</p>
-<!--more-->
-<h3 id="系统bug颜值来凑">系统BUG，颜值来凑</h3>
-<p>-办公基本满足，主流办公通讯都有Mac版。<br>
--无需频繁开关机，睡眠模式真睡眠，续航给力。<br>
--轻量PS、剪视频导出秒杀同配置win。<br>
--开关APP丝滑般的感受。<br>
-……</p>
-<h3 id="新机调校app清单">新机调校，APP清单</h3>
-<p>触摸板设置：轻点触摸板即点击、三指拖动、双击标题最小化。<br>
-触发角：「系统偏好设置」-「桌面与屏幕保护程序」-「屏幕保护程序」，选择「触发角」<br>
-Finder：「显示」菜单中将路径和硬盘容量显示出来<br>
-同窗口中只开启新标签页：程序坞中「打开文稿时首选标签页」设为始终。个人喜欢双击打开文件所在目录时，都在同一个finder窗口中只开启新标签页<br>
-Tab控制间移动焦点：键盘 - 快捷键 - 勾选最下方的「使用键盘导航在控制间移动焦点」，这样设置后每次弹框，tab键就可切换选项，回车确认很方便</p>
-<p>系统增强：iStat Menus、Bartender、Moom、eZIP、IINA、Snipaste、Pin。<br>
-办公工具：Sublime Text、uPic、Adobe Photoshop CC 2019、Camtasia、Chrome、印象笔记、WPS Office、钉钉、微信、QQ、微云。<br>
-江湖救急：Microsoft Remote Desktop、Parallels Desktop、Teamviews。</p>
-<p>dock 自定义延迟</p>
-<pre><code>defaults write com.apple.dock autohide-time-modifier -float 0.3;killall Dock
+        <updated>2019-12-06T05:05:00.000Z</updated>
+        <summary type="html"><![CDATA[<p><a href="https://wangningkai.github.io/OLAINDEX/#/?id=olaindex">OLAINDEX</a>：Another One Drrive Directory Index</p>
+<p>最后遇到id和密钥无法保存，输入下面命令解决。</p>
+<pre><code>chmod 777 storage/app/
 </code></pre>
-<h3 id="总结评分">总结评分</h3>
-<p>总体而言，10分制打8分，其中颜值占2分。</p>
+<p>支持前端上传文件，大赞！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://wangningkai.github.io/OLAINDEX/#/?id=olaindex">OLAINDEX</a>：Another One Drrive Directory Index</p>
+<p>最后遇到id和密钥无法保存，输入下面命令解决。</p>
+<pre><code>chmod 777 storage/app/
+</code></pre>
+<p>支持前端上传文件，大赞！</p>
+<!-- more -->
+<p>部署成果：<a href="https://o.immmmm.com/">https://o.immmmm.com/</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[电报 Flowerss Bot 搭建笔记]]></title>
+        <id>https://immmmm.com/telegram-flowerss-bot/</id>
+        <link href="https://immmmm.com/telegram-flowerss-bot/">
+        </link>
+        <updated>2019-12-02T07:05:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>看中一点：支持 Telegram 应用内 instant view ！</p>
+<p>点开即用：<a href="https://t.me/rssflowbot">https://t.me/rssflowbot</a></p>
+<p>项目主页：<a href="https://github.com/indes/flowerss-bot">https://github.com/indes/flowerss-bot</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>看中一点：支持 Telegram 应用内 instant view ！</p>
+<p>点开即用：<a href="https://t.me/rssflowbot">https://t.me/rssflowbot</a></p>
+<p>项目主页：<a href="https://github.com/indes/flowerss-bot">https://github.com/indes/flowerss-bot</a></p>
+<!-- more -->
+<h3 id="搭建">搭建</h3>
+<p><code>bot token</code>获取，电报 @Botfather，点 start，输入 /newbot，命名后获得 API Token。</p>
+<p><code>telegraph token</code>获取，返回的 JSON 中 access_token 字段值即为 Telegraph Token。</p>
+<pre><code>curl https://api.telegra.ph/createAccount?short_name=flowerss&amp;author_name=flowerss&amp;author_url=https://github.com/indes/flowerss-bot
+</code></pre>
+<p>然后构建命令，docker 一键部署：</p>
+<pre><code>docker run -d -v ~/data/flowerss:/var/flowerss indes/flowerss-bot -b &lt;bot token&gt; -t &lt;telegraph token&gt;
+</code></pre>
+<p>然后？然后，就成功啦！</p>
+<h3 id="绝配">绝配</h3>
+<p>RSSHub： <a href="https://docs.rsshub.app/">https://docs.rsshub.app/</a></p>
 ]]></content>
     </entry>
 </feed>
