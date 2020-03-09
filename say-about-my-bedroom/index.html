@@ -15,6 +15,7 @@
     <meta name="description" content="这哥们是跟我同一高中毕业的，不过是我高中毕业时，他才考进这所高中，我专升本到现在的大学，他也刚好考到了这所大学，有幸有缘，我俩还被分到了同一寝室！
 本来他也没啥好说的，就因他有个女朋友，他考到了这，她没考上这。
 于是说的东西就来了：他每晚坚..." />
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
   </head>
   <body>
     <!-- start: #wrapper -->
@@ -104,6 +105,7 @@
             </article>
             
             </div>
+            <div id="comments"></div>
         </div>
 
             <footer id="footer" class="">
@@ -282,5 +284,39 @@ jQuery(document).ready(function($) {
 });
 </script>
     </div>
+    <script src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js"></script>
+    <script>
+        jQuery(document).ready(function($){
+                new Valine({
+                    el: '#comments',
+                    recordIP:true,
+                    appId:'m6rxiyixBDG25mYPEPapQpnR-MdYXbMMI',
+                    appKey:'WMokwNAwh9noJ4XeUjVBjsCt',
+                    pageSize: 30,
+                    placeholder:'既然来了，那就留个痕迹吧~',
+                    //visitor: true
+                })
+                jinrishici.load(function(result) {
+                    var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+                    document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+                });
+                $(document).ready(function(){
+                    $('.vemoji-btn').text('😀');
+                    $("#comments").on('click', 'span.vat',function(){
+                        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+                        $('textarea#veditor').focus();
+                    })
+                })
+                if(window.location.hash){
+                    var checkExist = setInterval(function() {
+                        if ($(window.location.hash).length) {
+                            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+                            clearInterval(checkExist);
+                        }
+                    }, 100);
+                }
+        });
+    </script>
   </body>
 </html>
