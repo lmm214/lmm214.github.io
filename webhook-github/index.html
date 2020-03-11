@@ -99,6 +99,7 @@ password: xxx
 <p>域名配置，A记录到主机IP，宝塔-网站，安装nginx，一键https部署。</p>
 <h3 id="宝塔调配-webhook">宝塔调配 webhook</h3>
 <p>进面板-软件商店-装“webhook”，编辑 shell 命令：</p>
+<p><code>gitHttp=&quot;https://github.com/lmm214/blog.git&quot;</code> 需自行修改</p>
 <pre><code>#!/bin/bash
 echo &quot;&quot;
 #输出当前时间
@@ -143,6 +144,7 @@ fi
 </code></pre>
 <h3 id="github-存钩子">GitHub 存钩子</h3>
 <p>宝塔webhook查密钥记录下，GitHub 仓库 settings 钩子：</p>
+<p><code>密钥</code> 和 <code>i.immmmm.com</code> 需自行修改</p>
 <pre><code>http://x.x.x.x:8888/hook?access_key=密钥&amp;param=i.immmmm.com
 </code></pre>
 <p>参考文章：<a href="https://1078503.org/2019/11/4/">宝塔面板中通过GitHub同步博客仓库并通过webhook勾子拉取更新</a></p>
