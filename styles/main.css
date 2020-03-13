@@ -972,6 +972,10 @@ a.back_to_top span {
   .archive-item {
     width: 99%;
   }
+  .tags-item,
+  .links-item {
+    width: 49%;
+  }
 }
 .pages .post-content a {
   color: #999 !important;
