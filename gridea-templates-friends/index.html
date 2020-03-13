@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>三步创建 Gridea 友情链接页 | 木木木木木</title>
+<meta name="referrer" content="never" />
+<link rel="shortcut icon" href="https://immmmm.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://immmmm.com/styles/main.css">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+
+	<script src="https://cdn.jsdelivr.net/gh/lmm214/immmmm/media/js/lately.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/lmm214/immmmm/media/js/waterfall.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/lmm214/immmmm/media/js/slimbox2.min.js"></script>
+
+    <meta name="description" content="围观地址：https://i.immmmm.com/friends/ （官方教程)
+注：以下方法基于 Gridea v0.9+ ，相关代码以内置主题 notes 为例。
+
+一、添加自定义主题功能代码
+
+themes/notes/config..." />
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/prism.min.js"></script>
+  </head>
+  <body>
+    <!-- start: #wrapper -->
+    <header id="header" style="background-image:url(https://lmm.elizen.me/images/2020/01/my-friends-5.jpg)">
+        <div class="header-container">
+  <h1 class="site-title"><a href="https://immmmm.com">木木木木木</a></h1>
+  <h2 class="site-description"></h2>
+  <nav class="main-navigation">
+    <ul id="" class="">
+      
+      <li class="" ><a href="/" class="menu">首页</a></li>
+      
+      <li class="" ><a href="https://immmmm.com/books/" class="menu">阅读</a></li>
+      
+      <li class="" ><a href="https://immmmm.com/moives/" class="menu">观影</a></li>
+      
+      <li class="" ><a href="https://immmmm.com/archives/" class="menu">归档</a></li>
+      
+    </ul>
+  </nav>
+  <div class="my_socials">
+    
+      
+      <a href="https://twitter.com/linmumu" class="translate-effect" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <a href="https://github.com/lmm214" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+      
+    
+      
+    
+      
+      <a href="https://immmmm.com/atom.xml" class="translate-effect" target="_blank"><i class="fa fa-feed"></i></a>
+      
+    
+  </div>
+</div>
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            <div id="posts" class="posts single">
+            <!-- start: .articles -->
+            
+            <article class="post hentry format-daily">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2020-01-02 20:46</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    三步创建 Gridea 友情链接页
+                </h1>
+                <div class="post-content">
+                    <div class="post-hentry">
+                        <p>围观地址：<a href="https://i.immmmm.com/friends/">https://i.immmmm.com/friends/</a> （<a href="https://gridea.dev/docs/theme-custom.html#%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E9%85%8D%E7%BD%AE">官方教程</a>)</p>
+<p>注：以下方法基于 Gridea v0.9+ ，相关代码以内置主题 notes 为例。</p>
+<!-- more -->
+<h3 id="一-添加自定义主题功能代码">一、添加自定义主题功能代码</h3>
+<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2020/01/my-friends-2.png" alt="友链客户端" loading="lazy"></figure>
+<p><code>themes/notes/config.json</code>，添加以下代码：</p>
+<pre><code class="language-js">//……
+//&quot;note&quot;: &quot;UA-xxxxxxxxx-x&quot;
+//}, 添加逗号！！！
+    {
+      &quot;name&quot;: &quot;friends&quot;,
+      &quot;label&quot;: &quot;友链&quot;,
+      &quot;group&quot;: &quot;友链&quot;,
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;value&quot;: [],
+      &quot;arrayItems&quot;: [
+        { &quot;label&quot;: &quot;名称&quot;, &quot;name&quot;: &quot;siteName&quot;, &quot;type&quot;: &quot;input&quot;, &quot;value&quot;: &quot;&quot; },
+        { &quot;label&quot;: &quot;链接&quot;, &quot;name&quot;: &quot;siteLink&quot;, &quot;type&quot;: &quot;input&quot;, &quot;value&quot;: &quot;&quot; },
+        { &quot;label&quot;: &quot;Logo&quot;, &quot;name&quot;: &quot;siteLogo&quot;, &quot;type&quot;: &quot;picture-upload&quot;, &quot;value&quot;: &quot;&quot; },
+        { &quot;label&quot;: &quot;描述&quot;, &quot;name&quot;: &quot;description&quot;, &quot;type&quot;: &quot;textarea&quot;, &quot;value&quot;: &quot;&quot; }
+      ],
+      &quot;note&quot;: &quot;&quot;
+    }
+//  ]
+//}
+</code></pre>
+<p>保存，重启客户端，主题--自定义主题--友链。</p>
+<h3 id="二-创建自定义页面">二、创建自定义页面</h3>
+<p><code>themes/notes/templates/post.ejs</code> 复制并重命名为 <code>friends.ejs</code>，替换成如下代码：</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;%- include('./includes/head', { siteTitle: `我的朋友们 | ${themeConfig.siteName}` }) %&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;main&quot;&gt;
+      &lt;div class=&quot;main-content&quot;&gt;
+        &lt;%- include('./includes/header') %&gt;
+        &lt;div class=&quot;post-detail&quot;&gt;
+          &lt;article class=&quot;post&quot;&gt;
+            &lt;h2 class=&quot;post-title&quot;&gt;我的朋友们&lt;/h2&gt;
+
+            &lt;div class=&quot;post-content-wrapper&quot;&gt;
+              &lt;div class=&quot;post-content&quot;&gt;
+              &lt;% if (site.customConfig.friends) { %&gt;
+                &lt;% site.customConfig.friends.forEach(function(friend) { %&gt;
+                  &lt;div class=&quot;friend-box&quot;&gt;
+                    &lt;img class=&quot;friend-avatar&quot; src=&quot;&lt;%= friend.siteLogo %&gt;&quot;&gt;
+                    &lt;div class=&quot;flink-info&quot;&gt;
+                      &lt;a href=&quot;&lt;%= friend.siteLink %&gt;&quot; target=&quot;_blank&quot;&gt;&lt;%= friend.siteName %&gt;&lt;/a&gt;
+                      &lt;br/&gt;
+                      &lt;%= friend.description %&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;% }); %&gt;
+              &lt;% } %&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+
+        &lt;%- include('./includes/footer') %&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="三-添加样式代码">三、添加样式代码</h3>
+<figure data-type="image" tabindex="2"><img src="https://lmm.elizen.me/images/2020/01/my-friends-3.png" alt="友链效果" loading="lazy"></figure>
+<p><code>themes/notes/assets/styles/main.less</code>，添加以下代码：</p>
+<pre><code class="language-css">.friend-box {
+  float: left;
+  width: calc(50% - 20px);
+  margin: 15px 10px;
+  img.friend-avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 50% !important;
+    float: left;
+    margin:0 15px 0 0 !important;
+  }
+  .flink-info{
+    height:70px;
+    overflow: hidden;
+    line-height: 24px;
+  }
+}
+</code></pre>
+<h3 id="结语">结语</h3>
+<p>1、2、3，折腾起～</p>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </article>
+            
+
+            <div id="comments"></div>
+            
+            </div>
+
+        </div>
+
+            <footer id="footer" class="">
+        <p class="published border-effect">
+          ©2020 共 124 篇文章
+          <br/>
+          Theme <a href="https://immmmm.com/gridea-theme-motify/" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+    </footer>
+
+    <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+<script>
+jQuery(document).ready(function($){
+          $("photos img").each(function(){
+              var _a = $("<a></a>").attr("href",this.src);
+              $(this).wrap("<div class='photo'></div>").wrap(_a);
+          })
+          $("figure img").each(function(){
+              var _b = $("<a></a>").attr("href",this.src);
+              $(this).wrap(_b);
+          })
+          isImgLoad(function(){
+            var photos = document.querySelector('photos');
+            if(photos){
+              waterfall(photos);
+            }
+            $(window).resize(function() {
+             if(photos){
+                  waterfall(photos);
+            }
+          });
+});
+        var t_img;
+        var isLoad = true;
+        function isImgLoad(callback){
+          $('photos img').each(function(){
+            if(this.height === 0){
+              isLoad = false;
+              return false;
+            }
+          });
+          if(isLoad){
+            clearTimeout(t_img);
+            callback();
+          }else{
+            isLoad = true;
+            t_img = setTimeout(function(){
+              isImgLoad(callback);
+            },500);
+          }
+        }
+      });
+</script>
+
+<script>
+jQuery(document).ready(function($) {
+    //灯箱
+    $(".post-hentry a[rel!=link]:has(img)").slimbox();
+    //返回顶部
+    var bt;
+    bt = $('#back_to_top');
+    if ($(document).width() > 480) {
+      $(window).scroll(function() {
+        var st;
+        st = $(window).scrollTop();
+        if (st > 30) {
+          bt.css('display', 'block');
+        } else {
+          bt.css('display', 'none');
+        }
+      });
+      bt.click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    }
+    //相对时间
+    $.lately({'target' : 'time.date span,.author-date small'});
+    //外链新窗口
+    var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+    var location_href = window.location.href.replace(parse_url,'$3');
+    $('.post-content a:not(:has(img)),.author-name a').hover(function() {
+        var this_href = $(this).attr('href');
+        var replace_href = this_href.replace(parse_url,'$3');
+        if ( this_href != replace_href && location_href != replace_href){$(this).attr('target','_blank');}
+    });
+    //外链加图标
+        function urlIconlize(url) {
+        var domain,
+            _output;
+        var iconFontTag = 'iconfont';
+        var iconMap = {
+            'twitter': iconFontTag + '-twitter',
+            'wechat': iconFontTag + '-wechat',
+            'qzone': iconFontTag + '-qzone',
+            'weibo': iconFontTag + '-weibo',
+            'facebook': iconFontTag + '-facebook',
+            'github': iconFontTag + '-github',
+            'douban': iconFontTag + '-douban',
+            'google': iconFontTag + '-google',
+            'luolei': iconFontTag + '-luolei',
+            'dribble': iconFontTag + '-dribble',
+            'v2ex': iconFontTag + '-v2ex',
+            'zhihu': iconFontTag + '-zhihu',
+            'wikipedia': iconFontTag + '-wikipedia',
+            'jianshu': iconFontTag + '-jianshu',
+            'youku': iconFontTag + '-youku',
+            'youtube': iconFontTag + '-youtube'
+        }
+        for (var name in iconMap) {
+            if (typeof iconMap[name] !== 'function') {
+                var MapKey = name;
+                if (url.indexOf(MapKey) >= 0) {
+                    domain = MapKey;
+                    _output = iconMap[MapKey];
+                }
+            }
+        }
+        return _output;
+    };
+    function addIcons() {
+      $('.post-content  a:not(:has(img))').each(function(i) {
+            var _src = $(this).attr('href');
+            var tmp = document.createElement('a');
+            tmp.href = _src;
+            _selfDomain = tmp.hostname;
+            urlIconlize(_selfDomain);
+            $(this).prepend('<i class="iconfont ' + urlIconlize(_selfDomain) + '"></i>');
+
+      });
+    }
+    addIcons();
+    //豆瓣图书电影条目
+    $(".post-content a[href*='douban']").each(function () {
+        var _this = $(this);
+        var str = _this.attr("href");
+        var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+        if (db_reg.test(str)) {
+            var db_type = str.replace(db_reg, "$1");
+            var db_id = str.replace(db_reg, "$2").toString();
+            var db_api = "https://bm.weajs.com/api/";
+            if (db_type == 'movie') {
+                var url = db_api + "movies/" + db_id + "/";
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: "json",
+                    success: function (data) {
+                        var db_star = Math.ceil(data.rating);
+                        $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>导演：" + data.directors + " / 类型：" + data.genres + " / " + data.pubdate + "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                    }
+                });
+            } else if (db_type == 'book') {
+                var url = db_api + "books/" + db_id;
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        var db_star = Math.ceil(data.rating);
+                        $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>作者：" + data.author + " </time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                    }
+                });
+            } else {
+                console.log("error")
+            }
+        }
+    });
+
+});
+</script>
+    </div>
+    <script src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js"></script>
+    <script>
+        jQuery(document).ready(function($){
+                new Valine({
+                    el: '#comments',
+                    recordIP:true,
+                    appId:'m6rxiyixBDG25mYPEPapQpnR-MdYXbMMI',
+                    appKey:'WMokwNAwh9noJ4XeUjVBjsCt',
+                    pageSize: 30,
+                    placeholder:'既然来了，那就留个痕迹吧~',
+                    //visitor: true
+                })
+                jinrishici.load(function(result) {
+                    var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+                    document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+                });
+                $(document).ready(function(){
+                    $('.vemoji-btn').text('😀');
+                    $("#comments").on('click', 'span.vat',function(){
+                        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+                        $('textarea#veditor').focus();
+                    })
+                })
+                if(window.location.hash){
+                    var checkExist = setInterval(function() {
+                        if ($(window.location.hash).length) {
+                            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+                            clearInterval(checkExist);
+                        }
+                    }, 100);
+                }
+        });
+    </script>
+  </body>
+</html>
