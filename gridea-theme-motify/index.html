@@ -98,7 +98,29 @@
 <li>日志图片瀑布流使用  <code>&lt;photos&gt;&lt;/photos&gt;</code> 包裹，且不换行才有效；</li>
 <li>支持<a href="https://immmmm.com/post-show-douban-item/">《文章内显示豆瓣条目》</a>;</li>
 </ul>
-<p>🤘</p>
+<h3 id="提速小记">提速小记</h3>
+<ul>
+<li>Valine 评论功能的js在 <code>post.ejs</code> 才加载；</li>
+<li>字符图标文件托管到七牛云；</li>
+<li>页脚添加 <a href="https://instant.page/">https://instant.page/</a> ;</li>
+<li>首页、日志页分别添加预加载 prefetch；</li>
+</ul>
+<p><code>index.ejs</code></p>
+<pre><code class="language-js">    &lt;% if (pagination.prev) { %&gt;
+    &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= pagination.prev %&gt;&quot;&gt;
+    &lt;% } %&gt;
+    &lt;% if (pagination.next) { %&gt;
+    &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= pagination.next %&gt;&quot;&gt;
+    &lt;% } %&gt;
+</code></pre>
+<p><code>post.ejs</code></p>
+<pre><code class="language-js">    &lt;% if (post.prevPost) { %&gt;
+    &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= post.prevPost.link %&gt;&quot;&gt;
+    &lt;% } %&gt;
+    &lt;% if (post.nextPost) { %&gt;
+    &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= post.nextPost.link %&gt;&quot;&gt;
+    &lt;% } %&gt;
+</code></pre>
 
                         <div class="clear"></div>
                     </div>
