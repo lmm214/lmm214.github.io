@@ -699,8 +699,10 @@ figure figcaption {
   background: #BBB;
   text-align: center;
 }
+.pager:before,
+.pager:after,
 footer.footer:before,
-.post.hentry:after {
+.index .post.hentry:after {
   content: "";
   display: block;
   margin: 80px auto;
@@ -941,14 +943,6 @@ footer {
   font-size: 12px;
   font-weight: 200;
   display: block;
-}
-.archive-item::after {
-  content: "";
-  display: block;
-  width: 40%;
-  height: 1px;
-  margin: 20px 0 0 20%;
-  background-color: #eee;
 }
 .archive .postss {
   text-align: center;
