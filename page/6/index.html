@@ -59,6 +59,34 @@
             <!-- start: .articles -->
             
                 
+                                <article class="post hentry format-daily format-coding">
+                <header>
+                    <time class="date">
+                        <i class="fa">
+                            <span class="datetime">2018-08-03 14:30</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-exclude-cat-from-feed/">Bitcron 在 Feed 里排除某个分类</a>
+                </h1>
+                <div class="post-content">
+                    <div class="post-hentry">
+                    
+                        <p>无视了文档的 <code>status: false</code> ，直接在 feed 中更新，大 BUG 啊！</p>
+<p>官方文档 <a href="https://api.bitcron.com/read/builtin-codes-files#toc_0">feed.jade</a> 中是获取最近 10 篇文章：</p>
+<pre><code class="language-jade">feed_posts = posts.recent_10
+</code></pre>
+<p>要想排除某个分类，其实也就是 <strong>某个文件夹</strong>，只要在这里改动。经过超出预习的测试，暂且改为：</p>
+
+                        <footer class="post-footer"><a href="https://immmmm.com/bitcron-exclude-cat-from-feed/" class="more-link">阅读全文</a></footer>
+                    
+                    </div>
+                </div>
+            </article>
+                
+            
+                
                         <article class="post hentry format-chat">
     <header>
         <time class="date">
@@ -317,33 +345,6 @@
             </article>
                 
             
-                
-                                <article class="post hentry format-daily format-coding">
-                <header>
-                    <time class="date">
-                        <i class="fa">
-                            <span class="datetime">2018-01-30 20:00</span>
-                        </i>
-                    </time>
-                </header>
-                <h1 class="entry-title">
-                    <a href="https://immmmm.com/zan-by-leancloud-cn/">基于 LeanCloud 实现文章点赞</a>
-                </h1>
-                <div class="post-content">
-                    <div class="post-hentry">
-                    
-                        <p class="md_block" style="text-align:center;"><img class="md_compiled" src="https://lmm.elizen.me/images/2018/01/zan.gif" alt="zan.gif"></p>
-<h3 id="leancloud">LeanCloud</h3>
-<p>1、<a href="http://leancloud.cn/login.html?refuser=lmm214#/signup">注册 LeanCloud</a> ，创建应用，创建 Class（相当数据库），权限改为“无限制”。</p>
-<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2018/01/zan-1.png" alt="zan-1.png" loading="lazy"></figure>
-
-                        <footer class="post-footer"><a href="https://immmmm.com/zan-by-leancloud-cn/" class="more-link">阅读全文</a></footer>
-                    
-                    </div>
-                </div>
-            </article>
-                
-            
                         <div class="paginator pager pagination">
               <div class="nav">
                 
@@ -359,7 +360,7 @@
 
             <footer id="footer" class="">
         <p class="published border-effect">
-          ©2020 共 124 篇文章
+          ©2020 共 125 篇文章
           <br/>
           Theme <a href="https://immmmm.com/gridea-theme-motify/" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
         </p>

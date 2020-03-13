@@ -63,6 +63,37 @@
                 <header>
                     <time class="date">
                         <i class="fa">
+                            <span class="datetime">2017-12-24 00:01</span>
+                        </i>
+                    </time>
+                </header>
+                <h1 class="entry-title">
+                    <a href="https://immmmm.com/bitcron-show-last-update/">Bitcron 显示最后更新时间</a>
+                </h1>
+                <div class="post-content">
+                    <div class="post-hentry">
+                    
+                        <blockquote>
+<p>需求点：很多教程文章会多次修改，显示文章最后的修改时间，就显得非常有必要。效果图如下：</p>
+</blockquote>
+<figure>
+    <img src="https://lmm.elizen.me/images/2017/12/last-1.png" alt="" />
+    <figcaption>显示最后更新时间</figcaption>
+</figure>
+<p>利用了 <code>sys_date</code> 这属性，格式化为 <code>%Y%j</code>，其中 <code>%j</code> 表示一年中的第几天，所以 <strong>判断发布与修改不是同一日</strong> ，则显示。相关代码如下：</p>
+
+                        <footer class="post-footer"><a href="https://immmmm.com/bitcron-show-last-update/" class="more-link">阅读全文</a></footer>
+                    
+                    </div>
+                </div>
+            </article>
+                
+            
+                
+                                <article class="post hentry format-daily format-coding">
+                <header>
+                    <time class="date">
+                        <i class="fa">
                             <span class="datetime">2017-12-23 23:23</span>
                         </i>
                     </time>
@@ -316,35 +347,6 @@ https://us.bitcron.com/service/files_manager?site_id=站点ID.bitcron.com#_comme
             </article>
                 
             
-                
-                                <article class="post hentry format-daily format-coding">
-                <header>
-                    <time class="date">
-                        <i class="fa">
-                            <span class="datetime">2017-07-26 11:49</span>
-                        </i>
-                    </time>
-                </header>
-                <h1 class="entry-title">
-                    <a href="https://immmmm.com/pk24go-cn/">决战24点（HTML5）开发小记</a>
-                </h1>
-                <div class="post-content">
-                    <div class="post-hentry">
-                    
-                        <p>点击体验：<a href="https://pk24go.cn">https://pk24go.cn</a></p>
-<p>本就开发了一个玩儿24点游戏的微信公众号“决战24点”（pk24go），可以回复综合算式进行解答。说实话，还是挺不方面的。前段时间看到 <a href="http://4shu.net/">4数网</a> 在线 HTML5 玩法，立马着手改造！</p>
-<h3 id="改造点">改造点</h3>
-<p>1、界面UI：以方格为基本图形，4个数字在4个角落，4个运算符号在中间，完成数、撤销返回、提示等按钮在空白小方格中。<br>
-2、功能减法：去除时间限制模式、积分、结束按钮。<br>
-3、功能加法：新增【题库选择】可选择数字范围1<sub>10或1</sub>13，新增【待解模式】针对性强化玩家提示过的题组。</p>
-
-                        <footer class="post-footer"><a href="https://immmmm.com/pk24go-cn/" class="more-link">阅读全文</a></footer>
-                    
-                    </div>
-                </div>
-            </article>
-                
-            
                         <div class="paginator pager pagination">
               <div class="nav">
                 
@@ -360,7 +362,7 @@ https://us.bitcron.com/service/files_manager?site_id=站点ID.bitcron.com#_comme
 
             <footer id="footer" class="">
         <p class="published border-effect">
-          ©2020 共 124 篇文章
+          ©2020 共 125 篇文章
           <br/>
           Theme <a href="https://immmmm.com/gridea-theme-motify/" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
         </p>
