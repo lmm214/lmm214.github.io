@@ -2,13 +2,32 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-13T13:42:03.051Z</updated>
+    <updated>2020-03-13T13:52:24.250Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
     <logo>https://immmmm.com/images/avatar.png</logo>
     <icon>https://immmmm.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 木木木木木</rights>
+    <entry>
+        <title type="html"><![CDATA[Gridea Theme Motify]]></title>
+        <id>https://immmmm.com/gridea-theme-motify/</id>
+        <link href="https://immmmm.com/gridea-theme-motify/">
+        </link>
+        <updated>2020-03-13T11:35:34.000Z</updated>
+        <summary type="html"><![CDATA[<p>自用 N 年主题转制 Gridea 完成！</p>
+<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2020/03/Motify.png" alt="Motify 20.03.13" loading="lazy"></figure>
+<p>仓库下载：<a href="https://github.com/lmm214/gridea-theme-motify">https://github.com/lmm214/gridea-theme-motify</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>自用 N 年主题转制 Gridea 完成！</p>
+<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2020/03/Motify.png" alt="Motify 20.03.13" loading="lazy"></figure>
+<p>仓库下载：<a href="https://github.com/lmm214/gridea-theme-motify">https://github.com/lmm214/gridea-theme-motify</a></p>
+<!-- more -->
+<h3 id="说明">说明</h3>
+<p>稍后更新</p>
+<p>🤘</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用 jsDelivr 加速 Gridea]]></title>
         <id>https://immmmm.com/jsdelivr-gridea/</id>
@@ -246,63 +265,6 @@ jinrishici.load(function(result) {
         </link>
         <updated>2020-01-14T12:19:00.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://edui.fun/">Edui.fun</a>，让教学有点意思。整了个导航站，收集些与工作有关的在线工具、实用软件什么的，希望有点用！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gridea Theme WebStack]]></title>
-        <id>https://immmmm.com/gridea-theme-webstack/</id>
-        <link href="https://immmmm.com/gridea-theme-webstack/">
-        </link>
-        <updated>2020-01-11T15:00:18.000Z</updated>
-        <summary type="html"><![CDATA[<p>@Jackie 同学留言推荐了一个网站导航项目 <a href="https://github.com/WebStackPage/WebStackPage.github.io">WebStackPage</a> ，样式不错，尝试了纯静态，不得不佩服原作者，这一大段一大段的循环代码静态手工 html ，服！之后尝试了 Laravel、Docker，失败……</p>
-<p>哎，一个“链接页面”折腾成这样，自己造一个得叻！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>@Jackie 同学留言推荐了一个网站导航项目 <a href="https://github.com/WebStackPage/WebStackPage.github.io">WebStackPage</a> ，样式不错，尝试了纯静态，不得不佩服原作者，这一大段一大段的循环代码静态手工 html ，服！之后尝试了 Laravel、Docker，失败……</p>
-<p>哎，一个“链接页面”折腾成这样，自己造一个得叻！</p>
-<!-- more -->
-<p>效果预览：<a href="https://edui.fun/">https://edui.fun/</a></p>
-<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/logos/webstack-1.png" alt="webstack-1" loading="lazy"></figure>
-<p>仓库下载：<a href="https://github.com/lmm214/gridea-theme-webstack">https://github.com/lmm214/gridea-theme-webstack</a></p>
-<h3 id="主题目录">主题目录</h3>
-<pre><code>├── assets
-│   ├── media
-│   │   ├── css
-│   │   │   ├── fonts
-│   │   │   │   ├── icomoon.eot
-│   │   │   │   ├── icomoon.svg
-│   │   │   │   ├── icomoon.ttf
-│   │   │   │   └── icomoon.woff
-│   │   │   ├── icomoon.css
-│   │   │   └── main.css
-│   │   ├── images
-│   │   │   ├── favicon.png
-│   │   │   └── logo-collapsed@2x.png
-│   │   └── js
-│   │       ├── bootstrap.min.js
-│   │       ├── jquery-1.11.1.min.js
-│   │       ├── lozad.js
-│   │       ├── xenon-custom.js
-│   │       └── xenon-toggles.js
-│   └── styles
-│       └── main.less //空文件
-├── config.json
-└── templates
-    ├── archives.ejs //空文件
-    ├── index.ejs
-    ├── post.ejs //空文件
-    ├── tag.ejs //空文件
-    └── tags.ejs //空文件
-</code></pre>
-<h3 id="使用说明">使用说明</h3>
-<ul>
-<li>如果已有 Gridea 博客，务必新建一个文件夹作为 <strong>站点源文件夹</strong>，然后把主题丢进去；</li>
-<li>默认添加了4个分类，修改名称或增删类别，需手工改动 <code>config.json</code> 和 <code>index.ejs</code>；</li>
-<li>分类图标名见 <code>icomoon.css</code>;</li>
-<li>如果一定要集成到现在的主题中，那把 <code>assets/media</code> 放到自己主题中，把 <code>config.json</code> 与现主题合并代码，把 <code>index.ejs</code> 重命名；</li>
-<li>……（耗时2小时，手工去除了N多css、js……）</li>
-</ul>
-<h3 id="更多教程">更多教程</h3>
-<p><a href="https://wherelse.cc/post/Setup-your-own-navigation-website-by-Gridea+Github-Pages/">https://wherelse.cc/post/Setup-your-own-navigation-website-by-Gridea+Github-Pages/</a></p>
 ]]></content>
     </entry>
 </feed>
