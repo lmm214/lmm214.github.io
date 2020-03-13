@@ -562,9 +562,9 @@ figure figcaption {
 }
 .hentry .post-content pre {
   white-space: pre-wrap;
-  background-color: #f8f8f8;
   font: 14px/22px 'courier new';
   position: relative;
+  border-radius: 5px;
 }
 .hentry .post-content hr {
   border-style: dashed;
