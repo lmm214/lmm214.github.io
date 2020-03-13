@@ -173,6 +173,27 @@
     &lt;a href=&quot;&lt;%= pagination.next %&gt;&quot;&gt;下一页&lt;/a&gt;
 &lt;% } %&gt;
 </code></pre>
+<h3 id="提速优化">提速优化</h3>
+<p>添加 <a href="https://instant.page/">https://instant.page/</a> 代码：</p>
+<pre><code class="language-js">&lt;script src=&quot;//instant.page/3.0.0&quot; type=&quot;module&quot; defer integrity=&quot;sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>首页、日志页 <code>&lt;head&gt;&lt;/head&gt;</code> 内分别添加 prefetch 预加载：</p>
+<p><code>index.ejs</code></p>
+<pre><code class="language-js">&lt;% if (pagination.prev) { %&gt;
+    &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= pagination.prev %&gt;&quot;&gt;
+&lt;% } %&gt;
+&lt;% if (pagination.next) { %&gt;
+    &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= pagination.next %&gt;&quot;&gt;
+&lt;% } %&gt;
+</code></pre>
+<p><code>post.ejs</code></p>
+<pre><code class="language-js">&lt;% if (post.prevPost) { %&gt;
+    &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= post.prevPost.link %&gt;&quot;&gt;
+&lt;% } %&gt;
+&lt;% if (post.nextPost) { %&gt;
+    &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= post.nextPost.link %&gt;&quot;&gt;
+&lt;% } %&gt;
+</code></pre>
 <h3 id="实用-jquery-代码">实用 jQuery 代码</h3>
 <pre><code class="language-js">//新窗口打开外链
 var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
