@@ -938,6 +938,10 @@ footer {
 .tags-item {
   width: 24%;
 }
+.links-item {
+  width: 32%;
+  margin: 1em 0;
+}
 .archive .postss {
   text-align: center;
   display: block;
