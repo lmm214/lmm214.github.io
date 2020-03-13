@@ -137,8 +137,8 @@ a:active {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url('https://lmm.elizen.me/fontsicomoon.eot?qv3okx');
-  src: url('https://lmm.elizen.me/fontsicomoon.eot?qv3okx#iefix') format('embedded-opentype'), url('https://lmm.elizen.me/fontsicomoon.ttf?qv3okx') format('truetype'), url('https://lmm.elizen.me/fontsicomoon.woff?qv3okx') format('woff'), url('https://lmm.elizen.me/fontsicomoon.svg?qv3okx#icomoon') format('svg');
+  src: url('../media/fonts/icomoon.eot?qv3okx');
+  src: url('../media/fonts/icomoon.eot?qv3okx#iefix') format('embedded-opentype'), url('../media/fonts/icomoon.ttf?qv3okx') format('truetype'), url('../media/fonts/icomoon.woff?qv3okx') format('woff'), url('../media/fonts/icomoon.svg?qv3okx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -567,7 +567,7 @@ figure figcaption {
 .single .hentry .post-content li,
 .index .hentry .post-content li {
   max-width: 860px;
-  margin: 0 auto 2em!important;
+  margin: 0 auto 2em;
   padding: 10px 20px;
 }
 .single .hentry .post-content pre,
@@ -633,7 +633,8 @@ figure figcaption {
 .index .hentry .post-content ul,
 .single .hentry .post-content li,
 .index .hentry .post-content li {
-  margin-bottom: 12px;
+  margin-bottom: 0!important;
+  padding-bottom: 0!important;
 }
 .single .hentry .post-content ul li,
 .index .hentry .post-content ul li,
@@ -677,22 +678,6 @@ figure figcaption {
   margin: 0 auto 2em!important;
   padding: 10px 20px;
 }
-.hentry.format-link .post-content blockquote {
-  text-align: center;
-  margin-bottom: 4em !important;
-}
-.admin {
-  text-align: center;
-  margin: 8px auto;
-}
-.chat .admin {
-  text-align: left;
-}
-.last-update {
-  font-size: 13px;
-  text-align: center;
-  margin: 8px auto;
-}
 .friends {
   line-height: normal;
   padding: 8px 10px 8px 45px;
@@ -732,7 +717,7 @@ figure figcaption {
 .pager:before,
 .pager:after,
 footer.footer:before,
-.index .post.hentry:after {
+.index .post.hentry:not(:last-child):after {
   content: "";
   display: block;
   margin: 80px auto;
@@ -857,27 +842,6 @@ footer.footer:before,
   font-size: 13px;
   margin-left: 10px;
 }
-/* page_waterfall_body --------*/
-.humech_waterfall .wf-column {
-  float: left;
-}
-.humech_waterfall .item .item_body {
-  float: left;
-  position: relative;
-  padding: 4px;
-}
-.humech_waterfall .item img {
-  border-radius: 6px;
-  max-width: 100%;
-  border: 1px solid #f0f0f0;
-}
-.index .humech_waterfall .item img {
-  width: 150px;
-  height: 150px;
-}
-.humech_waterfall .item:hover {
-  opacity: 0.8;
-}
 /* Paginator ----------------------------------*/
 .pager {
   margin: 0 auto;
@@ -939,14 +903,12 @@ footer {
   background-color: #ccc;
 }
 .archive-list {
-  letter-spacing: -0.8em;
   padding-bottom: 50px;
 }
 .archive-item {
   padding: 10px 15px;
   font-size: 14px;
-  letter-spacing: 0;
-  width: 50%;
+  width: 49%;
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
@@ -972,6 +934,9 @@ footer {
   font-size: 12px;
   font-weight: 200;
   display: block;
+}
+.tags-item {
+  width: 24%;
 }
 .archive .postss {
   text-align: center;
