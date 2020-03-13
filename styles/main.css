@@ -856,7 +856,6 @@ footer.footer:before,
 .pager a {
   padding: 1em 0;
   display: inline-block;
-  font-weight: bold;
 }
 .pager a.prev,
 .pager span.prev {
