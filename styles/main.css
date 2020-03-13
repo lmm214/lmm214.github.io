@@ -854,6 +854,7 @@ footer.footer:before,
 .pager a {
   padding: 1em 0;
   display: inline-block;
+  font-weight: bold;
 }
 .pager a.prev,
 .pager span.prev {
@@ -862,10 +863,7 @@ footer.footer:before,
 .pager a.prev::before,
 .pager span.prev::before {
   content: "\2039";
-  font-size: 1.3em;
-  padding-right: 5px;
-  font-weight: bold;
-  line-height: 1em;
+  padding-right: 10px;
 }
 .pager a.next,
 .pager span.next {
@@ -874,16 +872,13 @@ footer.footer:before,
 .pager a.next::after,
 .pager span.next::after {
   content: "\203A";
-  font-size: 1.3em;
-  padding-left: 5px;
-  font-weight: bold;
-  line-height: 1em;
+  padding-left: 10px;
 }
 .pager span {
   display: inline-block;
   color: #bbb;
   padding: 1em 0;
-  width: 10%;
+  width: 25%;
 }
 .pager .paginator a {
   padding: 1em 0.5em;
