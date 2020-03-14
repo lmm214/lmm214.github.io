@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-14T05:34:14.173Z</updated>
+    <updated>2020-03-14T05:46:39.920Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
@@ -29,14 +29,15 @@
 </figure>
 <h3 id="使用指南">使用指南</h3>
 <ul>
-<li>特殊 chat 日志样式需要把标签的 slug 设置为 <code>chat</code>，或自行修改模板内的判断；</li>
+<li>特殊 chat 日志样式，建议先客户端添加一个【标签】，把 slug 设置为 <code>chat</code>，或自行修改模板内的判断；</li>
+<li><code>Motify/assets/media/images/</code> 只放了4张图片 <code>reading.png</code>、<code>chat.png</code>、<code>coding.png</code>、<code>daily.png</code> 作为【归档页】的默认图标，需自行匹配或更换；</li>
+<li>内置 <code>books.ejs</code>、<code>moives.ejs</code>、<code>friends.ejs</code> 模板，客户端主题自定义添加内容后，访问链接为 <code>https://你的域名/friends/</code> ;</li>
 <li>远程到 Github 才支持 jsDelivr 加速；</li>
 <li>日志图片瀑布流使用  <code>&lt;photos&gt;&lt;/photos&gt;</code> 包裹，且不换行才有效；</li>
 <li>支持<a href="https://immmmm.com/post-show-douban-item/">《文章内显示豆瓣条目》</a>;</li>
 </ul>
 <h3 id="提速小记">提速小记</h3>
 <ul>
-<li>Valine 评论功能的js在 <code>post.ejs</code> 才加载；</li>
 <li>字符图标文件托管到七牛云；</li>
 <li>页脚添加 <a href="https://instant.page/">https://instant.page/</a> ;</li>
 <li>首页、日志页分别添加预加载 prefetch；</li>
