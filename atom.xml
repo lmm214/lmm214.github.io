@@ -2,13 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-14T06:08:09.411Z</updated>
+    <updated>2020-03-14T06:16:51.449Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
     <logo>https://immmmm.com/images/avatar.png</logo>
     <icon>https://immmmm.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 木木木木木</rights>
+    <entry>
+        <title type="html"><![CDATA[《医学大神》读中记]]></title>
+        <id>https://immmmm.com/book-isbn-9787613337624/</id>
+        <link href="https://immmmm.com/book-isbn-9787613337624/">
+        </link>
+        <updated>2020-03-14T06:12:28.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://book.douban.com/subject/34935089/">https://book.douban.com/subject/34935089/</a></p>
+<p>好书增长常识，忍不住记一笔！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Gridea Theme Motify]]></title>
         <id>https://immmmm.com/gridea-theme-motify/</id>
@@ -293,15 +303,6 @@ jinrishici.load(function(result) {
 <!--more-->
 <h3 id="火树银花-平安顺遂">火树银花 平安顺遂</h3>
 <p><photos><img src="https://lmm.elizen.me/images/2020/01/yh-9.JPG" alt="yh-9" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-8.JPG" alt="yh-8" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-7.JPG" alt="yh-7" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-6.JPG" alt="yh-6" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-5.JPG" alt="yh-5" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-4.JPG" alt="yh-4" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-3.JPG" alt="yh-3" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-2.JPG" alt="yh-2" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-1.JPG" alt="yh-1" loading="lazy"></photos></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2020-01-14]]></title>
-        <id>https://immmmm.com/2020-01-14/</id>
-        <link href="https://immmmm.com/2020-01-14/">
-        </link>
-        <updated>2020-01-14T12:19:00.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://edui.fun/">Edui.fun</a>，让教学有点意思。整了个导航站，收集些与工作有关的在线工具、实用软件什么的，希望有点用！</p>
 ]]></content>
     </entry>
 </feed>
