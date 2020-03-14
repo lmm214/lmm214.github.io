@@ -590,6 +590,7 @@ figure figcaption {
 .single .hentry .post-content hr,
 .index .hentry .post-content hr {
   padding: 0;
+  margin-bottom: 0;
 }
 .single .hentry .post-content strong,
 .index .hentry .post-content strong {
@@ -635,7 +636,7 @@ figure figcaption {
 .single .hentry .post-content li,
 .index .hentry .post-content li {
   margin-bottom: 0!important;
-  padding-bottom: 0!important;
+  padding: 0!important;
 }
 .single .hentry .post-content ul li,
 .index .hentry .post-content ul li,
