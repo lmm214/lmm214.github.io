@@ -116,20 +116,20 @@
 <li>首页、日志页分别添加预加载 prefetch；</li>
 </ul>
 <p><code>index.ejs</code></p>
-<pre><code class="language-js">    &lt;% if (pagination.prev) { %&gt;
+<pre><code class="language-js">&lt;% if (pagination.prev) { %&gt;
     &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= pagination.prev %&gt;&quot;&gt;
-    &lt;% } %&gt;
-    &lt;% if (pagination.next) { %&gt;
+&lt;% } %&gt;
+&lt;% if (pagination.next) { %&gt;
     &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= pagination.next %&gt;&quot;&gt;
-    &lt;% } %&gt;
+&lt;% } %&gt;
 </code></pre>
 <p><code>post.ejs</code></p>
-<pre><code class="language-js">    &lt;% if (post.prevPost) { %&gt;
+<pre><code class="language-js">&lt;% if (post.prevPost) { %&gt;
     &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= post.prevPost.link %&gt;&quot;&gt;
-    &lt;% } %&gt;
-    &lt;% if (post.nextPost) { %&gt;
+&lt;% } %&gt;
+&lt;% if (post.nextPost) { %&gt;
     &lt;link rel=&quot;prefetch&quot; href=&quot;&lt;%= post.nextPost.link %&gt;&quot;&gt;
-    &lt;% } %&gt;
+&lt;% } %&gt;
 </code></pre>
 <h3 id="欢迎打赏">欢迎打赏</h3>
 <figure>
