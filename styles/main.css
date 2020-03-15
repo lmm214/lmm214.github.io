@@ -990,10 +990,10 @@ footer {
   white-space: nowrap;
   display: block;
 }
-.archive-item .archive-item-meta {
-  font-size: 12px;
+.archive-item .archive-item-meta span {
+  font-size: 13px;
   font-weight: 200;
-  display: block;
+  display: inline-block;
 }
 .tags-item {
   width: 24%;

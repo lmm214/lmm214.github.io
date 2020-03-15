@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-15T14:14:57.615Z</updated>
+    <updated>2020-03-15T14:45:19.408Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
@@ -55,6 +55,10 @@
 <ul>
 <li>字符图标文件托管到七牛云；</li>
 <li>页脚添加 <a href="https://instant.page/">https://instant.page/</a> ;</li>
+</ul>
+<pre><code>&lt;script src=&quot;//cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
+</code></pre>
+<ul>
 <li>首页、日志页分别添加预加载 prefetch；</li>
 </ul>
 <p><code>index.ejs</code></p>
