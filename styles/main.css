@@ -458,32 +458,6 @@ figure figcaption {
 #comments {
   max-width: 780px;
 }
-.hentry h4,
-.hentry h5,
-.hentry h6,
-.hentry p,
-.hentry blockquote,
-.hentry address,
-.hentry big,
-.hentry cite,
-.hentry em,
-.hentry font,
-.hentry img,
-.hentry small,
-.hentry strike,
-.hentry sub,
-.hentry sup,
-.hentry fieldset,
-.hentry form,
-.hentry label,
-.hentry legend,
-.hentry button,
-.hentry table,
-.hentry caption {
-  font-family: "Noto Serif CJK", "Noto Serif", "Noto Serif SC", "Noto Serif TC", Serif;
-  font-weight: 500;
-  text-align: justify;
-}
 .hentry h1 {
   color: #DA3E3E;
   text-align: center;
@@ -706,6 +680,54 @@ figure figcaption {
   max-width: 860px;
   margin: 0 auto 2em!important;
   padding: 10px 20px;
+}
+.single .hentry .post-content .post-hentry h4,
+.index .hentry .post-content .post-hentry h4,
+.single .hentry .post-content .post-hentry h5,
+.index .hentry .post-content .post-hentry h5,
+.single .hentry .post-content .post-hentry h6,
+.index .hentry .post-content .post-hentry h6,
+.single .hentry .post-content .post-hentry p,
+.index .hentry .post-content .post-hentry p,
+.single .hentry .post-content .post-hentry blockquote,
+.index .hentry .post-content .post-hentry blockquote,
+.single .hentry .post-content .post-hentry address,
+.index .hentry .post-content .post-hentry address,
+.single .hentry .post-content .post-hentry big,
+.index .hentry .post-content .post-hentry big,
+.single .hentry .post-content .post-hentry cite,
+.index .hentry .post-content .post-hentry cite,
+.single .hentry .post-content .post-hentry em,
+.index .hentry .post-content .post-hentry em,
+.single .hentry .post-content .post-hentry font,
+.index .hentry .post-content .post-hentry font,
+.single .hentry .post-content .post-hentry img,
+.index .hentry .post-content .post-hentry img,
+.single .hentry .post-content .post-hentry small,
+.index .hentry .post-content .post-hentry small,
+.single .hentry .post-content .post-hentry strike,
+.index .hentry .post-content .post-hentry strike,
+.single .hentry .post-content .post-hentry sub,
+.index .hentry .post-content .post-hentry sub,
+.single .hentry .post-content .post-hentry sup,
+.index .hentry .post-content .post-hentry sup,
+.single .hentry .post-content .post-hentry fieldset,
+.index .hentry .post-content .post-hentry fieldset,
+.single .hentry .post-content .post-hentry form,
+.index .hentry .post-content .post-hentry form,
+.single .hentry .post-content .post-hentry label,
+.index .hentry .post-content .post-hentry label,
+.single .hentry .post-content .post-hentry legend,
+.index .hentry .post-content .post-hentry legend,
+.single .hentry .post-content .post-hentry button,
+.index .hentry .post-content .post-hentry button,
+.single .hentry .post-content .post-hentry table,
+.index .hentry .post-content .post-hentry table,
+.single .hentry .post-content .post-hentry caption,
+.index .hentry .post-content .post-hentry caption {
+  font-family: "Noto Serif CJK", "Noto Serif", "Noto Serif SC", "Noto Serif TC", Serif;
+  font-weight: 500;
+  text-align: justify;
 }
 .friends {
   line-height: normal;
