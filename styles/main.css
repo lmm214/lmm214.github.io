@@ -691,6 +691,8 @@ figure figcaption {
 .index .hentry .post-content .post-hentry p,
 .single .hentry .post-content .post-hentry blockquote,
 .index .hentry .post-content .post-hentry blockquote,
+.single .hentry .post-content .post-hentry li,
+.index .hentry .post-content .post-hentry li,
 .single .hentry .post-content .post-hentry address,
 .index .hentry .post-content .post-hentry address,
 .single .hentry .post-content .post-hentry big,
