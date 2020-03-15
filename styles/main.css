@@ -462,7 +462,7 @@ figure figcaption {
   color: #DA3E3E;
   text-align: center;
   font-size: 26px;
-  margin: 12px 0 8px 0;
+  margin: 18px 0;
   font-weight: 600;
   letter-spacing: 2px;
 }
@@ -679,7 +679,7 @@ figure figcaption {
   line-height: 2.5em;
   max-width: 860px;
   margin: 0 auto 2em!important;
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 .single .hentry .post-content .post-hentry h4,
 .index .hentry .post-content .post-hentry h4,
