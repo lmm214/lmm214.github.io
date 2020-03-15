@@ -458,6 +458,32 @@ figure figcaption {
 #comments {
   max-width: 780px;
 }
+.hentry h4,
+.hentry h5,
+.hentry h6,
+.hentry p,
+.hentry blockquote,
+.hentry address,
+.hentry big,
+.hentry cite,
+.hentry em,
+.hentry font,
+.hentry img,
+.hentry small,
+.hentry strike,
+.hentry sub,
+.hentry sup,
+.hentry fieldset,
+.hentry form,
+.hentry label,
+.hentry legend,
+.hentry button,
+.hentry table,
+.hentry caption {
+  font-family: "Noto Serif CJK", "Noto Serif", "Noto Serif SC", "Noto Serif TC", Serif;
+  font-weight: 500;
+  text-align: justify;
+}
 .hentry h1 {
   color: #DA3E3E;
   text-align: center;
