@@ -106,13 +106,13 @@ markdown 语法链接不支持设置 target='_blank' ，如果要就直接写 ht
 <p>短短代码测试了个把小时，主要耗在“a标签里无img”和“本地和点击的href的正则”，哎，果真代码欺负老新人！</p>
 <!--more-->
 <h3 id="测试">测试</h3>
-<p><a href="https://lmm.elizen.me/wx.jpg">外链（新窗口打开）</a> <a href="https://immmmm.com/new-tab-external-link">内链（直接打开）</a></p>
-<pre><code class="language-markdown">[外链](https://lmm.elizen.me/wx.jpg)
+<p><a href="https://lmm.elizen.me/wx.jpg?imageView2/0/format/webp">外链（新窗口打开）</a> <a href="https://immmmm.com/new-tab-external-link">内链（直接打开）</a></p>
+<pre><code class="language-markdown">[外链](https://lmm.elizen.me/wx.jpg?imageView2/0/format/webp)
 [内链](https://immmmm.com/new-tab-external-link)
 </code></pre>
-<p><a href="https://lmm.elizen.me/wx.jpg"><img src="https://lmm.elizen.me/wx.jpg"></a><br>
+<p><a href="https://lmm.elizen.me/wx.jpg"><img src="https://lmm.elizen.me/wx.jpg?imageView2/0/format/webp"></a><br>
 图片有链接不识别（直接打开）</p>
-<pre><code class="language-html">&lt;a href=&quot;https://lmm.elizen.me/wx.jpg&quot;&gt;&lt;img src=&quot;https://lmm.elizen.me/wx.jpg&quot;&gt;&lt;/a&gt;
+<pre><code class="language-html">&lt;a href=&quot;https://lmm.elizen.me/wx.jpg?imageView2/0/format/webp&quot;&gt;&lt;img src=&quot;https://lmm.elizen.me/wx.jpg?imageView2/0/format/webp&quot;&gt;&lt;/a&gt;
 </code></pre>
 <h3 id="更新">更新</h3>
 <p>2017/7/26：更新正则代码 <a href="http://harttle.com/2016/02/23/javascript-regular-expressions.html">来源</a>，<code>$0~$7</code> 依次获取以下内容：</p>
