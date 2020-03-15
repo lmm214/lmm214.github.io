@@ -462,7 +462,7 @@ figure figcaption {
   color: #DA3E3E;
   text-align: center;
   font-size: 26px;
-  margin: 18px 0;
+  margin: 18px 1em;
   font-weight: 600;
   letter-spacing: 2px;
 }
@@ -836,6 +836,9 @@ footer.footer:before,
     width: 95%;
     height: 120px;
   }
+  .post-preview--meta {
+    padding: 15px;
+  }
   .post-preview--image {
     height: 120px!important;
   }
@@ -903,7 +906,7 @@ footer.footer:before,
   max-width: 580px;
 }
 .pager a {
-  padding: 1em 0;
+  padding: 8px 1em;
   display: inline-block;
 }
 .pager a.prev,
@@ -1011,12 +1014,16 @@ a.back_to_top span {
 }
 /* Media ----------------------------------*/
 @media only screen and (max-width: 500px) {
+  .wrapper {
+    margin-top: 40px;
+  }
   #header {
-    padding: 48px 20px 10px 20px;
+    padding: 28px 20px 10px;
     transition: all 1s;
   }
-  .site-title {
-    font-size: 3rem;
+  #header .site-title {
+    font-size: 2.5em;
+    margin-bottom: 28px;
   }
   .main-navigation li {
     margin-right: 10px;
@@ -1030,6 +1037,13 @@ a.back_to_top span {
   .tags-item,
   .links-item {
     width: 49%;
+  }
+  .pager:before,
+  .pager:after,
+  footer.footer:before,
+  .index .post.hentry:not(:last-child):after {
+    margin: 40px auto;
+    width: 40%;
   }
 }
 .pages .post-content a {
