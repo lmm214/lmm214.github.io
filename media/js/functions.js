@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
       });
     }
     //相对时间
-    $.lately({'target' : 'time.date span.datetime,.author-date small'});
+    $.lately({'target' : 'time span.datetime,.author-date small'});
     //外链新窗口
     var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
     var location_href = window.location.href.replace(parse_url,'$3');

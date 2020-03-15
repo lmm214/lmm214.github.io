@@ -62,8 +62,7 @@ button,
 code,
 blockquote,
 code,
-pre,
-.date span {
+pre {
   font: 16px "PingFang SC", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
 }
 body,
@@ -511,6 +510,9 @@ figure figcaption {
   margin-bottom: 12px;
   font-size: 13px;
   display: block;
+}
+.hentry .date span {
+  font-size: 15px;
 }
 .hentry .meta {
   text-align: center;
@@ -998,9 +1000,16 @@ footer {
 .tags-item {
   width: 24%;
 }
+.tags-item .archive-item-meta {
+  display: block;
+  text-transform: capitalize;
+}
 .links-item {
   width: 32%;
   margin: 1em 0;
+}
+.links-item .archive-item-meta {
+  display: block;
 }
 .archive .postss {
   text-align: center;
