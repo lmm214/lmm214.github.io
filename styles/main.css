@@ -786,10 +786,10 @@ footer.footer:before,
 @media (max-width: 550px) {
   .post-preview {
     width: 95%;
-    height: 160px;
+    height: 120px;
   }
   .post-preview--image {
-    height: 160px!important;
+    height: 120px!important;
   }
   .post-preview--excerpt {
     display: none;
