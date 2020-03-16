@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-16T00:57:28.311Z</updated>
+    <updated>2020-03-16T08:33:05.186Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
@@ -53,6 +53,7 @@
 </ul>
 <h3 id="提速小记">提速小记</h3>
 <ul>
+<li>图片启用 webp 格式，又拍云加图片后缀 <code>!/format/webp</code> ，七牛云加 <code>?imageView2/0/format/webp</code> ；</li>
 <li>字符图标文件托管到七牛云；</li>
 <li>页脚添加 <a href="https://instant.page/">https://instant.page/</a> ;</li>
 </ul>
