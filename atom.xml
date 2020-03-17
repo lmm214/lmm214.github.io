@@ -2,13 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-17T01:04:05.274Z</updated>
+    <updated>2020-03-17T01:13:14.844Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
     <logo>https://immmmm.com/images/avatar.png</logo>
     <icon>https://immmmm.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 木木木木木</rights>
+    <entry>
+        <title type="html"><![CDATA[文章内显示豆瓣条目（LocalStorage 缓存版）]]></title>
+        <id>https://immmmm.com/post-show-douban-item-localStorage-cache/</id>
+        <link href="https://immmmm.com/post-show-douban-item-localStorage-cache/">
+        </link>
+        <updated>2020-03-17T01:05:20.000Z</updated>
+        <content type="html"><![CDATA[<p>使用说明同：<a href="https://immmmm.com/post-show-douban-item/">https://immmmm.com/post-show-douban-item/</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[《医学大神》读中记]]></title>
         <id>https://immmmm.com/book-isbn-9787613337624/</id>
@@ -287,32 +296,6 @@ jinrishici.load(function(result) {
 @media (max-width:550px) {.post-preview {width:95%;}.post-preview--excerpt{display:none;}.post-preview--middle {line-height:19px;}}
 .rating{display:block;line-height:15px;}.rating-star{display:inline-block;width:75px;height:15px;background-repeat:no-repeat;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==);overflow:hidden;}.allstar10{background-position:0px 0px;}.allstar9{background-position:0px -15px;}.allstar8{background-position:0px -30px;}.allstar7{background-position:0px -45px;}.allstar6{background-position:0px -60px;}.allstar5{background-position:0px -75px;}.allstar4{background-position:0px -90px;}.allstar3{background-position:0px -105px;}.allstar2{background-position:0px -120px;}.allstar1{background-position:0px -135px;}.allstar0{background-position:0px -150px;}.rating-average{color:#777;display:inline-block;font-size:13px;margin-left:10px;}
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[二〇二〇，你好]]></title>
-        <id>https://immmmm.com/hi-2020/</id>
-        <link href="https://immmmm.com/hi-2020/">
-        </link>
-        <updated>2020-01-23T12:20:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>取消外出旅行计划，乖乖乡下来过年，愿所有人平安无事！</p>
-<h3 id="推荐">推荐</h3>
-<p>一本书《病毒星球》<br>
-一部电影《流感》<br>
-一个游戏《瘟疫公司》<br>
-一个小程序《我要戴口罩》<br>
-……</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>取消外出旅行计划，乖乖乡下来过年，愿所有人平安无事！</p>
-<h3 id="推荐">推荐</h3>
-<p>一本书《病毒星球》<br>
-一部电影《流感》<br>
-一个游戏《瘟疫公司》<br>
-一个小程序《我要戴口罩》<br>
-……</p>
-<!--more-->
-<h3 id="火树银花-平安顺遂">火树银花 平安顺遂</h3>
-<p><photos><img src="https://lmm.elizen.me/images/2020/01/yh-9.JPG?imageView2/0/format/webp" alt="yh-9" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-8.JPG?imageView2/0/format/webp" alt="yh-8" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-7.JPG?imageView2/0/format/webp" alt="yh-7" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-6.JPG?imageView2/0/format/webp" alt="yh-6" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-5.JPG?imageView2/0/format/webp" alt="yh-5" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-4.JPG?imageView2/0/format/webp" alt="yh-4" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-3.JPG?imageView2/0/format/webp" alt="yh-3" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-2.JPG?imageView2/0/format/webp" alt="yh-2" loading="lazy"><img src="https://lmm.elizen.me/images/2020/01/yh-1.JPG?imageView2/0/format/webp" alt="yh-1" loading="lazy"></photos></p>
 ]]></content>
     </entry>
 </feed>
