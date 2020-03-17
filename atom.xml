@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-17T01:13:14.844Z</updated>
+    <updated>2020-03-17T01:18:39.193Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
@@ -15,7 +15,74 @@
         <link href="https://immmmm.com/post-show-douban-item-localStorage-cache/">
         </link>
         <updated>2020-03-17T01:05:20.000Z</updated>
-        <content type="html"><![CDATA[<p>使用说明同：<a href="https://immmmm.com/post-show-douban-item/">https://immmmm.com/post-show-douban-item/</a></p>
+        <summary type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2020/03/douban-ls.png?imageView2/0/format/webp" alt="douban-ls" loading="lazy"></figure>
+<p>使用说明同：<a href="https://immmmm.com/post-show-douban-item/">https://immmmm.com/post-show-douban-item/</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2020/03/douban-ls.png?imageView2/0/format/webp" alt="douban-ls" loading="lazy"></figure>
+<p>使用说明同：<a href="https://immmmm.com/post-show-douban-item/">https://immmmm.com/post-show-douban-item/</a></p>
+<!-- more -->
+<h3 id="相关代码">相关代码</h3>
+<pre><code class="language-js">//豆瓣图书电影条目
+$(&quot;a[href*='douban.com/subject/']&quot;).each(function () {
+    var _this = $(this);
+    var str = _this.attr(&quot;href&quot;);
+    var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+    if (db_reg.test(str)) {
+        var db_type = str.replace(db_reg, &quot;$1&quot;);
+        var db_id = str.replace(db_reg, &quot;$2&quot;).toString();
+        var db_api = &quot;https://bm.weajs.com/api/&quot;;
+        if (db_type == 'movie') {
+          var ls_item = 'movie'+db_id;
+          var url = db_api + &quot;movies/&quot; + db_id + &quot;/&quot;;
+          if(localStorage.getItem(ls_item)==null ||localStorage.getItem(ls_item)=='undefined'){
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: &quot;json&quot;,
+                success: function (data) {
+                  localStorage.setItem(ls_item,JSON.stringify(data));
+                  moiveShow(_this,ls_item)
+                }
+            });
+          }else{
+            moiveShow(_this,ls_item)
+          }
+        } else if (db_type == 'book') {
+          var ls_item = 'book'+db_id;
+          var url = db_api + &quot;books/&quot; + db_id;
+          if(localStorage.getItem(ls_item)==null ||localStorage.getItem(ls_item)=='undefined'){
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                  localStorage.setItem('book'+db_id,JSON.stringify(data));
+                  bookShow(_this,ls_item)
+                }
+            });
+          }else{
+            bookShow(_this,ls_item)
+          }
+        }
+    }
+});
+function moiveShow(_this,ls_item){
+    var storage=localStorage.getItem(ls_item);
+    var data=JSON.parse(storage);
+    var str = _this.attr(&quot;href&quot;);
+    //console.log(data)
+    var db_star = Math.ceil(data.rating);
+    $(&quot;&lt;div class='post-preview'&gt;&lt;div class='post-preview--meta'&gt;&lt;div class='post-preview--middle'&gt;&lt;h4 class='post-preview--title'&gt;&lt;a target='_blank' href='&quot; + str + &quot;'&gt;《&quot; + data.title + &quot;》&lt;/a&gt;&lt;/h4&gt;&lt;div class='rating'&gt;&lt;div class='rating-star allstar&quot; + db_star + &quot;'&gt;&lt;/div&gt;&lt;div class='rating-average'&gt;&quot; + data.rating + &quot;&lt;/div&gt;&lt;/div&gt;&lt;time class='post-preview--date'&gt;导演：&quot; + data.directors + &quot; / 类型：&quot; + data.genres + &quot; / &quot; + data.pubdate + &quot;&lt;/time&gt;&lt;section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'&gt;&quot; + data.intro + &quot;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img class='post-preview--image' src=&quot; + data.cover + &quot;&gt;&lt;/div&gt;&quot;).replaceAll(_this);
+}
+function bookShow(_this,ls_item){
+    var storage=localStorage.getItem(ls_item);
+    var data=JSON.parse(storage);
+    var str = _this.attr(&quot;href&quot;);
+    ///console.log(data)
+    var db_star = Math.ceil(data.rating);
+    $(&quot;&lt;div class='post-preview'&gt;&lt;div class='post-preview--meta'&gt;&lt;div class='post-preview--middle'&gt;&lt;h4 class='post-preview--title'&gt;&lt;a target='_blank' href='&quot; + str + &quot;'&gt;《&quot; + data.title + &quot;》&lt;/a&gt;&lt;/h4&gt;&lt;div class='rating'&gt;&lt;div class='rating-star allstar&quot; + db_star + &quot;'&gt;&lt;/div&gt;&lt;div class='rating-average'&gt;&quot; + data.rating + &quot;&lt;/div&gt;&lt;/div&gt;&lt;time class='post-preview--date'&gt;作者：&quot; + data.author + &quot; &lt;/time&gt;&lt;section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'&gt;&quot; + data.intro + &quot;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img class='post-preview--image' src=&quot; + data.cover + &quot;&gt;&lt;/div&gt;&quot;).replaceAll(_this);
+}
+</code></pre>
 ]]></content>
     </entry>
     <entry>
