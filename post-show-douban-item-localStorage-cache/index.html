@@ -8,11 +8,10 @@
 <link rel="shortcut icon" href="https://immmmm.com/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://immmmm.com/styles/main.css">
     <meta name="description" content="
-使用说明同：https://immmmm.com/post-show-douban-item/
+具体使用说明同：https://immmmm.com/post-show-douban-item/
 
 相关代码
-//豆瓣图书电影条目
-$(&quot;a[href*='douban.com/subject/']&quot;).each(fun..." />
+增加判断，首次访问把 json 缓存到本地 LocalStorage，之后直接本地取数据，能对二次访问提点速，聊胜于无。 🤓..." />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     
@@ -88,9 +87,10 @@ $(&quot;a[href*='douban.com/subject/']&quot;).each(fun..." />
                 <div class="post-content">
                     <div class="post-hentry">
                         <figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2020/03/douban-ls.png?imageView2/0/format/webp" alt="douban-ls" loading="lazy"></figure>
-<p>使用说明同：<a href="https://immmmm.com/post-show-douban-item/">https://immmmm.com/post-show-douban-item/</a></p>
+<p>具体使用说明同：<a href="https://immmmm.com/post-show-douban-item/">https://immmmm.com/post-show-douban-item/</a></p>
 <!-- more -->
 <h3 id="相关代码">相关代码</h3>
+<p>增加判断，首次访问把 json 缓存到本地 LocalStorage，之后直接本地取数据，能对二次访问提点速，聊胜于无。 🤓</p>
 <pre><code class="language-js">//豆瓣图书电影条目
 $(&quot;a[href*='douban.com/subject/']&quot;).each(function () {
     var _this = $(this);
