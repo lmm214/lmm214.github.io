@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>“学笔画”折腾小记 | 木木木木木</title>
+<title>RSSHub 部署笔记 | 木木木木木</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://immmmm.com/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://immmmm.com/styles/main.css">
-    <meta name="description" content="点击体验→ https://xuebihua.cn
+    <meta name="description" content="
+🍰 万物皆可 RSS。
 
-刷着阮一峰的 weekly 看到了 Hanzi Writer [1] 这个项目，发现笔顺的动画比较自然，还能在 svg 上手写练习，最重要的是看看 demo 好像上手比较简单，实际也如此..." />
+内容来源：https://docs.rsshub.app/install/#an-zhuang-2
+$ docker pull diygod/rsshub
+$ docker run -d --name rssh..." />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     
     
-    <link rel="prefetch" href="https://immmmm.com/qq-handwrite-typewriting/">
     
-    
-    <link rel="prefetch" href="https://immmmm.com/matrixk-bitcron-themes/">
+    <link rel="prefetch" href="https://immmmm.com/post-show-douban-item-localStorage-cache/">
     
   </head>
   <body>
@@ -78,32 +79,29 @@
                 <header>
                     <time class="date">
                         <i class="fa"></i>
-                            <span class="datetime">2019-07-29 18:26</span><span> · <span class="valine-comment-count" data-xid="/xuebihua-cn/"></span> 评论 · <span id="/xuebihua-cn/" class="leancloud_visitors"><span class="leancloud-visitors-count"></span> 阅读</span>
+                            <span class="datetime">2020-03-18 00:31</span><span> · <span class="valine-comment-count" data-xid="/rsshub-docker/"></span> 评论 · <span id="/rsshub-docker/" class="leancloud_visitors"><span class="leancloud-visitors-count"></span> 阅读</span>
                     </time>
                 </header>
                 <h1 class="entry-title">
-                    “学笔画”折腾小记
+                    RSSHub 部署笔记
                 </h1>
                 <div class="post-content">
                     <div class="post-hentry">
-                        <p>点击体验→ <a href="https://xuebihua.cn">https://xuebihua.cn</a></p>
-<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2019/07/xuebihua_qr.png" alt="xuebihua_qr" loading="lazy"></figure>
-<p>刷着阮一峰的 weekly 看到了 <a href="https://chanind.github.io/hanzi-writer/cn/">Hanzi Writer</a> <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> 这个项目，发现笔顺的动画比较自然，还能在 svg 上手写练习，最重要的是看看 demo 好像上手比较简单，实际也如此。</p>
-<p>功能代码非常好使，基本折腾在界面和陌生的代码上，比如想让 svg 自适应，搜索测试一晚发现还是以下代码好使：</p>
-<!--more-->
-<pre><code class="language-html">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;
+                        <blockquote>
+<p>🍰 万物皆可 RSS。</p>
+</blockquote>
+<p>内容来源：<a href="https://docs.rsshub.app/install/#an-zhuang-2">https://docs.rsshub.app/install/#an-zhuang-2</a></p>
+<pre><code>$ docker pull diygod/rsshub
+$ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 </code></pre>
-<p>考虑到教室大屏上不方便输入文字，直接内置一年级语文的400个生字，点击即可展示。发现，会 jQuery 还真省事！</p>
-<p>折腾完准备上线使用的是 Coding Page 服务，这货已经被腾讯云拿下，索性直接败个 cn 域名绑定之。</p>
-<p>源码： <a href="https://github.com/lmm214/xuebihua/">https://github.com/lmm214/xuebihua/</a></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>HanziWriter是javascript免费开源库，根据汉字书写时按照笔画顺序的特征，可以播放正确笔画顺序的描边动画和练习测试。支持简体字和繁体字。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
+<p>用宝塔面板的话，放行 1200 端口。浏览器打开 http://IP:1200/ ，看到成功页面。✅</p>
+<!-- more -->
+<h3 id="绑定域名">绑定域名</h3>
+<figure data-type="image" tabindex="1"><img src="https://lmm.elizen.me/images/2020/03/rsshub.png" alt="rsshub" loading="lazy"></figure>
+<p>每次 IP 总不方便，子域名绑起，后台添加网址，加一个「理代向反」即可。</p>
+<h3 id="使用指北">使用指北</h3>
+<figure data-type="image" tabindex="2"><img src="https://lmm.elizen.me/images/2020/03/rsshub-1.jpg" alt="rsshub-1" loading="lazy"></figure>
+<p>配合 chrome 扩展更方便：<a href="https://chrome.google.com/webstore/detail/rsshub-radar/kefjpfngnndepjbopdmoebkipbgkggaa">RSSHub Radar</a> ，自定义域名，随时查询规则！再配合 <a href="https://immmmm.com/telegram-flowerss-bot/">电报 Flowerss Bot</a>，开启私属 rss 聚合机器人！</p>
 
                         <div class="clear"></div>
                     </div>
@@ -113,10 +111,10 @@
 
                 <div class="pager">
                     
-                        <a class="prev" href="https://immmmm.com/qq-handwrite-typewriting/">Canvas 手写输入法</a>
+                        <span class="prev">已是最新一篇</span>
                     
                     
-                         <a class="next" href="https://immmmm.com/matrixk-bitcron-themes/">矩阵良的 Bitcron 主题集</a>
+                         <a class="next" href="https://immmmm.com/post-show-douban-item-localStorage-cache/">文章内显示豆瓣条目（LocalStorage 缓存版）</a>
                     
                     <div class="clear"></div>
                 </div>
