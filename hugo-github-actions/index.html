@@ -112,8 +112,12 @@
 <p>实现效果，直接网页上修改 <code>data/links.toml</code> 或任意文件，触发 Actions 自动化运行 Hugo 程序生成静态文件并推送到 <code>gh-pages</code> 分支上，等待几十秒可看到更新 <a href="https://lmm214.github.io/edui/">https://lmm214.github.io/edui/</a></p>
 <p>具体操作：</p>
 <ul>
-<li>点 <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> 新建一个，并暂存；进项目 <code>settings/secrets</code> 新建标题为 <code>personal_token</code> ，内容是刚创建的 <code>tokens</code> ;</li>
-<li>回项目，点 <code>Actions -- New wordflow -- Set up a workflow yourself</code> ，添加如下代码：</li>
+<li>
+<p>点 <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> 新建一个，并暂存；进项目 <code>settings/secrets</code> 新建标题为 <code>personal_token</code> ，内容是刚创建的 <code>tokens</code> ;</p>
+</li>
+<li>
+<p>回项目，点 <code>Actions -- New wordflow -- Set up a workflow yourself</code> ，添加如下代码：</p>
+</li>
 </ul>
 <pre><code>name: Deploy Hugo # 任君喜欢
 
@@ -157,9 +161,14 @@ jobs:
 <p><code>WEBHOOK_URL</code> 和 <code>WEBHOOK_SECRET</code> 是进项目 <code>settings/secrets</code> 新建添加，构建成宝塔面板的 webhook 链接，同时宝塔后台的代码去掉后缀判断。</p>
 <h3 id="后话一点点">后话一点点 🤏</h3>
 <p>听闻 Hugo 大名也有好几个月，一直没尝试，之后也沉浸在 Gridea 中，不得不夸夸 Gridea 客户端体检真是优雅！</p>
-<p>但一直有一点点遗憾，更新只能启动客户端，点击【同步】。而 Hugo 生成静态文件摔 Hexo 几光年，部署安装无依赖，试用门槛较低。看着官方文档，程序、主题自定义也比较强悍。</p>
-<p>官方 Hugo Templates： <a href="https://gohugo.io/templates/">https://gohugo.io/templates/</a><br>
-Hugo 中文帮助文档：<a href="https://hugo.aiaide.com/">https://hugo.aiaide.com/</a></p>
+<p>但一直有一点点遗憾，更新只能启动客户端，点击【同步】。</p>
+<p>而 Hugo 生成静态文件摔 Hexo 几光年，部署安装无依赖，试用门槛较低。看着官方文档，程序、主题自定义也比较强悍。</p>
+<p>搜遍全网教程，要不就是太详细，一长串代码加注释，供大于求，要不略过。幸好，也算折腾成功！ ✌️</p>
+<h3 id="感谢">感谢</h3>
+<ul>
+<li>官方 Hugo Templates： <a href="https://gohugo.io/templates/">https://gohugo.io/templates/</a></li>
+<li>Hugo 中文帮助文档：<a href="https://hugo.aiaide.com/">https://hugo.aiaide.com/</a></li>
+</ul>
 
                         <div class="clear"></div>
                     </div>
