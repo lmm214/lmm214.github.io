@@ -2,13 +2,94 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-17T16:50:09.630Z</updated>
+    <updated>2020-03-19T15:50:41.875Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
     <logo>https://immmmm.com/images/avatar.png</logo>
     <icon>https://immmmm.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 木木木木木</rights>
+    <entry>
+        <title type="html"><![CDATA[Hugo + Github Actions 实现自动化部署]]></title>
+        <id>https://immmmm.com/hugo-github-actions/</id>
+        <link href="https://immmmm.com/hugo-github-actions/">
+        </link>
+        <updated>2020-03-19T14:55:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>不折腾点东西总觉得浑浑噩噩，折腾点东西搞得脑袋晕晕乎乎！</p>
+<h3 id="折腾需求">折腾需求</h3>
+<p>为更新 <a href="https://edui.fun/">https://edui.fun/</a> 导航站能随手些，造了 <a href="https://immmmm.com/gridea-theme-webstack/">Gridea Theme WebStack</a> 每次得源文件切换加载，但只为加几行代码，等等等；</p>
+<p>折腾一天，已实现直接在 GitHub  <code>master</code> 添加代码，<code>Github Actions</code> 自动构建 <code>Hugo</code> 静态文件到 <code>gh-pages</code> 分支，外加同步 webhook 到自己的服务器。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>不折腾点东西总觉得浑浑噩噩，折腾点东西搞得脑袋晕晕乎乎！</p>
+<h3 id="折腾需求">折腾需求</h3>
+<p>为更新 <a href="https://edui.fun/">https://edui.fun/</a> 导航站能随手些，造了 <a href="https://immmmm.com/gridea-theme-webstack/">Gridea Theme WebStack</a> 每次得源文件切换加载，但只为加几行代码，等等等；</p>
+<p>折腾一天，已实现直接在 GitHub  <code>master</code> 添加代码，<code>Github Actions</code> 自动构建 <code>Hugo</code> 静态文件到 <code>gh-pages</code> 分支，外加同步 webhook 到自己的服务器。</p>
+<!-- more -->
+<h3 id="上传-hugo-源文件">上传 Hugo 源文件</h3>
+<p>（注：如已把 Hugo 程序 push 到 GitHub 上，直接跳过看下一步。）</p>
+<p>点击下载：<a href="https://github.com/lmm214/edui/archive/master.zip">https://github.com/lmm214/edui/archive/master.zip</a></p>
+<p>GitHub 上新建一个 repo，并只需保留以下文件上传到 <code>master</code> ，同时随手建个 <code>gh-pages</code> 分支：</p>
+<pre><code>├── archetypes
+│   └── default.md
+├── config.toml  //Hugo 程序配置文件
+├── content
+│   ├── about.md
+├── data
+│   └── links.toml //导航数据，一个文件搞定
+└── themes
+    └── webstack  //Hugo 主题
+        ├── layouts
+        │   └── home.html  //主页
+        └── theme.toml  //主题配置文件
+</code></pre>
+<h3 id="添加-github-actions-代码">添加 Github Actions 代码：</h3>
+<p>实现效果，直接网页上修改 <code>data/links.toml</code> 或任意文件，触发 Actions 自动化运行 Hugo 程序生成静态文件并推送到 <code>gh-pages</code> 分支上，等待几十秒可看到更新 <a href="https://lmm214.github.io/edui/">https://lmm214.github.io/edui/</a></p>
+<p>具体操作：</p>
+<ul>
+<li>点 <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> 新建一个，并暂存；</li>
+<li>回项目，点 <code>Actions -- New wordflow -- Set up a workflow yourself</code> ，添加如下代码：</li>
+</ul>
+<pre><code>name: Deploy Hugo # 任君喜欢
+
+on:
+  push:
+    branches:
+      - master   # master 更新触发
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+
+      - name: Build 
+        run: hugo
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.personal_token }} # personal_token 这里新建一个 https://github.com/settings/tokens
+          PUBLISH_BRANCH: gh-pages  # 推送到当前 gh-pages 分支
+          PUBLISH_DIR: ./public  # hugo 生成到 public 作为跟目录
+          commit_message: ${{ github.event.head_commit.message }}
+</code></pre>
+<p>👌 快去 <code>master</code> 里动动代码，看看 <code>Actions</code> 顺利不，再看看 <code>gh-pages</code> 静态文件更新了不，最终打开 Pages ，祝贺！</p>
+<p>这下再也不用 git 来 git 去，日志？主题？通过 GitHub 网页端搞定！</p>
+<p>完整源文件查看：<a href="https://github.com/lmm214/edui/blob/master/.github/workflows/main.yml">https://github.com/lmm214/edui/blob/master/.github/workflows/main.yml</a></p>
+<h3 id="同步到服务器">同步到服务器</h3>
+<pre><code>      - name: Webhook
+        uses: distributhor/workflow-webhook@v1
+        env:
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[RSSHub 部署笔记]]></title>
         <id>https://immmmm.com/rsshub-docker/</id>
@@ -307,30 +388,6 @@ jinrishici.load(function(result) {
 });
 &lt;/script&gt;
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Valine 文章列表显示评论数和阅读数]]></title>
-        <id>https://immmmm.com/valine-show-comment-views/</id>
-        <link href="https://immmmm.com/valine-show-comment-views/">
-        </link>
-        <updated>2020-01-27T11:05:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>回头一看 Valine 已使用半年，除早前国内版 Leancloud 出现<strong>被</strong>宕机，整体还算稳。</p>
-<p>闲着寻思到 Valine 能否在首页文章列表中显示对应的「评论数」和「阅读数」，查阅了文档（只有阅读数代码）和issue，好家伙,竟然 <a href="https://github.com/xCss/Valine/releases/tag/v1.1.8-beta2">v1.1.8-beta2</a> 已实现！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>回头一看 Valine 已使用半年，除早前国内版 Leancloud 出现<strong>被</strong>宕机，整体还算稳。</p>
-<p>闲着寻思到 Valine 能否在首页文章列表中显示对应的「评论数」和「阅读数」，查阅了文档（只有阅读数代码）和issue，好家伙,竟然 <a href="https://github.com/xCss/Valine/releases/tag/v1.1.8-beta2">v1.1.8-beta2</a> 已实现！</p>
-<!-- more -->
-<h3 id="评论数">评论数</h3>
-<pre><code class="language-html">&lt;span class=&quot;valine-comment-count&quot; data-xid=&quot;pathname&quot;&gt;&lt;/span&gt;
-</code></pre>
-<p>自动查找网页中class值为 <code>valine-comment-count</code> 的元素并自动填充查询结果，如果文章完整网址是 <code>http://immmmm.com/valine-show-comment-views</code> ，pathname则是 <code>/valine-show-comment-views</code>。</p>
-<h3 id="阅读数">阅读数</h3>
-<p>直接套用手册：<a href="https://valine.js.org/visitor.html">https://valine.js.org/visitor.html</a></p>
-<h3 id="结语">结语</h3>
-<p>效果预览：<a href="https://i.immmmm.com/">https://i.immmmm.com/</a></p>
-<p>但发现如果首页刷新过快，会被 Leancloud 阻止……</p>
-<p>PS：刚官宣学校推迟上学了，咳！</p>
 ]]></content>
     </entry>
 </feed>

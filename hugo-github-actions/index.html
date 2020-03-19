@@ -3,24 +3,20 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>解忧杂货店 | 木木木木木</title>
+<title>Hugo + Github Actions 实现自动化部署 | 木木木木木</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://immmmm.com/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://immmmm.com/styles/main.css">
-    <meta name="description" content="
-如今回顾写作过程，我发现直接始终再思考一个问题：站在人生的岔路口，人究竟应该怎么做？————东野圭吾
-
-月兔：是参加奥运集训，还是陪身患绝症的男友度过生命最后一程……
-鱼店音乐人：是坚持自己的音乐梦，还是子承父业成为鱼店的接班人……
-约翰..." />
+    <meta name="description" content="不折腾点东西总觉得浑浑噩噩，折腾点东西搞得脑袋晕晕乎乎！
+折腾需求
+为更新 https://edui.fun/ 导航站能随手些，造了 Gridea Theme WebStack 每次得源文件切换加载，但只为加几行代码，等等等；
+折腾一天，已..." />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     
     
-    <link rel="prefetch" href="https://immmmm.com/dont-be-trust/">
     
-    
-    <link rel="prefetch" href="https://immmmm.com/slimbox2-js-adaptive/">
+    <link rel="prefetch" href="https://immmmm.com/rsshub-docker/">
     
   </head>
   <body>
@@ -77,28 +73,86 @@
             <div id="posts" class="posts">
             <!-- start: .articles -->
             
-            <article class="post hentry format-daily format-daily">
+            <article class="post hentry format-daily format-coding">
                 <header>
                     <time class="date">
                         <i class="fa"></i>
-                            <span class="datetime">2014-06-14 21:20</span><span> · <span class="valine-comment-count" data-xid="/overcome-the-grocery-store/"></span> 评论 · <span id="/overcome-the-grocery-store/" class="leancloud_visitors"><span class="leancloud-visitors-count"></span> 阅读</span>
+                            <span class="datetime">2020-03-19 22:55</span><span> · <span class="valine-comment-count" data-xid="/hugo-github-actions/"></span> 评论 · <span id="/hugo-github-actions/" class="leancloud_visitors"><span class="leancloud-visitors-count"></span> 阅读</span>
                     </time>
                 </header>
                 <h1 class="entry-title">
-                    解忧杂货店
+                    Hugo + Github Actions 实现自动化部署
                 </h1>
                 <div class="post-content">
                     <div class="post-hentry">
-                        <blockquote>
-<p>如今回顾写作过程，我发现直接始终再思考一个问题：站在人生的岔路口，人究竟应该怎么做？————东野圭吾</p>
-</blockquote>
-<p>月兔：是参加奥运集训，还是陪身患绝症的男友度过生命最后一程……</p>
-<p>鱼店音乐人：是坚持自己的音乐梦，还是子承父业成为鱼店的接班人……</p>
-<p>约翰·列侬：是否与父母一同走上逃债的不归路，还是坚持让父母留下来面对现实……</p>
-<p>迷途的小狗：希望得到正面肯定的“陪酒小姐”……</p>
-<p>这些人通过一封封信，把自己的烦恼写下来投递进了“解忧杂货店”，这些信奇迹般地在时光中来回穿梭，改变的不仅仅是写信人的人生，同时也改变着回信人的人生。看似不同人的人生，在不知不觉中都归向了这间杂货店……</p>
-<p>这不是一本推理小说，却可以让我带着近似阅读推理小说时的疑惑和小猜测一口气读到底的小说。</p>
-<p>读完，想说：推理大师写得“鸡汤”还是挺“干货”的！</p>
+                        <p>不折腾点东西总觉得浑浑噩噩，折腾点东西搞得脑袋晕晕乎乎！</p>
+<h3 id="折腾需求">折腾需求</h3>
+<p>为更新 <a href="https://edui.fun/">https://edui.fun/</a> 导航站能随手些，造了 <a href="https://immmmm.com/gridea-theme-webstack/">Gridea Theme WebStack</a> 每次得源文件切换加载，但只为加几行代码，等等等；</p>
+<p>折腾一天，已实现直接在 GitHub  <code>master</code> 添加代码，<code>Github Actions</code> 自动构建 <code>Hugo</code> 静态文件到 <code>gh-pages</code> 分支，外加同步 webhook 到自己的服务器。</p>
+<!-- more -->
+<h3 id="上传-hugo-源文件">上传 Hugo 源文件</h3>
+<p>（注：如已把 Hugo 程序 push 到 GitHub 上，直接跳过看下一步。）</p>
+<p>点击下载：<a href="https://github.com/lmm214/edui/archive/master.zip">https://github.com/lmm214/edui/archive/master.zip</a></p>
+<p>GitHub 上新建一个 repo，并只需保留以下文件上传到 <code>master</code> ，同时随手建个 <code>gh-pages</code> 分支：</p>
+<pre><code>├── archetypes
+│   └── default.md
+├── config.toml  //Hugo 程序配置文件
+├── content
+│   ├── about.md
+├── data
+│   └── links.toml //导航数据，一个文件搞定
+└── themes
+    └── webstack  //Hugo 主题
+        ├── layouts
+        │   └── home.html  //主页
+        └── theme.toml  //主题配置文件
+</code></pre>
+<h3 id="添加-github-actions-代码">添加 Github Actions 代码：</h3>
+<p>实现效果，直接网页上修改 <code>data/links.toml</code> 或任意文件，触发 Actions 自动化运行 Hugo 程序生成静态文件并推送到 <code>gh-pages</code> 分支上，等待几十秒可看到更新 <a href="https://lmm214.github.io/edui/">https://lmm214.github.io/edui/</a></p>
+<p>具体操作：</p>
+<ul>
+<li>点 <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> 新建一个，并暂存；</li>
+<li>回项目，点 <code>Actions -- New wordflow -- Set up a workflow yourself</code> ，添加如下代码：</li>
+</ul>
+<pre><code>name: Deploy Hugo # 任君喜欢
+
+on:
+  push:
+    branches:
+      - master   # master 更新触发
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+
+      - name: Build 
+        run: hugo
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.personal_token }} # personal_token 这里新建一个 https://github.com/settings/tokens
+          PUBLISH_BRANCH: gh-pages  # 推送到当前 gh-pages 分支
+          PUBLISH_DIR: ./public  # hugo 生成到 public 作为跟目录
+          commit_message: ${{ github.event.head_commit.message }}
+</code></pre>
+<p>👌 快去 <code>master</code> 里动动代码，看看 <code>Actions</code> 顺利不，再看看 <code>gh-pages</code> 静态文件更新了不，最终打开 Pages ，祝贺！</p>
+<p>这下再也不用 git 来 git 去，日志？主题？通过 GitHub 网页端搞定！</p>
+<p>完整源文件查看：<a href="https://github.com/lmm214/edui/blob/master/.github/workflows/main.yml">https://github.com/lmm214/edui/blob/master/.github/workflows/main.yml</a></p>
+<h3 id="同步到服务器">同步到服务器</h3>
+<pre><code>      - name: Webhook
+        uses: distributhor/workflow-webhook@v1
+        env:
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
+</code></pre>
 
                         <div class="clear"></div>
                     </div>
@@ -108,10 +162,10 @@
 
                 <div class="pager">
                     
-                        <a class="prev" href="https://immmmm.com/dont-be-trust/">不被信任感</a>
+                        <span class="prev">已是最新一篇</span>
                     
                     
-                         <a class="next" href="https://immmmm.com/slimbox2-js-adaptive/">Slimbox2.js 图片灯箱自适应</a>
+                         <a class="next" href="https://immmmm.com/rsshub-docker/">RSSHub 部署笔记</a>
                     
                     <div class="clear"></div>
                 </div>
