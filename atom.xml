@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-19T15:50:41.875Z</updated>
+    <updated>2020-03-19T16:14:50.366Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
@@ -17,13 +17,15 @@
         <updated>2020-03-19T14:55:33.000Z</updated>
         <summary type="html"><![CDATA[<p>不折腾点东西总觉得浑浑噩噩，折腾点东西搞得脑袋晕晕乎乎！</p>
 <h3 id="折腾需求">折腾需求</h3>
-<p>为更新 <a href="https://edui.fun/">https://edui.fun/</a> 导航站能随手些，造了 <a href="https://immmmm.com/gridea-theme-webstack/">Gridea Theme WebStack</a> 每次得源文件切换加载，但只为加几行代码，等等等；</p>
+<p>为更新 <a href="https://edui.fun/">https://edui.fun/</a> 导航站能随手些，造了 <a href="https://immmmm.com/gridea-theme-webstack/">Gridea Theme WebStack</a> 。每次得源文件切换加载，但只为加几行代码，等等等；</p>
 <p>折腾一天，已实现直接在 GitHub  <code>master</code> 添加代码，<code>Github Actions</code> 自动构建 <code>Hugo</code> 静态文件到 <code>gh-pages</code> 分支，外加同步 webhook 到自己的服务器。</p>
+<p>再也不用 git 来 git 去！</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>不折腾点东西总觉得浑浑噩噩，折腾点东西搞得脑袋晕晕乎乎！</p>
 <h3 id="折腾需求">折腾需求</h3>
-<p>为更新 <a href="https://edui.fun/">https://edui.fun/</a> 导航站能随手些，造了 <a href="https://immmmm.com/gridea-theme-webstack/">Gridea Theme WebStack</a> 每次得源文件切换加载，但只为加几行代码，等等等；</p>
+<p>为更新 <a href="https://edui.fun/">https://edui.fun/</a> 导航站能随手些，造了 <a href="https://immmmm.com/gridea-theme-webstack/">Gridea Theme WebStack</a> 。每次得源文件切换加载，但只为加几行代码，等等等；</p>
 <p>折腾一天，已实现直接在 GitHub  <code>master</code> 添加代码，<code>Github Actions</code> 自动构建 <code>Hugo</code> 静态文件到 <code>gh-pages</code> 分支，外加同步 webhook 到自己的服务器。</p>
+<p>再也不用 git 来 git 去！</p>
 <!-- more -->
 <h3 id="上传-hugo-源文件">上传 Hugo 源文件</h3>
 <p>（注：如已把 Hugo 程序 push 到 GitHub 上，直接跳过看下一步。）</p>
@@ -78,16 +80,22 @@ jobs:
           PUBLISH_DIR: ./public  # hugo 生成到 public 作为跟目录
           commit_message: ${{ github.event.head_commit.message }}
 </code></pre>
-<p>👌 快去 <code>master</code> 里动动代码，看看 <code>Actions</code> 顺利不，再看看 <code>gh-pages</code> 静态文件更新了不，最终打开 Pages ，祝贺！</p>
-<p>这下再也不用 git 来 git 去，日志？主题？通过 GitHub 网页端搞定！</p>
-<p>完整源文件查看：<a href="https://github.com/lmm214/edui/blob/master/.github/workflows/main.yml">https://github.com/lmm214/edui/blob/master/.github/workflows/main.yml</a></p>
+<p>👌 等，3、2、1，看看 <code>Actions</code> 顺利不，再看看 <code>gh-pages</code> 静态文件更新了不，最终打开 Pages ，祝贺！</p>
+<p>日志？主题？统统 GitHub 网页端搞定！当然，调试主题什么的还是建议本地进行。</p>
 <h3 id="同步到服务器">同步到服务器</h3>
+<p>完整源文件 <a href="https://github.com/lmm214/edui/blob/master/.github/workflows/main.yml">【这里】</a> ，还有一段代码，实现同步推送到自己的服务器。</p>
 <pre><code>      - name: Webhook
         uses: distributhor/workflow-webhook@v1
         env:
           webhook_url: ${{ secrets.WEBHOOK_URL }}
           webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
 </code></pre>
+<p><code>WEBHOOK_URL</code> 和 <code>WEBHOOK_SECRET</code> 是进项目 <code>settings/secrets</code> 新建添加，构建成宝塔面板的 webhook 链接，同时宝塔后台的代码去掉后缀判断。</p>
+<h3 id="后话一点点">后话一点点 🤏</h3>
+<p>听闻 Hugo 大名也有好几个月，一直没尝试，之后也沉浸在 Gridea 中，不得不夸夸 Gridea 客户端体检真是优雅！</p>
+<p>但一直有一点点遗憾，更新只能启动客户端，点击【同步】。而 Hugo 生成静态文件摔 Hexo 几光年，部署安装无依赖，试用门槛较低。看着官方文档，程序、主题自定义也比较强悍。</p>
+<p>官方 Hugo Templates： <a href="https://gohugo.io/templates/">https://gohugo.io/templates/</a><br>
+Hugo 中文帮助文档：<a href="https://hugo.aiaide.com/">https://hugo.aiaide.com/</a></p>
 ]]></content>
     </entry>
     <entry>
