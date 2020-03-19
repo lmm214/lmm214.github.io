@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://immmmm.com</id>
     <title>木木木木木</title>
-    <updated>2020-03-19T16:14:50.366Z</updated>
+    <updated>2020-03-19T16:21:56.002Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://immmmm.com"/>
     <link rel="self" href="https://immmmm.com/atom.xml"/>
@@ -48,7 +48,7 @@
 <p>实现效果，直接网页上修改 <code>data/links.toml</code> 或任意文件，触发 Actions 自动化运行 Hugo 程序生成静态文件并推送到 <code>gh-pages</code> 分支上，等待几十秒可看到更新 <a href="https://lmm214.github.io/edui/">https://lmm214.github.io/edui/</a></p>
 <p>具体操作：</p>
 <ul>
-<li>点 <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> 新建一个，并暂存；</li>
+<li>点 <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> 新建一个，并暂存；进项目 <code>settings/secrets</code> 新建标题为 <code>personal_token</code> ，内容是刚创建的 <code>tokens</code> ;</li>
 <li>回项目，点 <code>Actions -- New wordflow -- Set up a workflow yourself</code> ，添加如下代码：</li>
 </ul>
 <pre><code>name: Deploy Hugo # 任君喜欢
